@@ -1,0 +1,160 @@
+# Changelog
+All notable changes to the webrtc package will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [2.2.1] - 2020-11-13
+
+### Added
+
+- Added a `Bandwidth` sample 
+
+### Fixed
+
+- Fixed the receiver of video streaming with Vulkan API
+- Fixed a crash bug when the application ended using Vulkan API
+- Fixed a crash bug of the standalone build using Vulkan API
+- Fixed bugs that occur on Linux not installed NVIDIA driver
+- Fixed a bug of the `VideoReceive` sample
+
+## [2.2.0] - 2020-10-26
+
+### Added
+
+- Software decoder support
+- Hardware encoder (VideoToolbox) support on macOS
+- Vulkan API support on Linux and Windows
+- Linux IL2CPP support
+- Add WebRTC samples (`MultiplePeerConnections`, `MultiVideoReceive`, `MungeSDP`, `VideoReceive`)
+
+### Changed
+
+- Upgrade libwebrtc m85
+- Upgrade NVIDIA Codec SDK 9.1
+- Changed `RTCPeerConnection` behaviour to throw exceptions when pass invalid arguments to `SetLocalDescription`, `SetRemoteDescription` 
+
+## [2.1.3] - 2020-09-28
+
+### Changed
+
+- Add "minBitrate" parameter to `RTCRtpEncodingParameters` class.
+
+## [2.1.2] - 2020-09-14
+
+### Changed
+
+- Erase Japanese documentation due to migrating to internal translation system.
+
+## [2.1.1] - 2020-09-11
+
+### Fixed
+
+- Fixed an issue where the `RTCRtpSender.SetParameters` API did not work properly
+- Removed ZWSP(zero-width-space) in C# code
+
+## [2.1.0] - 2020-08-24
+
+### Added
+
+- Added statistics window in Unity editor to allow checking the operation of WebRTC
+- Added `RTCPeerConnection.GetStats` API which collect statistics of WebRTC
+- Added `RTCRtpSender.SetParameters` and `RTCRtpSender.GetParameters` to adjustment streaming video quality
+- Added `RTCDataChannel.ReadyState` which shows the state of the channel
+
+### Fixed
+
+- Fixed a issue which video stream remains with bad quality after a short network degradation
+
+## [2.0.5] - 2020-07-30
+
+### Fixed
+
+- Upgrade libwebrtc m84 to fix security issue (https://bugs.chromium.org/p/project-zero/issues/detail?id=2034)
+
+## [2.0.4] - 2020-07-10
+
+### Fixed
+
+- Fix a crash bug when dispose a video track
+
+## [2.0.3] - 2020-06-05
+
+### Fixed
+
+- Fix the memory leak when using DirectX12
+
+## [2.0.2] - 2020-05-14
+
+### Fixed
+
+- Fix the crash when using the incorrect parameter to as the argument of `RTCDataChannel` constructor
+- Fix the crash when initializing the hardware encoder failed
+- Fix the editor freeze bug when recompiling scripts
+- Fixed documents
+
+## [2.0.1] - 2020-05-01
+
+### Fixed
+
+- Fixed versioning issue
+
+## [2.0.0] - 2020-04-30
+
+### Added
+
+- Multi camera support
+- DirectX 12 API support
+- Published VideoStreamTrack API
+- Published AudioStreamTrack API
+
+## [1.1.2] - 2020-03-19
+
+### Fixed
+
+- Fix OpenGL color order
+
+## [1.1.1] - 2020-02-28
+
+### Fixed
+
+- Fix DLL import error
+
+## [1.1.0] - 2020-02-25
+
+### Added
+
+- IL2CPP support
+- Linux OpenGL hardware encoder support
+- Mac OS Metal software encoder support
+- Windows DirectX11 software encoder support
+
+### Changed
+
+- Changed `Audio.Update` method to public
+
+## [1.0.1] - 2019-09-22
+
+### Fixed
+
+- Fixed documents
+
+## [1.0.0] - 2019-08-22
+
+### Added
+
+- Added tooltips
+
+### Changed
+
+- Renamed sample folders
+
+## [0.2.0] - 2019-07-30
+
+### Changed
+
+- Output logs when NVCodec failed to initialize
+
+## [0.1.0] - 2019-07-02
+
+- Initial Release
