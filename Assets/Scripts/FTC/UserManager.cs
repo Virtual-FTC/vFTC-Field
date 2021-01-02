@@ -10,9 +10,13 @@ public class UserManager : MonoBehaviour
 
     public Transform[] spawnPositions;
 
+    public GameObject[] setupPrefab;
+    private GameObject setup;
+
     private void Start()
     {
         setSpawn(1);
+        resetField(1);
     }
 
     private void setSpawn(int index)
@@ -33,6 +37,20 @@ public class UserManager : MonoBehaviour
 
         m_Robots[m_index].transform.position = transform.position;
         m_Robots[m_index].transform.rotation = newRotationQ;
+    }
+
+    private void resetField(int index)
+    {
+        Destroy(setup);
+
+        setup = (GameObject)Instantiate(setupPrefab[index], new Vector3(0,0.5f,0), Quaternion.identity);
+        for (int x = 0; x < setup.GetComponentsInChildren<Rigidbody>().Length; x++)
+        {
+            if (setup.GetComponentsInChildren<Rigidbody>()[x].tag == "Wobble")
+            {
+                setup.GetComponentsInChildren<Rigidbody>()[x].centerOfMass = new Vector3(0, -0.6f, 0);
+            }
+        }
     }
 
     public void OnRightButtonClick()

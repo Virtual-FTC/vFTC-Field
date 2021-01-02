@@ -47,6 +47,7 @@ public class IntakeControl : MonoBehaviour
     // Ball Pickup
     void OnCollisionEnter(Collision collision)
     {
+        print("test");
         if (collision.collider.tag == coliderTag && numBalls < maxNumberBalls)
         {
             timer = Time.time;

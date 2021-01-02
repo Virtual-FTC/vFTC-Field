@@ -1357,6 +1357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2785162366660351070}
   - component: {fileID: 8562851135289058122}
+  - component: {fileID: 4101899929921333080}
   m_Layer: 0
   m_Name: IntakeWheels
   m_TagString: Untagged
@@ -1396,6 +1397,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.16664217, y: 0.063558556, z: 0.061340317}
   m_Center: {x: 0.002888202, y: -0.00016260117, z: -0.0020694723}
+--- !u!114 &4101899929921333080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3309357127577095908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fe3b01ce140fb94b897396ae19ed190, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerCellText: {fileID: 0}
+  maxNumberBalls: 3
+  numBalls: 3
+  timeOfBallContact: 0.25
+  coliderTag: Ring
+  wantedVelocity: 150
 --- !u!1 &3309357129190269751
 GameObject:
   m_ObjectHideFlags: 0

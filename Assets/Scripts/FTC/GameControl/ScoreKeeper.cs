@@ -25,12 +25,12 @@ public class ScoreKeeper : MonoBehaviour
 
     void updateRedScore()
     {
-        redScoreText.text = "Red Score: " + redScore;
+        redScoreText.text = "" + redScore;
     }
 
     void updateBlueScore()
     {
-        blueScoreText.text = "Blue Score: " + blueScore;
+        blueScoreText.text = "" + blueScore;
     }
 
     public void resetScore()

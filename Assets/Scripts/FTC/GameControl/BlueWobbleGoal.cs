@@ -14,18 +14,18 @@ public class BlueWobbleGoal : MonoBehaviour
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
-        if (collision.collider.tag == tagOfGameObject && inZone == false)
+        if (collision.tag == tagOfGameObject && inZone == false)
         {
             inZone = true;
             scoreKeeper.addScoreBlue(pointsPerGoal);
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collision)
     {
-        if (collision.collider.tag == tagOfGameObject && inZone == true)
+        if (collision.tag == tagOfGameObject && inZone == true)
         {
             inZone = false;
             scoreKeeper.addScoreBlue(-pointsPerGoal);
