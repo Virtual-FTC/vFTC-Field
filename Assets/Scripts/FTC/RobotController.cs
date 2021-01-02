@@ -31,6 +31,11 @@ public class RobotController : MonoBehaviour
     private float backLeftWheelEnc = 0f;
     private float backRightWheelEnc = 0f;
 
+    private float motorPower5;
+    private float motorPower6;
+    private float motorPower7;
+    private float motorPower8;
+
     public float drivetrainGearRatio = 20f;
     public float encoderTicksPerRev = 126f;
     public float wheelSeparationWidth = 0.0f;
@@ -40,6 +45,12 @@ public class RobotController : MonoBehaviour
 
     private float previousRealTime;
 
+    [Header("Subsystem Controls")]
+    public GameObject shooter;
+    public GameObject intake;
+
+    private FtcShooterControl shooterControl;
+    private IntakeControl intakeControl;
 
     private void Start()
     {
@@ -50,6 +61,21 @@ public class RobotController : MonoBehaviour
 
         Thread sendThread = new Thread(sendToRC);
         sendThread.Start();
+
+        shooterControl = shooter.GetComponent<FtcShooterControl>();
+        shooterControl.Commands.Add(() => motorPower6 > 0, shooterControl.shooting);
+        shooterControl.Commands.Add(() => motorPower7 > 0 && motorPower8 > 0, () =>
+        {
+            shooterControl.setVelocity((motorPower7 + motorPower8) / 2f);
+        });
+
+        intakeControl = intake.GetComponent<IntakeControl>();
+        intakeControl.Commands.Add(() => motorPower5 != 0, () =>
+        {
+            intakeControl.setVelocity(motorPower5 * 150);
+            intakeControl.deployIntake();
+        });
+        intakeControl.Commands.Add(() => motorPower5 == 0, intakeControl.retractIntake);
     }
 
     private void OnDestroy()
@@ -123,6 +149,10 @@ public class RobotController : MonoBehaviour
             frontRightWheelCmd = powers.motor2;
             backLeftWheelCmd = powers.motor3;
             backRightWheelCmd = powers.motor4;
+            motorPower5 = powers.motor5;
+            motorPower6 = powers.motor6;
+            motorPower7 = powers.motor7;
+            motorPower8 = powers.motor8;
 
             // if(Encoding.ASCII.GetString(data, 0, recv) == "forward")
             // {
@@ -149,7 +179,7 @@ public class RobotController : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void driveRobot()
     {
         canSendEncoder = true;
         float deltaTime = Time.realtimeSinceStartup - previousRealTime;
@@ -165,13 +195,22 @@ public class RobotController : MonoBehaviour
         var angVelZ = (angularVelocity / (Mathf.PI / 180f)) * deltaTime;
 
         transform.Rotate(Vector3.down, angVelZ);
-        
-        frontLeftWheelEnc  += (motorRPM/60) * frontLeftWheelCmd  * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
-        frontRightWheelEnc += (motorRPM/60) * frontRightWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
-        backLeftWheelEnc   += (motorRPM/60) * backLeftWheelCmd   * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
-        backRightWheelEnc  += (motorRPM/60) * backRightWheelCmd  * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
+
+        frontLeftWheelEnc += (motorRPM / 60) * frontLeftWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
+        frontRightWheelEnc += (motorRPM / 60) * frontRightWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
+        backLeftWheelEnc += (motorRPM / 60) * backLeftWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
+        backRightWheelEnc += (motorRPM / 60) * backRightWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
 
         previousRealTime = Time.realtimeSinceStartup;
+    }
+
+    private void Update()
+    {
+        driveRobot();
+
+        shooterControl.Commands.Process();
+        intakeControl.Commands.Process();
+
     }
 
     [System.Serializable]

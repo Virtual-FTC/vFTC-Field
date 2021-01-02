@@ -930,6 +930,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 447825374}
     m_Modifications:
+    - target: {fileID: 496916893655605371, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c834312fb5058f34dbc4c4d730a39b69, type: 2}
+    - target: {fileID: 1352815378533243005, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c834312fb5058f34dbc4c4d730a39b69, type: 2}
+    - target: {fileID: 1662748702858351230, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f65d42d25d7c7841b547a95579dd08c, type: 2}
+    - target: {fileID: 2390385658993188038, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc2c11501ce74a94cb9a097a10b1d059, type: 2}
+    - target: {fileID: 2390385659303727685, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc2c11501ce74a94cb9a097a10b1d059, type: 2}
+    - target: {fileID: 2390385660050924295, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc2c11501ce74a94cb9a097a10b1d059, type: 2}
+    - target: {fileID: 2537574884428319767, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c834312fb5058f34dbc4c4d730a39b69, type: 2}
     - target: {fileID: 2785162367030614702, guid: 86e602c436a6be14084cd4d5b4c40ea1,
         type: 3}
       propertyPath: m_RootOrder
@@ -995,6 +1030,41 @@ PrefabInstance:
       propertyPath: numBalls
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4169971064459518404, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c834312fb5058f34dbc4c4d730a39b69, type: 2}
+    - target: {fileID: 4430699098476321603, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 424e043ba5ab0dc438f93165ba0f46e6, type: 2}
+    - target: {fileID: 5542745868586054696, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f65d42d25d7c7841b547a95579dd08c, type: 2}
+    - target: {fileID: 7391681414950950783, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c834312fb5058f34dbc4c4d730a39b69, type: 2}
+    - target: {fileID: 7663683668502294716, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c834312fb5058f34dbc4c4d730a39b69, type: 2}
+    - target: {fileID: 7733597562549533180, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc2c11501ce74a94cb9a097a10b1d059, type: 2}
+    - target: {fileID: 8771290151045590426, guid: 86e602c436a6be14084cd4d5b4c40ea1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c834312fb5058f34dbc4c4d730a39b69, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86e602c436a6be14084cd4d5b4c40ea1, type: 3}
 --- !u!1 &498353784
