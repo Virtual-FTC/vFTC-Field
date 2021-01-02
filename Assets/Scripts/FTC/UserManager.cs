@@ -8,12 +8,32 @@ public class UserManager : MonoBehaviour
 
     private int m_index = 0;
 
+    public Transform[] spawnPositions;
+
     private void Start()
     {
-
+        setSpawn(1);
     }
 
-    #region ROBOT_SELECTION
+    private void setSpawn(int index)
+    {
+        transform.position = spawnPositions[index].position;
+        transform.rotation = spawnPositions[index].rotation;
+        resetRobot();
+    }
+
+    private void resetRobot()
+    {
+        var newRotation = m_Robots[m_index].transform.rotation.eulerAngles;
+        newRotation.x = -90f;
+        newRotation.y = 0f;
+        newRotation.z = 180f;
+        var newRotationQ = m_Robots[m_index].transform.rotation;
+        newRotationQ.eulerAngles = newRotation;
+
+        m_Robots[m_index].transform.position = transform.position;
+        m_Robots[m_index].transform.rotation = newRotationQ;
+    }
 
     public void OnRightButtonClick()
     {
@@ -43,7 +63,10 @@ public class UserManager : MonoBehaviour
             m_index = 0;
         }
     }
-    #endregion
+
+    // 
+    // Some sort of TCP connection to the website to handle user pref like which robot, position of the robot, dimensions of the robot, color of the robot, team number of the robot, start/stop game, and select which game mode to run (freeplay, autonomous, teleop, and full match) 
+    //
 
     void Awake()
     {
@@ -53,6 +76,5 @@ public class UserManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
     }
 }
