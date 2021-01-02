@@ -1,0 +1,178 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 16344 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/vassilis/vFTC-Field
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+52645
+Successfully changed project path to: C:/Users/vassilis/vFTC-Field
+C:/Users/vassilis/vFTC-Field
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 60.76 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 1.99 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/vassilis/vFTC-Field/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1080 (ID=0x1b80)
+    Vendor:   
+    VRAM:     8079 MB
+    Driver:   26.21.14.4166
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56908
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001431 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 59.12 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.799 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001762 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 64.34 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.055 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 3676 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 194.4 MB.
+System memory in use after: 194.5 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 4138.
+Total: 2.470300 ms (FindLiveObjects: 0.333200 ms CreateObjectMapping: 0.174200 ms MarkObjects: 1.902000 ms  DeleteObjects: 0.059400 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts
+  artifactKey: Guid(09a244eed15e66948aca8114ad51c573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(09a244eed15e66948aca8114ad51c573) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1853bb768cafb9c72bd51dc7af86dcef') in 0.007878 seconds
+  Import took 0.012341 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.577685 seconds.
+  path: Assets/TextMesh Pro
+  artifactKey: Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro using Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '019cb03cd4e37445542528c396c70315') in 0.006448 seconds
+  Import took 0.011249 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001764 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.16 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.961 seconds
+Platform modules already initialized, skipping
+Script is not up to date after domain reload: guid(05ad8323e143ede41b23fc7784fa8b17) path("Assets/Scripts/FTC/GameControl/RobotControl.cs") state(2)
+Script is not up to date after domain reload: guid(1d5555b7de488bc46b5e242005e84462) path("Assets/Scripts/FTC/Control/FTC/FtcScoopControl.cs") state(2)
+Script is not up to date after domain reload: guid(c297458bda122574d9ef105ea896699b) path("Assets/Scripts/FTC/RobotController.cs") state(2)
+Script is not up to date after domain reload: guid(1ca106cebd8ce934ebb27a3c5e17f76c) path("Assets/Scripts/FTC/GameControl/BlueWobbleGoal.cs") state(2)
+Script is not up to date after domain reload: guid(114064ada1ccb9248bf41001b4cc2f91) path("Assets/Scripts/FTC/Control/FRC/HoodControl.cs") state(2)
+Script is not up to date after domain reload: guid(c0d403ae7a9b0884c8dba507dac0eedb) path("Assets/Scripts/FTC/RobotCustomizer.cs") state(2)
+Script is not up to date after domain reload: guid(4911888fda6b2bf488fd644f81688c9d) path("Assets/Scripts/FTC/GameControl/RedWobbleGoal.cs") state(2)
+Script is not up to date after domain reload: guid(1d397a59c0930ca48b321b2608c971b6) path("Assets/Scripts/FTC/GameControl/RedGoal.cs") state(2)
+Script is not up to date after domain reload: guid(3a71b7557988dcd4fa368334165af57a) path("Assets/Scripts/FTC/Control/FRC/SwerveAngleControl.cs") state(2)
+Script is not up to date after domain reload: guid(1150433cc5156284fbec1d42cbd1c083) path("Assets/Scripts/FTC/GameControl/BlueGoal.cs") state(2)
+Script is not up to date after domain reload: guid(8bc8a7d1b480b5c488f3c8dc27e361c3) path("Assets/Scripts/FTC/Control/FTC/FtcShooterControl.cs") state(2)
+Script is not up to date after domain reload: guid(e9c12ea23a47bac4f95eabc77d5a515d) path("Assets/Scripts/FTC/Control/FRC/SwerveWheelControl.cs") state(2)
+Script is not up to date after domain reload: guid(9aab43be574199140be014b8c371d0a7) path("Assets/Scripts/FTC/Control/FRC/TurretControl.cs") state(2)
+Script is not up to date after domain reload: guid(a8ddd3e65a0129442a37e3a03956d01c) path("Assets/Scripts/FTC/Control/FRC/ShooterControl.cs") state(2)
+Script is not up to date after domain reload: guid(24f1ede1051fdaa40a83a777dc546c7e) path("Assets/Scripts/FTC/Control/FRC/FlywheelControl.cs") state(2)
+Script is not up to date after domain reload: guid(9fe3b01ce140fb94b897396ae19ed190) path("Assets/Scripts/FTC/Control/IntakeControl.cs") state(2)
+Script is not up to date after domain reload: guid(101ee7ca1b5131e46bf20809aa18c671) path("Assets/Scripts/FTC/Control/CommandProcessor.cs") state(2)
+Script is not up to date after domain reload: guid(219691a4f63ba6243941f447567a17cb) path("Assets/Scripts/FTC/UserManager.cs") state(2)
+Script is not up to date after domain reload: guid(b2d2e4afb1c44ba43a4b55c431848e48) path("Assets/Scripts/FTC/GameControl/ScoreKeeper.cs") state(2)
+Refreshing native plugins compatible for Editor in 0.51 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 3380 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 182.1 MB.
+System memory in use after: 182.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4140.
+Total: 2.489900 ms (FindLiveObjects: 0.399500 ms CreateObjectMapping: 0.190300 ms MarkObjects: 1.855800 ms  DeleteObjects: 0.042900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001756 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.883 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 3413 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 182.9 MB.
+System memory in use after: 183.1 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4161.
+Total: 3.613900 ms (FindLiveObjects: 0.334900 ms CreateObjectMapping: 0.234200 ms MarkObjects: 2.999600 ms  DeleteObjects: 0.043900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001887 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.869 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Unloading 3413 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 183.0 MB.
+System memory in use after: 183.2 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4163.
+Total: 2.376500 ms (FindLiveObjects: 0.299100 ms CreateObjectMapping: 0.163400 ms MarkObjects: 1.870500 ms  DeleteObjects: 0.042500 ms)
+
