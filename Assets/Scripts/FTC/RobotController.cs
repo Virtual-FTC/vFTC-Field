@@ -92,7 +92,7 @@ public class RobotController : MonoBehaviour
                       SocketType.Dgram, ProtocolType.Udp);
 
         TXnewsock.Bind(ipep);
-        Console.WriteLine("Waiting for a client...");
+        Console.WriteLine("Waiting for a UDP client...");
 
         IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
         TXRemote = (EndPoint)(sender);
@@ -128,17 +128,10 @@ public class RobotController : MonoBehaviour
                       SocketType.Dgram, ProtocolType.Udp);
 
         RXnewsock.Bind(ipep);
-        Console.WriteLine("Waiting for a client...");
+        Console.WriteLine("Waiting for a UDP client...");
 
         IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
         RXRemote = (EndPoint)(sender);
-
-        // recv = newsock.ReceiveFrom(data, ref Remote);
-        // Console.WriteLine("Message received from {0}:", Remote.ToString());
-        // Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
-        // string welcome = "Welcome to my test server";
-        // data = Encoding.ASCII.GetBytes(welcome);
-        // newsock.SendTo(data, data.Length, SocketFlags.None, Remote);
 
         while(true) {
             RXdata = new byte[1024];
@@ -153,29 +146,6 @@ public class RobotController : MonoBehaviour
             motorPower6 = powers.motor6;
             motorPower7 = powers.motor7;
             motorPower8 = powers.motor8;
-
-            // if(Encoding.ASCII.GetString(data, 0, recv) == "forward")
-            // {
-            //     bool_moveForward = true;
-            //     bool_moveBack    = false;
-            // }
-            // else if(Encoding.ASCII.GetString(data, 0, recv) == "backward")
-            // {
-            //     bool_moveForward = false;
-            //     bool_moveBack    = true;
-            // }
-            // else
-            // {
-            //     bool_moveForward = false;
-            //     bool_moveBack    = false;                
-            // }
-
-            // Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
-            // newsock.SendTo(data, recv, SocketFlags.None, Remote);
-
-            // welcome = "M1: " + frontLeftWheelCmd + ", M2:" + frontRightWheelCmd + ", M3:" + backLeftWheelCmd + ", M3:" + backRightWheelCmd;
-            // data = Encoding.ASCII.GetBytes(welcome);
-            // newsock.SendTo(data, data.Length, SocketFlags.None, Remote);
         }
     }
 
@@ -235,7 +205,4 @@ public class RobotController : MonoBehaviour
         // this example will return a PlayerInfo object with
         // name == "Dr Charles", lives == 3, and health == 0.8f.
     }
-
-
-
 }

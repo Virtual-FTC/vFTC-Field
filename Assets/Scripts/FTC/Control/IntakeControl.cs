@@ -26,28 +26,28 @@ public class IntakeControl : MonoBehaviour
         retractIntake();
     }
 
+
     public void deployIntake()
     {
-        var hinge = GetComponent<HingeJoint>();
-        var motor = hinge.motor;
-        motor.targetVelocity = wantedVelocity;
+        //var hinge = GetComponent<HingeJoint>();
+        //var motor = hinge.motor;
+        //motor.targetVelocity = wantedVelocity;
 
-        hinge.motor = motor;
+        //hinge.motor = motor;
     }
 
     public void retractIntake()
     {
-        var hinge = GetComponent<HingeJoint>();
-        var motor = hinge.motor;
-        motor.targetVelocity = -wantedVelocity;
+        //var hinge = GetComponent<HingeJoint>();
+        //var motor = hinge.motor;
+        //motor.targetVelocity = -wantedVelocity;
 
-        hinge.motor = motor;
+        //hinge.motor = motor;
     }
 
     // Ball Pickup
     void OnCollisionEnter(Collision collision)
     {
-        print("test");
         if (collision.collider.tag == coliderTag && numBalls < maxNumberBalls)
         {
             timer = Time.time;
