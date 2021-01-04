@@ -213,71 +213,71 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4698}
     - Class: 114
-      Script: {instanceID: 4898}
+      Script: {instanceID: 4732}
     - Class: 114
-      Script: {instanceID: 5250}
+      Script: {instanceID: 4900}
     - Class: 114
-      Script: {instanceID: 5414}
+      Script: {instanceID: 5252}
     - Class: 114
-      Script: {instanceID: 5426}
+      Script: {instanceID: 5416}
     - Class: 114
-      Script: {instanceID: 5482}
+      Script: {instanceID: 5428}
     - Class: 114
-      Script: {instanceID: 5486}
+      Script: {instanceID: 5484}
     - Class: 114
-      Script: {instanceID: 5500}
+      Script: {instanceID: 5488}
     - Class: 114
-      Script: {instanceID: 5700}
+      Script: {instanceID: 5502}
     - Class: 114
       Script: {instanceID: 5702}
     - Class: 114
-      Script: {instanceID: 5724}
+      Script: {instanceID: 5704}
     - Class: 114
-      Script: {instanceID: 5952}
+      Script: {instanceID: 5726}
     - Class: 114
-      Script: {instanceID: 6232}
+      Script: {instanceID: 5954}
     - Class: 114
-      Script: {instanceID: 6306}
+      Script: {instanceID: 6234}
     - Class: 114
-      Script: {instanceID: 6314}
+      Script: {instanceID: 6308}
     - Class: 114
-      Script: {instanceID: 6414}
+      Script: {instanceID: 6316}
     - Class: 114
-      Script: {instanceID: 6430}
+      Script: {instanceID: 6416}
     - Class: 114
-      Script: {instanceID: 6476}
+      Script: {instanceID: 6432}
     - Class: 114
-      Script: {instanceID: 6520}
+      Script: {instanceID: 6478}
     - Class: 114
-      Script: {instanceID: 6558}
+      Script: {instanceID: 6522}
     - Class: 114
-      Script: {instanceID: 6706}
+      Script: {instanceID: 6560}
     - Class: 114
-      Script: {instanceID: 6846}
+      Script: {instanceID: 6708}
     - Class: 114
-      Script: {instanceID: 6934}
+      Script: {instanceID: 6848}
     - Class: 114
-      Script: {instanceID: 6966}
+      Script: {instanceID: 6936}
     - Class: 114
-      Script: {instanceID: 6982}
+      Script: {instanceID: 6968}
     - Class: 114
-      Script: {instanceID: 7414}
+      Script: {instanceID: 6984}
     - Class: 114
-      Script: {instanceID: 7666}
+      Script: {instanceID: 7416}
     - Class: 114
-      Script: {instanceID: 7714}
+      Script: {instanceID: 7668}
     - Class: 114
-      Script: {instanceID: 8002}
+      Script: {instanceID: 7716}
     - Class: 114
-      Script: {instanceID: 8022}
+      Script: {instanceID: 8004}
     - Class: 114
-      Script: {instanceID: 8276}
+      Script: {instanceID: 8024}
     - Class: 114
       Script: {instanceID: 8278}
     - Class: 114
-      Script: {instanceID: 8434}
+      Script: {instanceID: 8280}
     - Class: 114
-      Script: {instanceID: 66840}
+      Script: {instanceID: 8436}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1009,6 +1009,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: bb61b0a63078525eb3c521da98f528c2
+    assemblyName: Unity.Template.RenderStreaming.Runtime.dll
+    namespaceName: 
+    className: GameTimer
   - hash:
       serializedVersion: 2
       Hash: 4654a438523d353481544eb5c55b91fb
@@ -1813,12 +1819,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualEffectGraph.Runtime.dll
     namespaceName: UnityEngine.VFX.Utility
     className: VFXRaycastBinder
-  - hash:
-      serializedVersion: 2
-      Hash: bb61b0a63078525eb3c521da98f528c2
-    assemblyName: Unity.Template.RenderStreaming.Runtime.dll
-    namespaceName: 
-    className: GameTimer
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

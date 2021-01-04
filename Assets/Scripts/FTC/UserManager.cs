@@ -21,15 +21,9 @@ public class UserManager : MonoBehaviour
     private GameObject setup;
 
     // TCP server
-    private int RXrecv;
-    private Socket RXnewsock;
-    private byte[] RXdata;
-    private EndPoint RXRemote;
-
-    private int TXrecv;
-    private Socket TXnewsock;
-    private byte[] TXdata;
-    private EndPoint TXRemote;
+    private int recv;
+    private Socket newsock;
+    private Socket client;
 
     private WebsiteCommands websiteCommands = new WebsiteCommands();
     private bool currentGameStart = false;
@@ -48,55 +42,73 @@ public class UserManager : MonoBehaviour
         gameTimer = GetComponent<GameTimer>();
 
         Console.WriteLine("Started.....");
-        Thread receiveThread = new Thread(receiveFromWeb);
-        receiveThread.Start();
-
-        Thread sendThread = new Thread(sendToWeb);
-        sendThread.Start();
+        Thread thread = new Thread(startTCPServer);
+        thread.Start();
     }
 
     private void OnDestroy()
     {
-        TXnewsock.Close();
-        RXnewsock.Close();
+        client.Close();
+        newsock.Close();
     }
 
     // Some sort of TCP connection to the website to handle user pref like which robot, position of the robot, dimensions of the robot, color of the robot, team number of the robot, start/stop game, and select which game mode to run (freeplay, autonomous, teleop, and full match) 
     #region TCP server for sending and receiving data  
-    void sendToWeb()
+    void startTCPServer()
     {
-        TXdata = new byte[1024];
-        IPEndPoint ipep = new IPEndPoint(IPAddress.Any, 9052);
+        int recv;
+        byte[] data = new byte[1024];
+        IPEndPoint ipep = new IPEndPoint(IPAddress.Any,
+                               9050);
 
-        TXnewsock = new Socket(AddressFamily.InterNetwork,
-                      SocketType.Dgram, ProtocolType.Tcp);
+        newsock = new
+            Socket(AddressFamily.InterNetwork,
+                        SocketType.Stream, ProtocolType.Tcp);
 
-        TXnewsock.Bind(ipep);
-        Console.WriteLine("Waiting for a TCP client...");
+        newsock.Bind(ipep);
+        newsock.Listen(10);
+        print("Waiting for a client...");
+        client = newsock.Accept();
+        IPEndPoint clientep =
+                     (IPEndPoint)client.RemoteEndPoint;
+        print("Connected with {0} at port {1}" +
+                        clientep.Address + clientep.Port);
 
-        IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
-        TXRemote = (EndPoint)(sender);
 
-        TXrecv = TXnewsock.ReceiveFrom(TXdata, ref TXRemote);
         string welcome = "Welcome to my test server";
-        TXdata = Encoding.ASCII.GetBytes(welcome);
-        TXnewsock.SendTo(TXdata, TXdata.Length, SocketFlags.None, TXRemote);
-
+        data = Encoding.ASCII.GetBytes(welcome);
+        client.Send(data, data.Length,
+                          SocketFlags.None);
         while (true)
         {
-           
+            data = new byte[1024];
+            recv = client.Receive(data);
+            if (recv == 0)
+                break;
+
+            string message = Encoding.ASCII.GetString(data, 0, recv);
+            print(message);
+            websiteCommands = WebsiteCommands.CreateFromJSON(message);
+            //client.Send(data, recv, SocketFlags.None);
         }
+        print("Disconnected from {0}" +
+                          clientep.Address);
+        client.Close();
+        newsock.Close();
+        startTCPServer();
     }
 
+    /*
     void receiveFromWeb()
     {
         RXdata = new byte[1024];
         IPEndPoint ipep = new IPEndPoint(IPAddress.Any, 9052);
 
         RXnewsock = new Socket(AddressFamily.InterNetwork,
-                      SocketType.Dgram, ProtocolType.Tcp);
+                      SocketType.Stream, ProtocolType.Tcp);
 
         RXnewsock.Bind(ipep);
+        RXnewsock.Listen(10)
         Console.WriteLine("Waiting for a Tcp client...");
 
         IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
@@ -110,6 +122,7 @@ public class UserManager : MonoBehaviour
             websiteCommands = WebsiteCommands.CreateFromJSON(message);
         }
     }
+    */
     #endregion 
 
     #region Game Control

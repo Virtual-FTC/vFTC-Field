@@ -154,11 +154,12 @@ public class RobotController : MonoBehaviour
         canSendEncoder = true;
         float deltaTime = Time.realtimeSinceStartup - previousRealTime;
 
-        var linearVelocityY = (frontLeftWheelCmd + frontRightWheelCmd + backLeftWheelCmd + backRightWheelCmd);// * (wheelRadius / 4);
+        // Strafer Drivetrain Control
+        var linearVelocityX = (frontLeftWheelCmd + frontRightWheelCmd + backLeftWheelCmd + backRightWheelCmd) * (wheelRadius / 4);
 
-        var linearVelocityX = -(-frontLeftWheelCmd + frontRightWheelCmd + backLeftWheelCmd - backRightWheelCmd);// * (wheelRadius / 4);
+        var linearVelocityY = (-frontLeftWheelCmd + frontRightWheelCmd + backLeftWheelCmd - backRightWheelCmd) * (wheelRadius / 4);
 
-        var angularVelocity = (-frontLeftWheelCmd + frontRightWheelCmd - backLeftWheelCmd + backRightWheelCmd);// * (wheelRadius / (4 * (wheelSeparationWidth + wheelSeparationLength)));
+        var angularVelocity = (-frontLeftWheelCmd + frontRightWheelCmd - backLeftWheelCmd + backRightWheelCmd) * (wheelRadius / (4 * (wheelSeparationWidth + wheelSeparationLength)));
 
         transform.Translate(new Vector3(linearVelocityX * deltaTime, 0f, linearVelocityY * deltaTime));
 
