@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -45,6 +45,7 @@ public class RobotController : MonoBehaviour
     private EndPoint TXRemote;
 
     private bool canSendEncoder = false;
+    private bool reconnectEncoderSocket = true;
 
     private float frontLeftWheelCmd = 0f;
     private float frontRightWheelCmd = 0f;
@@ -69,7 +70,7 @@ public class RobotController : MonoBehaviour
     private void Start()
     {
         previousRealTime = Time.realtimeSinceStartup;
-        Console.WriteLine("Started.....");
+        Debug.Log("Started.....");
         Thread receiveThread = new Thread(receiveFromRC);
         receiveThread.Start();
 
@@ -86,35 +87,41 @@ public class RobotController : MonoBehaviour
     void sendToRC() {
         TXdata = new byte[1024];
         IPEndPoint ipep = new IPEndPoint(IPAddress.Any, 9051);
-
         TXnewsock = new Socket(AddressFamily.InterNetwork,
-                      SocketType.Dgram, ProtocolType.Udp);
-
+                    SocketType.Dgram, ProtocolType.Udp);
         TXnewsock.Bind(ipep);
-        Console.WriteLine("Waiting for a client...");
+        while (true) {
+            try {
+                if(reconnectEncoderSocket) {
+                    Debug.Log("Waiting for a client...");
 
-        IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
-        TXRemote = (EndPoint)(sender);
+                    IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
+                    TXRemote = (EndPoint)(sender);
 
-        TXrecv = TXnewsock.ReceiveFrom(TXdata, ref TXRemote);
-        string welcome = "Welcome to my test server";
-        TXdata = Encoding.ASCII.GetBytes(welcome);
-        TXnewsock.SendTo(TXdata, TXdata.Length, SocketFlags.None, TXRemote);
+                    TXrecv = TXnewsock.ReceiveFrom(TXdata, ref TXRemote);
+                    string welcome = "Welcome to my test server";
+                    TXdata = Encoding.ASCII.GetBytes(welcome);
+                    TXnewsock.SendTo(TXdata, TXdata.Length, SocketFlags.None, TXRemote);
 
-        while(true) {
-            if (canSendEncoder) {
-                RobotPowers robotencoders = new RobotPowers();
-                robotencoders.motor1 = frontLeftWheelEnc;
-                robotencoders.motor2 = frontRightWheelEnc;
-                robotencoders.motor3 = backLeftWheelEnc;
-                robotencoders.motor4 = backRightWheelEnc;
+                    reconnectEncoderSocket = false;
+                }
+                if (canSendEncoder) {
+                    RobotPowers robotencoders = new RobotPowers();
+                    robotencoders.motor1 = frontLeftWheelEnc;
+                    robotencoders.motor2 = frontRightWheelEnc;
+                    robotencoders.motor3 = backLeftWheelEnc;
+                    robotencoders.motor4 = backRightWheelEnc;
 
-                //Convert to JSON
-                string encodersJSON = JsonUtility.ToJson(robotencoders);
+                    //Convert to JSON
+                    string encodersJSON = JsonUtility.ToJson(robotencoders);
 
-                TXdata = Encoding.ASCII.GetBytes(encodersJSON);
-                TXnewsock.SendTo(TXdata, TXdata.Length, SocketFlags.None, TXRemote);
-                canSendEncoder = false;
+                    TXdata = Encoding.ASCII.GetBytes(encodersJSON);
+                    TXnewsock.SendTo(TXdata, TXdata.Length, SocketFlags.None, TXRemote);
+                    canSendEncoder = false;
+                }
+            }
+            catch (Exception e ) {
+                Debug.LogError(e.ToString());
             }
         }
     }
@@ -127,14 +134,14 @@ public class RobotController : MonoBehaviour
                       SocketType.Dgram, ProtocolType.Udp);
 
         RXnewsock.Bind(ipep);
-        Console.WriteLine("Waiting for a client...");
+        Debug.Log("Waiting for a client...");
 
         IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
         RXRemote = (EndPoint)(sender);
 
         // recv = newsock.ReceiveFrom(data, ref Remote);
-        // Console.WriteLine("Message received from {0}:", Remote.ToString());
-        // Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
+        // Debug.Log("Message received from {0}:", Remote.ToString());
+        // Debug.Log(Encoding.ASCII.GetString(data, 0, recv));
         // string welcome = "Welcome to my test server";
         // data = Encoding.ASCII.GetBytes(welcome);
         // newsock.SendTo(data, data.Length, SocketFlags.None, Remote);
@@ -143,11 +150,16 @@ public class RobotController : MonoBehaviour
             RXdata = new byte[1024];
             RXrecv = RXnewsock.ReceiveFrom(RXdata, ref RXRemote);
             string message = Encoding.ASCII.GetString(RXdata, 0, RXrecv);
-            RobotPowers powers = RobotPowers.CreateFromJSON(message);
-            frontLeftWheelCmd = powers.motor1;
-            frontRightWheelCmd = powers.motor2;
-            backLeftWheelCmd = powers.motor3;
-            backRightWheelCmd = powers.motor4;
+            if(message.Contains("reset")) {
+                reconnectEncoderSocket = true;
+            } else {
+                RobotPowers powers = RobotPowers.CreateFromJSON(message);
+                frontLeftWheelCmd = powers.motor1;
+                frontRightWheelCmd = powers.motor2;
+                backLeftWheelCmd = powers.motor3;
+                backRightWheelCmd = powers.motor4;                
+            }
+
 
             // if(Encoding.ASCII.GetString(data, 0, recv) == "forward")
             // {
@@ -165,7 +177,7 @@ public class RobotController : MonoBehaviour
             //     bool_moveBack    = false;                
             // }
 
-            // Console.WriteLine(Encoding.ASCII.GetString(data, 0, recv));
+            // Debug.Log(Encoding.ASCII.GetString(data, 0, recv));
             // newsock.SendTo(data, recv, SocketFlags.None, Remote);
 
             // welcome = "M1: " + frontLeftWheelCmd + ", M2:" + frontRightWheelCmd + ", M3:" + backLeftWheelCmd + ", M3:" + backRightWheelCmd;
