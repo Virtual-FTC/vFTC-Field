@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 8068431556293253908}
   - component: {fileID: 7142101330250118479}
   m_Layer: 0
-  m_Name: RobotType-1 1
+  m_Name: RobotType-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,8 +470,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drivetrainGearRatio: 20
   encoderTicksPerRev: 126
-  wheelSeparationWidth: 0
-  wheelSeparationLength: 0
+  wheelSeparationWidth: 15
+  wheelSeparationLength: 15
   wheelRadius: 2
   motorRPM: 340
   shooter: {fileID: 4468977922145075771}

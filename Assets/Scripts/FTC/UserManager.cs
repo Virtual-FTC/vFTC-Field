@@ -59,7 +59,7 @@ public class UserManager : MonoBehaviour
         int recv;
         byte[] data = new byte[1024];
         IPEndPoint ipep = new IPEndPoint(IPAddress.Any,
-                               9050);
+                               9052);
 
         newsock = new
             Socket(AddressFamily.InterNetwork,
@@ -81,15 +81,23 @@ public class UserManager : MonoBehaviour
                           SocketFlags.None);
         while (true)
         {
-            data = new byte[1024];
-            recv = client.Receive(data);
-            if (recv == 0)
-                break;
+            try
+            {
+                data = new byte[1024];
+                recv = client.Receive(data);
+                if (recv == 0)
+                    break;
 
-            string message = Encoding.ASCII.GetString(data, 0, recv);
-            print(message);
-            websiteCommands = WebsiteCommands.CreateFromJSON(message);
-            //client.Send(data, recv, SocketFlags.None);
+                string message = Encoding.ASCII.GetString(data, 0, recv);
+                print(message);
+                websiteCommands = WebsiteCommands.CreateFromJSON(message);
+                //client.Send(data, recv, SocketFlags.None);
+            }
+            catch (SocketException)
+            {
+                print("Client lost connection");
+                break;
+            }
         }
         print("Disconnected from {0}" +
                           clientep.Address);

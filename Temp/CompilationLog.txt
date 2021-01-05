@@ -1,0 +1,2 @@
+# Starting compiling Unity.Template.RenderStreaming.Runtime.dll
+C:\Program Files\Unity\Hub\Editor\2020.2.1f1\Editor\Data\Tools\RoslynScripts\unity_csc.bat /noconfig @Temp/UnityTempFile-584e8714b009b2742b3cd9db47831877
