@@ -177,6 +177,12 @@ public class UserManager : MonoBehaviour
             index = rnd.Next(3);
         }
 
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("Ring");
+        foreach(GameObject a in gos)
+        {
+            Destroy(a);
+        }
+
         setup = (GameObject)Instantiate(setupPrefab[index], new Vector3(0,0.5f,0), Quaternion.identity);
         for (int x = 0; x < setup.GetComponentsInChildren<Rigidbody>().Length; x++)
         {

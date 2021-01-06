@@ -180,13 +180,13 @@ public class RobotController : MonoBehaviour
 
         var angularVelocity = (-frontLeftWheelCmd + frontRightWheelCmd - backLeftWheelCmd + backRightWheelCmd) * (wheelRadius / (4 * (wheelSeparationWidth + wheelSeparationLength)));
 
-        print(linearVelocityX + " : " + linearVelocityY + " : " + angularVelocity);
+        //print(linearVelocityX + " : " + linearVelocityY + " : " + angularVelocity);
 
-        transform.Translate(new Vector3(linearVelocityY * deltaTime, linearVelocityX * deltaTime, 0f));
+        transform.Translate(new Vector3(-linearVelocityY * deltaTime, -linearVelocityX * deltaTime, 0f));
 
         var angVelZ = (angularVelocity / (Mathf.PI / 180f)) * deltaTime;
 
-        transform.Rotate(Vector3.left, angVelZ);
+        transform.Rotate(Vector3.down, angVelZ);
 
         frontLeftWheelEnc += (motorRPM / 60) * frontLeftWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
         frontRightWheelEnc += (motorRPM / 60) * frontRightWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;

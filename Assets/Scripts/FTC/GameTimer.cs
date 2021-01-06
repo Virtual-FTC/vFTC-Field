@@ -70,6 +70,11 @@ public class GameTimer : MonoBehaviour
         gameType = type;
     }
 
+    public string getGameType()
+    {
+        return gameType;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
