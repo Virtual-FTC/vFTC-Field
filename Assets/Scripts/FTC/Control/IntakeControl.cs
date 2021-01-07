@@ -46,21 +46,21 @@ public class IntakeControl : MonoBehaviour
     }
 
     // Ball Pickup
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
-        if (collision.collider.tag == coliderTag && numBalls < maxNumberBalls)
+        if (collision.tag == coliderTag && numBalls < maxNumberBalls)
         {
             timer = Time.time;
         }
     }
 
-    void OnCollisionStay(Collision collision)
+    void OnTriggerStay(Collider collision)
     {
      
-        if (collision.collider.tag == coliderTag && numBalls < maxNumberBalls && Time.time - timer >= timeOfBallContact)
+        if (collision.tag == coliderTag && numBalls < maxNumberBalls && Time.time - timer >= timeOfBallContact)
         {
             numBalls++;
-            Destroy(collision.collider.gameObject);
+            Destroy(collision.gameObject);
             updateText();
         }
     }

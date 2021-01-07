@@ -10,6 +10,7 @@ using UnityEngine;
 public class RobotController : MonoBehaviour
 {
     public float driveMulti = 10;
+    public float angMulti = 10;
 
     private int RXrecv;
     private Socket RXnewsock;
@@ -195,13 +196,21 @@ public class RobotController : MonoBehaviour
         //print(linearVelocityX + " : " + linearVelocityY + " : " + angularVelocity);
 
         //transform.Translate(new Vector3(-linearVelocityY * deltaTime, -linearVelocityX * deltaTime, 0f));
-        rb.velocity = new Vector3(linearVelocityY * Time.deltaTime * driveMulti,0f , linearVelocityX * Time.deltaTime * driveMulti);
+        Vector3 forward = new Vector3(linearVelocityY * Time.deltaTime * driveMulti,0f , -linearVelocityX * Time.deltaTime * driveMulti);
+
+        var locVel = transform.InverseTransformDirection(rb.velocity);
+        locVel.x = -linearVelocityY * Time.deltaTime * driveMulti;
+        locVel.y = -linearVelocityX * Time.deltaTime * driveMulti;
+        locVel.z = 0f;
+        rb.velocity = transform.TransformDirection(locVel);
+
+        //rb.velocity = forward;
         
 
         var angVelZ = (angularVelocity / (Mathf.PI / 180f)) * deltaTime;
 
         //transform.Rotate(Vector3.back, angVelZ);
-        rb.angularVelocity = new Vector3(0f,0f, angVelZ);
+        rb.angularVelocity = new Vector3(0f, -angVelZ * angMulti, 0f);
 
         frontLeftWheelEnc += (motorRPM / 60) * frontLeftWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
         frontRightWheelEnc += (motorRPM / 60) * frontRightWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
