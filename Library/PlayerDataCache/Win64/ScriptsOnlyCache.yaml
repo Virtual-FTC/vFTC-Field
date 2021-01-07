@@ -67,6 +67,7 @@ ScriptsOnlyBuild:
     - IntakeControl
     - RedGoal
     - RedWobbleGoal
+    - RingDispenser
     - RobotController
     - RobotCustomizer
     - ScoreKeeper
@@ -161,123 +162,125 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1946}
     - Class: 114
-      Script: {instanceID: 2086}
+      Script: {instanceID: 2016}
     - Class: 114
-      Script: {instanceID: 2202}
+      Script: {instanceID: 2088}
     - Class: 114
-      Script: {instanceID: 2284}
+      Script: {instanceID: 2204}
     - Class: 114
-      Script: {instanceID: 2444}
+      Script: {instanceID: 2286}
     - Class: 114
-      Script: {instanceID: 2546}
+      Script: {instanceID: 2446}
     - Class: 114
-      Script: {instanceID: 2756}
+      Script: {instanceID: 2548}
     - Class: 114
-      Script: {instanceID: 2834}
+      Script: {instanceID: 2758}
     - Class: 114
-      Script: {instanceID: 2874}
+      Script: {instanceID: 2836}
     - Class: 114
-      Script: {instanceID: 3198}
+      Script: {instanceID: 2876}
     - Class: 114
-      Script: {instanceID: 3264}
+      Script: {instanceID: 3200}
     - Class: 114
-      Script: {instanceID: 3270}
+      Script: {instanceID: 3266}
     - Class: 114
-      Script: {instanceID: 3292}
+      Script: {instanceID: 3272}
     - Class: 114
-      Script: {instanceID: 3408}
+      Script: {instanceID: 3294}
     - Class: 114
-      Script: {instanceID: 3484}
+      Script: {instanceID: 3410}
     - Class: 114
-      Script: {instanceID: 3640}
+      Script: {instanceID: 3486}
     - Class: 114
-      Script: {instanceID: 3670}
+      Script: {instanceID: 3642}
     - Class: 114
-      Script: {instanceID: 3754}
+      Script: {instanceID: 3672}
     - Class: 114
-      Script: {instanceID: 3880}
+      Script: {instanceID: 3756}
     - Class: 114
-      Script: {instanceID: 3976}
+      Script: {instanceID: 3882}
     - Class: 114
-      Script: {instanceID: 4102}
+      Script: {instanceID: 3978}
     - Class: 114
-      Script: {instanceID: 4256}
+      Script: {instanceID: 4104}
     - Class: 114
-      Script: {instanceID: 4346}
+      Script: {instanceID: 4258}
     - Class: 114
-      Script: {instanceID: 4354}
+      Script: {instanceID: 4348}
     - Class: 114
-      Script: {instanceID: 4414}
+      Script: {instanceID: 4356}
     - Class: 114
-      Script: {instanceID: 4596}
+      Script: {instanceID: 4416}
     - Class: 114
-      Script: {instanceID: 4698}
+      Script: {instanceID: 4598}
     - Class: 114
-      Script: {instanceID: 4732}
+      Script: {instanceID: 4700}
     - Class: 114
-      Script: {instanceID: 4900}
+      Script: {instanceID: 4734}
     - Class: 114
-      Script: {instanceID: 5252}
+      Script: {instanceID: 4902}
     - Class: 114
-      Script: {instanceID: 5416}
+      Script: {instanceID: 5254}
     - Class: 114
-      Script: {instanceID: 5428}
+      Script: {instanceID: 5418}
     - Class: 114
-      Script: {instanceID: 5484}
+      Script: {instanceID: 5430}
     - Class: 114
-      Script: {instanceID: 5488}
+      Script: {instanceID: 5486}
     - Class: 114
-      Script: {instanceID: 5502}
+      Script: {instanceID: 5490}
     - Class: 114
-      Script: {instanceID: 5702}
+      Script: {instanceID: 5504}
     - Class: 114
       Script: {instanceID: 5704}
     - Class: 114
-      Script: {instanceID: 5726}
+      Script: {instanceID: 5706}
     - Class: 114
-      Script: {instanceID: 5954}
+      Script: {instanceID: 5728}
     - Class: 114
-      Script: {instanceID: 6234}
+      Script: {instanceID: 5956}
     - Class: 114
-      Script: {instanceID: 6308}
+      Script: {instanceID: 6236}
     - Class: 114
-      Script: {instanceID: 6316}
+      Script: {instanceID: 6310}
     - Class: 114
-      Script: {instanceID: 6416}
+      Script: {instanceID: 6318}
     - Class: 114
-      Script: {instanceID: 6432}
+      Script: {instanceID: 6418}
     - Class: 114
-      Script: {instanceID: 6478}
+      Script: {instanceID: 6434}
     - Class: 114
-      Script: {instanceID: 6522}
+      Script: {instanceID: 6480}
     - Class: 114
-      Script: {instanceID: 6560}
+      Script: {instanceID: 6524}
     - Class: 114
-      Script: {instanceID: 6708}
+      Script: {instanceID: 6562}
     - Class: 114
-      Script: {instanceID: 6848}
+      Script: {instanceID: 6710}
     - Class: 114
-      Script: {instanceID: 6936}
+      Script: {instanceID: 6850}
     - Class: 114
-      Script: {instanceID: 6968}
+      Script: {instanceID: 6938}
     - Class: 114
-      Script: {instanceID: 6984}
+      Script: {instanceID: 6970}
     - Class: 114
-      Script: {instanceID: 7416}
+      Script: {instanceID: 6986}
     - Class: 114
-      Script: {instanceID: 7668}
+      Script: {instanceID: 7418}
     - Class: 114
-      Script: {instanceID: 7716}
+      Script: {instanceID: 7670}
     - Class: 114
-      Script: {instanceID: 8004}
+      Script: {instanceID: 7718}
     - Class: 114
-      Script: {instanceID: 8024}
+      Script: {instanceID: 8006}
     - Class: 114
-      Script: {instanceID: 8278}
+      Script: {instanceID: 8026}
     - Class: 114
       Script: {instanceID: 8280}
     - Class: 114
-      Script: {instanceID: 8436}
+      Script: {instanceID: 8282}
+    - Class: 114
+      Script: {instanceID: 8438}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -439,6 +442,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.HighDefinition.Runtime.dll
     namespaceName: UnityEngine.VFX.Utility
     className: HDRPCameraBinder
+  - hash:
+      serializedVersion: 2
+      Hash: 46ecf4bbeb2bdc2fcfb9c81ef61221a1
+    assemblyName: Unity.Template.RenderStreaming.Runtime.dll
+    namespaceName: 
+    className: RingDispenser
   - hash:
       serializedVersion: 2
       Hash: efa7ef237e3d10bef497dee1e6135a83
@@ -1822,4 +1831,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/vassilis/Desktop/Virtual FTC Sim Builds/Robot Controller.exe
+  playerPath: C:/Users/user/Desktop/Builds/Robot Controller.exe

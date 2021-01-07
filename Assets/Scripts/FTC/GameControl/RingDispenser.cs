@@ -39,7 +39,6 @@ public class RingDispenser : MonoBehaviour
         {
             index1 = -index1;
         }
-        print(index1);
 
         GameObject ring = (GameObject)Instantiate(prefab, pos.position, Quaternion.Euler(0f,index1,90f));
         var rigid = ring.GetComponent<Rigidbody>();
@@ -51,7 +50,7 @@ public class RingDispenser : MonoBehaviour
     void FixedUpdate()
     {
         gos = GameObject.FindGameObjectsWithTag("Ring");
-        if (gameTimer.getGameType() != "Auto")
+        if (gameTimer.getGameType() != "Auto" && gameTimer.getGameStarted())
         {
             if (Time.realtimeSinceStartup - previousRealTime > timeBetween)
             {
@@ -69,7 +68,6 @@ public class RingDispenser : MonoBehaviour
                         spawn(rightPos);
                     }
                 }
-                print(lastSpawn);
             }
         }
         foreach (GameObject a in gos)

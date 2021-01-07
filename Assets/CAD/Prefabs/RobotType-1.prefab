@@ -470,8 +470,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drivetrainGearRatio: 20
   encoderTicksPerRev: 126
-  wheelSeparationWidth: 15
-  wheelSeparationLength: 15
+  wheelSeparationWidth: 0.4
+  wheelSeparationLength: 0.4
   wheelRadius: 2
   motorRPM: 340
   shooter: {fileID: 4468977922145075771}

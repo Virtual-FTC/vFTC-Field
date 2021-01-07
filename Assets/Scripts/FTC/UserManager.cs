@@ -28,7 +28,7 @@ public class UserManager : MonoBehaviour
     private WebsiteCommands websiteCommands = new WebsiteCommands();
     private bool currentGameStart = false;
     private string currentGameSetup = "A";
-    private string currentGameType = "Freeplay";
+    private string currentGameType = "";
 
     private RobotCustomizer robotCustomizer;
     private GameTimer gameTimer;
@@ -195,33 +195,13 @@ public class UserManager : MonoBehaviour
     #endregion
 
     #region Robot Selector
-    public void OnRightButtonClick()
+    public void OnButtonClick(int index)
     {
-        m_index += 1;
-
-        if (m_index < m_Robots.Length)
+        if (index < m_Robots.Length)
         {
-            m_Robots[m_index - 1].SetActive(false);
+            m_Robots[m_index].SetActive(false);
+            m_index = index;
             m_Robots[m_index].SetActive(true);
-        }
-        else
-        {
-            m_index = m_Robots.Length - 1;
-        }
-        robotCustomizer = m_Robots[m_index].GetComponent<RobotCustomizer>();
-    }
-    public void OnLeftButtonClick()
-    {
-        m_index -= 1;
-
-        if (m_index > -1)
-        {
-            m_Robots[m_index + 1].SetActive(false);
-            m_Robots[m_index].SetActive(true);
-        }
-        else
-        {
-            m_index = 0;
         }
         robotCustomizer = m_Robots[m_index].GetComponent<RobotCustomizer>();
     }
@@ -235,14 +215,11 @@ public class UserManager : MonoBehaviour
             setSpawn(websiteCommands.position);
         }
         // Changing robot
-        if (websiteCommands.robotType > m_index)
+        if (websiteCommands.robotType != m_index)
         {
-            OnRightButtonClick();
+            OnButtonClick(websiteCommands.robotType);
         }
-        else if (websiteCommands.robotType < m_index)
-        {
-            OnLeftButtonClick();
-        }
+   
         // Reset field
         if (websiteCommands.resetField)
         {
@@ -259,18 +236,22 @@ public class UserManager : MonoBehaviour
 
 
         // Start game
-        if (websiteCommands.startGame)
+        if (websiteCommands.startGame && !currentGameStart)
         {
             currentGameStart = true;
+            gameTimer.startGame();
         }
-        else
+        else if(!websiteCommands.startGame && currentGameStart)
         {
             currentGameStart = false;
+            gameTimer.stopGame();
         }
+
         // Game type
         if (websiteCommands.gameType != currentGameType)
         {
-            
+            gameTimer.setGameType(websiteCommands.gameType);
+            currentGameType = websiteCommands.gameType;
         }
 
         // Robot config
@@ -304,7 +285,7 @@ public class UserManager : MonoBehaviour
         public int robotType;
         public bool resetField;
         public bool startGame;
-        public string gameType;
+        public string gameType = "";
         public string gameSetup;
         public bool incSize;
         public bool decSize;

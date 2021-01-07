@@ -75,6 +75,11 @@ public class GameTimer : MonoBehaviour
         return gameType;
     }
 
+    public bool getGameStarted()
+    {
+        return startToggle;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -85,6 +90,7 @@ public class GameTimer : MonoBehaviour
         }
         else if (gameType == "Freeplay")
         {
+            
             timer = Time.realtimeSinceStartup - previousRealTime;
             timerText = "" + (int)timer / 60 + " : " + (int)timer % 60;
             if (timer < 10)

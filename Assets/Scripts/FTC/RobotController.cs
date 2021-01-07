@@ -9,6 +9,8 @@ using UnityEngine;
 
 public class RobotController : MonoBehaviour
 {
+    public float driveMulti = 10;
+
     private int RXrecv;
     private Socket RXnewsock;
     private byte[] RXdata;
@@ -44,6 +46,8 @@ public class RobotController : MonoBehaviour
     public float wheelRadius = 2.0f;
     public float motorRPM = 340.0f;
 
+    private Rigidbody rb;
+
     private float previousRealTime;
 
     [Header("Subsystem Controls")]
@@ -53,14 +57,19 @@ public class RobotController : MonoBehaviour
     private FtcShooterControl shooterControl;
     private IntakeControl intakeControl;
 
+    private Thread sendThread;
+    private Thread receiveThread;
+
     private void Start()
     {
+        rb = GetComponent<Rigidbody>();
+
         previousRealTime = Time.realtimeSinceStartup;
         Console.WriteLine("Started.....");
-        Thread receiveThread = new Thread(receiveFromRC);
+        receiveThread = new Thread(receiveFromRC);
         receiveThread.Start();
 
-        Thread sendThread = new Thread(sendToRC);
+        sendThread = new Thread(sendToRC);
         sendThread.Start();
 
         shooterControl = shooter.GetComponent<FtcShooterControl>();
@@ -83,6 +92,9 @@ public class RobotController : MonoBehaviour
     {
         TXnewsock.Close();
         RXnewsock.Close();
+        sendThread.Abort();
+        receiveThread.Abort();
+
     }
 
     void sendToRC() {
@@ -182,11 +194,14 @@ public class RobotController : MonoBehaviour
 
         //print(linearVelocityX + " : " + linearVelocityY + " : " + angularVelocity);
 
-        transform.Translate(new Vector3(-linearVelocityY * deltaTime, -linearVelocityX * deltaTime, 0f));
+        //transform.Translate(new Vector3(-linearVelocityY * deltaTime, -linearVelocityX * deltaTime, 0f));
+        rb.velocity = new Vector3(linearVelocityY * Time.deltaTime * driveMulti,0f , linearVelocityX * Time.deltaTime * driveMulti);
+        
 
         var angVelZ = (angularVelocity / (Mathf.PI / 180f)) * deltaTime;
 
-        transform.Rotate(Vector3.down, angVelZ);
+        //transform.Rotate(Vector3.back, angVelZ);
+        rb.angularVelocity = new Vector3(0f,0f, angVelZ);
 
         frontLeftWheelEnc += (motorRPM / 60) * frontLeftWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
         frontRightWheelEnc += (motorRPM / 60) * frontRightWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
