@@ -50,7 +50,7 @@ public class RingDispenser : MonoBehaviour
     void FixedUpdate()
     {
         gos = GameObject.FindGameObjectsWithTag("Ring");
-        if (gameTimer.getGameType() != "Auto" && gameTimer.getGameStarted())
+        if (gameTimer.getGameType() != "auto" && gameTimer.getGameStarted())
         {
             if (Time.realtimeSinceStartup - previousRealTime > timeBetween)
             {

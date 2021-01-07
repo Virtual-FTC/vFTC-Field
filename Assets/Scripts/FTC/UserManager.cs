@@ -33,6 +33,11 @@ public class UserManager : MonoBehaviour
     private RobotCustomizer robotCustomizer;
     private GameTimer gameTimer;
 
+    private Thread thread;
+
+    private float previousRealTime;
+    private bool resetCoolDown = false;
+
     private void Start()
     {
         setSpawn(0);
@@ -41,8 +46,8 @@ public class UserManager : MonoBehaviour
         robotCustomizer = m_Robots[m_index].GetComponent<RobotCustomizer>();
         gameTimer = GetComponent<GameTimer>();
 
-        Console.WriteLine("Started.....");
-        Thread thread = new Thread(startTCPServer);
+        print("Started.....");
+        thread = new Thread(startTCPServer);
         thread.Start();
     }
 
@@ -50,6 +55,7 @@ public class UserManager : MonoBehaviour
     {
         client.Close();
         newsock.Close();
+        thread.Abort();
     }
 
     // Some sort of TCP connection to the website to handle user pref like which robot, position of the robot, dimensions of the robot, color of the robot, team number of the robot, start/stop game, and select which game mode to run (freeplay, autonomous, teleop, and full match) 
@@ -67,7 +73,7 @@ public class UserManager : MonoBehaviour
 
         newsock.Bind(ipep);
         newsock.Listen(10);
-        print("Waiting for a client...");
+        print("Waiting for a TCP client...");
         client = newsock.Accept();
         IPEndPoint clientep =
                      (IPEndPoint)client.RemoteEndPoint;
@@ -105,32 +111,6 @@ public class UserManager : MonoBehaviour
         newsock.Close();
         startTCPServer();
     }
-
-    /*
-    void receiveFromWeb()
-    {
-        RXdata = new byte[1024];
-        IPEndPoint ipep = new IPEndPoint(IPAddress.Any, 9052);
-
-        RXnewsock = new Socket(AddressFamily.InterNetwork,
-                      SocketType.Stream, ProtocolType.Tcp);
-
-        RXnewsock.Bind(ipep);
-        RXnewsock.Listen(10)
-        Console.WriteLine("Waiting for a Tcp client...");
-
-        IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
-        RXRemote = (EndPoint)(sender);
-
-        while (true)
-        {
-            RXdata = new byte[1024];
-            RXrecv = RXnewsock.ReceiveFrom(RXdata, ref RXRemote);
-            string message = Encoding.ASCII.GetString(RXdata, 0, RXrecv);
-            websiteCommands = WebsiteCommands.CreateFromJSON(message);
-        }
-    }
-    */
     #endregion 
 
     #region Game Control
@@ -219,12 +199,18 @@ public class UserManager : MonoBehaviour
         {
             OnButtonClick(websiteCommands.robotType);
         }
-   
+
         // Reset field
-        if (websiteCommands.resetField)
+        if (websiteCommands.resetField && !resetCoolDown)
         {
+            resetCoolDown = true;
+            previousRealTime = Time.realtimeSinceStartup;
             resetField(websiteCommands.gameSetup);
             resetRobot();
+        }
+        else if (Time.realtimeSinceStartup - previousRealTime > 5)
+        {
+            resetCoolDown = false;
         }
         // Game setup
         if (websiteCommands.gameSetup != currentGameSetup)

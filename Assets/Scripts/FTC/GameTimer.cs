@@ -14,7 +14,7 @@ public class GameTimer : MonoBehaviour
 
     private bool startToggle = false;
 
-    private string gameType = "Freeplay";
+    private string gameType = "freeplay";
 
     private float previousRealTime;
 
@@ -30,12 +30,12 @@ public class GameTimer : MonoBehaviour
         startToggle = true;
         previousRealTime = Time.realtimeSinceStartup;
 
-        if (gameType == "Auto")
+        if (gameType == "auto")
         {
             startTime = 30f;
             timer = 30f;
         }
-        else if (gameType == "Teleop")
+        else if (gameType == "teleop")
         {
             startTime = 120f;
             timer = 120f;
@@ -88,9 +88,8 @@ public class GameTimer : MonoBehaviour
             timerText = "- : --";
             timerTextUI.text = timerText;
         }
-        else if (gameType == "Freeplay")
+        else if (gameType == "freeplay")
         {
-            
             timer = Time.realtimeSinceStartup - previousRealTime;
             timerText = "" + (int)timer / 60 + " : " + (int)timer % 60;
             if (timer < 10)
@@ -99,7 +98,7 @@ public class GameTimer : MonoBehaviour
             }
             timerTextUI.text = timerText;
         }
-        else if (gameType == "Auto" || gameType == "Teleop")
+        else if (gameType == "auto" || gameType == "teleop")
         {
             if (timer <= 0)
             {
