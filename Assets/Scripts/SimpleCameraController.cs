@@ -72,9 +72,9 @@ namespace Unity.RenderStreaming
             {
                 Vector3 rotatedTranslation = Quaternion.Euler(pitch, yaw, roll) * translation;
 
-                x += rotatedTranslation.x;
-                y += rotatedTranslation.y;
-                z += rotatedTranslation.z;
+                //x += rotatedTranslation.x;
+                //y += rotatedTranslation.y;
+                //z += rotatedTranslation.z;
             }
 
             public void LerpTowards(CameraState target, float positionLerpPct, float rotationLerpPct)
@@ -83,15 +83,15 @@ namespace Unity.RenderStreaming
                 pitch = Mathf.Lerp(pitch, target.pitch, rotationLerpPct);
                 roll = Mathf.Lerp(roll, target.roll, rotationLerpPct);
 
-                x = Mathf.Lerp(x, target.x, positionLerpPct);
-                y = Mathf.Lerp(y, target.y, positionLerpPct);
-                z = Mathf.Lerp(z, target.z, positionLerpPct);
+                //x = Mathf.Lerp(x, target.x, positionLerpPct);
+                //y = Mathf.Lerp(y, target.y, positionLerpPct);
+                //z = Mathf.Lerp(z, target.z, positionLerpPct);
             }
 
             public void UpdateTransform(Transform t)
             {
-                t.eulerAngles = new Vector3(pitch, yaw, roll);
-                t.position = new Vector3(x, y, z);
+                //t.eulerAngles = new Vector3(pitch, yaw, roll);
+                //t.position = new Vector3(x, y, z);
             }
         }
 

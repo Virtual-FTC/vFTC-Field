@@ -75,12 +75,14 @@ ScriptsOnlyBuild:
     - Unity.RenderStreaming.CameraStreamer
     - Unity.RenderStreaming.RenderStreaming
     - Unity.RenderStreaming.SimpleCameraController
+    - Unity.RenderStreaming.UIController
     - UserManager
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -242,6 +244,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6236}
     - Class: 114
+      Script: {instanceID: 6244}
+    - Class: 114
       Script: {instanceID: 6310}
     - Class: 114
       Script: {instanceID: 6318}
@@ -280,6 +284,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 8282}
     - Class: 114
+      Script: {instanceID: 8414}
+    - Class: 114
       Script: {instanceID: 8438}
     - Class: 115
       Script: {instanceID: 0}
@@ -298,6 +304,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -462,7 +470,7 @@ ScriptsOnlyBuild:
     className: DepthOfField
   - hash:
       serializedVersion: 2
-      Hash: a7e4714c53ccfdc4d52e926af97a5f6e
+      Hash: 8c9816376a2387db990ab0a591aa5366
     assemblyName: Unity.Template.RenderStreaming.Runtime.dll
     namespaceName: 
     className: RobotController
