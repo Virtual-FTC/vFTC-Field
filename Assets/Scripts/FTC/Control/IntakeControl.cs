@@ -20,10 +20,13 @@ public class IntakeControl : MonoBehaviour
 
     private float timer = 0.0f;
 
+    private int resetNum;
+
     // Intake Motor Control
     void Start()
     {
         retractIntake();
+        resetNum = numBalls;
     }
 
 
@@ -74,6 +77,11 @@ public class IntakeControl : MonoBehaviour
     void updateText()
     {
         powerCellText.text = coliderTag + ": " + numBalls;
+    }
+
+    public void resetBalls()
+    {
+        numBalls = resetNum;
     }
 
     public int getNumberBalls()

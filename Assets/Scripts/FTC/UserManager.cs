@@ -38,8 +38,14 @@ public class UserManager : MonoBehaviour
     private float previousRealTime;
     private bool resetCoolDown = false;
 
+    private ScoreKeeper scoreKeeper;
+    private IntakeControl intake;
+
     private void Start()
     {
+        scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
+        intake = GameObject.Find("IntakeWheels").GetComponent<IntakeControl>();
+
         setSpawn(0);
         resetField("A");
 
@@ -124,6 +130,7 @@ public class UserManager : MonoBehaviour
 
     private void resetRobot()
     {
+        intake.resetBalls();
         var newRotation = m_Robots[m_index].transform.rotation.eulerAngles;
         newRotation.x = -90f;
         newRotation.y = 0f;
@@ -131,12 +138,15 @@ public class UserManager : MonoBehaviour
         var newRotationQ = m_Robots[m_index].transform.rotation;
         newRotationQ.eulerAngles = newRotation;
 
+        //
+
         m_Robots[m_index].transform.position = transform.position;
         m_Robots[m_index].transform.rotation = newRotationQ;
     }
 
     private void resetField(string type)
     {
+        scoreKeeper.resetScore();
         Destroy(setup);
         int index;
         if (type == "A")
