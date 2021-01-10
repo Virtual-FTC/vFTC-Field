@@ -89,8 +89,10 @@ public class RobotCustomizer : MonoBehaviour
     // Changes settings
     private void FixedUpdate()
     {
+        /*
         if (decreaseDis)
         {
+            print("Dec wheel 2");
             if (frontAxel.transform.localPosition.y < 0.15f && backAxel.transform.localPosition.y > 0.285f)
             {
                 frontAxel.transform.position = new Vector3(frontAxel.transform.position.x,
@@ -103,6 +105,7 @@ public class RobotCustomizer : MonoBehaviour
         }
         else if (increaseDis)
         {
+            print("Inc wheel 2");
             if (frontAxel.transform.localPosition.y > 0.05f && backAxel.transform.localPosition.y < 0.385f)
             {
                 frontAxel.transform.position = new Vector3(frontAxel.transform.position.x,
@@ -114,6 +117,7 @@ public class RobotCustomizer : MonoBehaviour
         }
         else if (decreaseSize)
         {
+            print("Dec size 2");
             if (robotBody.transform.localScale.x > 0.51f)
             {
                 robotBody.transform.localScale += scaleChange * Time.deltaTime;
@@ -121,10 +125,12 @@ public class RobotCustomizer : MonoBehaviour
         }
         else if (increaseSize)
         {
+            print("Inc size 2");
             if (robotBody.transform.localScale.x < 0.99f)
             {
                 robotBody.transform.localScale -= scaleChange * Time.deltaTime;
             }
         }
+        */
     }
 }

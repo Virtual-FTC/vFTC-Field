@@ -253,18 +253,22 @@ public class UserManager : MonoBehaviour
         // Robot config
         if (websiteCommands.incSize)
         {
+            print("Increase size 1");
             robotCustomizer.IncreaseRobotSize_PointerDown();
         }
         else if (websiteCommands.decSize)
         {
+            print("Dec size 1");
             robotCustomizer.DecreaseRobotSize_PointerDown();
         }
         else if (websiteCommands.incWheel)
         {
+            print("Increase wheel 1");
             robotCustomizer.IncAxelDis_PointerDown();
         }
         else if (websiteCommands.decWheel)
         {
+            print("Dec wheel 1");
             robotCustomizer.DecAxelDis_PointerDown();
         }
         else

@@ -20,13 +20,12 @@ public class IntakeControl : MonoBehaviour
 
     private float timer = 0.0f;
 
-    private int resetNum;
+    private int resetNum = 3;
 
     // Intake Motor Control
     void Start()
     {
         retractIntake();
-        resetNum = numBalls;
     }
 
 

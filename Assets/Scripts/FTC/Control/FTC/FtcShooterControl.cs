@@ -41,8 +41,8 @@ public class FtcShooterControl : MonoBehaviour
             newPosition.y += 0.0f;
 
             var newRotation = transform.rotation.eulerAngles;
-            newRotation.x = 90f - 24.84f;
-            newRotation.y = 90f;
+            newRotation.x = 0f;
+            newRotation.y = 54.9f;
             newRotation.z = 0f;
             var newRotationQ = transform.rotation;
             newRotationQ.eulerAngles = newRotation;
