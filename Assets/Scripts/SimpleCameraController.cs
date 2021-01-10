@@ -231,6 +231,7 @@ namespace Unity.RenderStreaming
             return direction;
         }
 
+        /*
         void FixedUpdate()
         {
             if (m_keyboard.uKey.isPressed)
@@ -277,6 +278,7 @@ namespace Unity.RenderStreaming
             m_InterpolatingCameraState.UpdateTransform(transform);
         }
 
+        */
         void ResetCamera()
         {
             m_InitialCameraState.UpdateTransform(transform);
