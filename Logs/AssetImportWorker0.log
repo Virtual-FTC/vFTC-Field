@@ -1,53 +1,177 @@
 Using pre-set license
-Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 15358 MB
-BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
  COMMAND LINE ARGUMENTS:
-C:\Program Files\Unity\Hub\Editor\2020.2.1f1\Editor\Unity.exe
+/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MacOS/Unity
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/user/Documents/GitHub/vFTC-Field
+/Users/Sundeep/Data/FTC/VirtualFTC/vFTC-Field-Repo/vFTC-Field
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49727
-Successfully changed project path to: C:/Users/user/Documents/GitHub/vFTC-Field
-C:/Users/user/Documents/GitHub/vFTC-Field
+61149
+Successfully changed project path to: /Users/Sundeep/Data/FTC/VirtualFTC/vFTC-Field-Repo/vFTC-Field
+/Users/Sundeep/Data/FTC/VirtualFTC/vFTC-Field-Repo/vFTC-Field
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 169.52 ms, found 1 plugins.
-Preloading 1 native plugins for Editor in 3.87 ms.
+Refreshing native plugins compatible for Editor in 100.48 ms, found 2 plugins.
+Preloading 1 native plugins for Editor in 26.86 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
-[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/user/Documents/GitHub/vFTC-Field/Assets
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/Sundeep/Data/FTC/VirtualFTC/vFTC-Field-Repo/vFTC-Field/Assets
 GfxDevice: creating device client; threaded=0
-Direct3D:
-    Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA Tesla T4 (ID=0x1eb8)
-    Vendor:   
-    VRAM:     15158 MB
-    Driver:   27.21.14.5239
+2021-01-11 22:37:46.733 Unity[49469:2841040] Color LCD preferred device: Intel(R) Iris(TM) Plus Graphics 640 (low power)
+2021-01-11 22:37:46.733 Unity[49469:2841040] Metal devices available: 1
+2021-01-11 22:37:46.733 Unity[49469:2841040] 0: Intel(R) Iris(TM) Plus Graphics 640 (low power)
+2021-01-11 22:37:46.734 Unity[49469:2841040] Using device Intel(R) Iris(TM) Plus Graphics 640 (low power)
+Initializing Metal device caps: Intel(R) Iris(TM) Plus Graphics 640
 Initialize mono
-Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
-Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
-Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56196
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56469
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.125020 seconds.
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.1f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2020.2.1f1/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.004932 seconds.
+Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 125.70 ms, found 1 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 80.24 ms, found 2 plugins.
+Preloading 1 native plugins for Editor in 2.02 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  4.452 seconds
+- Completed reload, in  2.459 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.165929 seconds.
+Registered in 0.005819 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 86.62 ms, found 2 plugins.
+Preloading 1 native plugins for Editor in 1.75 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.994 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.2.1f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.86 ms, found 2 plugins.
+Preloading 1 native plugins for Editor in 2.99 ms.
+Unloading 3696 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 302.1 MB.
+System memory in use after: 302.3 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 4158.
+Total: 8.754647 ms (FindLiveObjects: 1.311612 ms CreateObjectMapping: 0.420117 ms MarkObjects: 6.439170 ms  DeleteObjects: 0.580090 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/FTC/Control/FRC/ShooterControl.cs
+  artifactKey: Guid(a8ddd3e65a0129442a37e3a03956d01c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/Control/FRC/ShooterControl.cs using Guid(a8ddd3e65a0129442a37e3a03956d01c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83044be66e0b931e2de2d403bef40fd5') in 0.740122 seconds
+  Import took 0.748690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.037972 seconds.
+  path: Assets/Scripts/FTC/Control
+  artifactKey: Guid(296a4193e16d64d408cee8c122e67625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/Control using Guid(296a4193e16d64d408cee8c122e67625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'efe3397c293d9894669536fd439a95ef') in 0.003132 seconds
+  Import took 0.013115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.530398 seconds.
+  path: Assets/Scripts/FTC/GameTimer.cs
+  artifactKey: Guid(bcb1b43c7b6af484d81be43626f3d1af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/GameTimer.cs using Guid(bcb1b43c7b6af484d81be43626f3d1af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c3311068eb35134a940ea775e27e873') in 0.003878 seconds
+  Import took 0.014480 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.443576 seconds.
+  path: Assets/Scripts/FTC/RobotController.cs
+  artifactKey: Guid(c297458bda122574d9ef105ea896699b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/RobotController.cs using Guid(c297458bda122574d9ef105ea896699b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69390c5d2cb22b5bbd30695c28071a3c') in 0.002170 seconds
+  Import took 0.010853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001152 seconds.
+  path: Assets/Scripts/FTC/RobotController.cs
+  artifactKey: Guid(c297458bda122574d9ef105ea896699b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/RobotController.cs using Guid(c297458bda122574d9ef105ea896699b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69390c5d2cb22b5bbd30695c28071a3c') in 0.002463 seconds
+  Import took 0.011617 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.829053 seconds.
+  path: Assets/Scripts/FTC/RobotCustomizer.cs
+  artifactKey: Guid(c0d403ae7a9b0884c8dba507dac0eedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/RobotCustomizer.cs using Guid(c0d403ae7a9b0884c8dba507dac0eedb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07aaccd47430b7d2b67f3f7f02c5a366') in 0.002405 seconds
+  Import took 0.011211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.992930 seconds.
+  path: Assets/Scripts/FTC/UserManager.cs
+  artifactKey: Guid(219691a4f63ba6243941f447567a17cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/UserManager.cs using Guid(219691a4f63ba6243941f447567a17cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b32ad1002f1e9162ebc5c0df308e2f23') in 0.002295 seconds
+  Import took 0.009775 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.387612 seconds.
+  path: Assets/Scripts/FTC/Control/CommandProcessor.cs
+  artifactKey: Guid(101ee7ca1b5131e46bf20809aa18c671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/Control/CommandProcessor.cs using Guid(101ee7ca1b5131e46bf20809aa18c671) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0970aa884c2691c4f92eb4bb60448e53') in 0.003244 seconds
+  Import took 0.011266 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003043 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 2 plugins.
+Preloading 1 native plugins for Editor in 1.92 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.786 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.83 ms, found 2 plugins.
+Preloading 1 native plugins for Editor in 2.36 ms.
+Unloading 3414 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 295.1 MB.
+System memory in use after: 295.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4160.
+Total: 4.946592 ms (FindLiveObjects: 0.554743 ms CreateObjectMapping: 0.323236 ms MarkObjects: 3.993855 ms  DeleteObjects: 0.070871 ms)
+
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 4.76 ms, found 2 plugins.
+Preloading 1 native plugins for Editor in 1.80 ms.
+Unloading 10 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 228.5 MB.
+System memory in use after: 228.7 MB.
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 4160.
+Total: 3.328241 ms (FindLiveObjects: 0.479873 ms CreateObjectMapping: 0.199413 ms MarkObjects: 2.595996 ms  DeleteObjects: 0.051530 ms)
+

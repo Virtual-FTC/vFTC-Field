@@ -9,9 +9,6 @@ using UnityEngine;
 
 public class RobotController : MonoBehaviour
 {
-    public float driveMulti = 10;
-    public float angMulti = 10;
-
     private int RXrecv;
     private Socket RXnewsock;
     private byte[] RXdata;
@@ -41,10 +38,10 @@ public class RobotController : MonoBehaviour
     private float motorPower8;
 
     public float drivetrainGearRatio = 20f;
-    public float encoderTicksPerRev = 126f;
-    public float wheelSeparationWidth = 0.0f;
-    public float wheelSeparationLength = 0.0f;
-    public float wheelRadius = 2.0f;
+    public float encoderTicksPerRev = 28f;
+    public float wheelSeparationWidth = 0.4f;
+    public float wheelSeparationLength = 0.4f;
+    public float wheelRadius = 0.0508f;
     public float motorRPM = 340.0f;
 
     private Rigidbody rb;
@@ -165,6 +162,14 @@ public class RobotController : MonoBehaviour
             if (message.Contains("reset"))
             {
                 reconnectEncoderSocket = true;
+                frontLeftWheelCmd  = 0f;
+                frontRightWheelCmd = 0f;
+                backLeftWheelCmd   = 0f;
+                backRightWheelCmd  = 0f;
+                frontLeftWheelEnc  = 0f;
+                frontRightWheelEnc = 0f;
+                backLeftWheelEnc   = 0f;
+                backRightWheelEnc  = 0f;
             }
             else
             {
@@ -184,49 +189,30 @@ public class RobotController : MonoBehaviour
     private void driveRobot()
     {
         canSendEncoder = true;
-        float deltaTime = Time.realtimeSinceStartup - previousRealTime;
-
         // Strafer Drivetrain Control
-        var linearVelocityX = (frontLeftWheelCmd + frontRightWheelCmd + backLeftWheelCmd + backRightWheelCmd) * (wheelRadius / 4);
-
-        var linearVelocityY = (-frontLeftWheelCmd + frontRightWheelCmd + backLeftWheelCmd - backRightWheelCmd) * (wheelRadius / 4);
-
-        var angularVelocity = (-frontLeftWheelCmd + frontRightWheelCmd - backLeftWheelCmd + backRightWheelCmd) * (wheelRadius / (4 * (wheelSeparationWidth + wheelSeparationLength)));
-
-        //print(linearVelocityX + " : " + linearVelocityY + " : " + angularVelocity);
-
-        //transform.Translate(new Vector3(-linearVelocityY * deltaTime, -linearVelocityX * deltaTime, 0f));
-        Vector3 forward = new Vector3(linearVelocityY * Time.deltaTime * driveMulti,0f , -linearVelocityX * Time.deltaTime * driveMulti);
-
+        var linearVelocityX = ((frontLeftWheelCmd + frontRightWheelCmd + backLeftWheelCmd + backRightWheelCmd)/4) * ((motorRPM/60) * 2 * wheelRadius * Mathf.PI);
+        var linearVelocityY = ((-frontLeftWheelCmd + frontRightWheelCmd + backLeftWheelCmd - backRightWheelCmd)/4) * ((motorRPM/60) * 2 * wheelRadius * Mathf.PI);
+        var angularVelocity = (((-frontLeftWheelCmd + frontRightWheelCmd - backLeftWheelCmd + backRightWheelCmd)/3) * ((motorRPM/60) * 2 * wheelRadius * Mathf.PI) / (Mathf.PI * wheelSeparationWidth)) * 2 * Mathf.PI;
+        // Apply Local Velocity to Rigid Body        
         var locVel = transform.InverseTransformDirection(rb.velocity);
-        locVel.x = -linearVelocityY * Time.deltaTime * driveMulti;
-        locVel.y = -linearVelocityX * Time.deltaTime * driveMulti;
+        locVel.x = -linearVelocityY;
+        locVel.y = -linearVelocityX;
         locVel.z = 0f;
         rb.velocity = transform.TransformDirection(locVel);
-
-        //rb.velocity = forward;
-        
-
-        var angVelZ = (angularVelocity / (Mathf.PI / 180f)) * deltaTime;
-
-        //transform.Rotate(Vector3.back, angVelZ);
-        rb.angularVelocity = new Vector3(0f, -angVelZ * angMulti, 0f);
-
-        frontLeftWheelEnc += (motorRPM / 60) * frontLeftWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
-        frontRightWheelEnc += (motorRPM / 60) * frontRightWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
-        backLeftWheelEnc += (motorRPM / 60) * backLeftWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
-        backRightWheelEnc += (motorRPM / 60) * backRightWheelCmd * deltaTime * encoderTicksPerRev * drivetrainGearRatio;
-
-        previousRealTime = Time.realtimeSinceStartup;
+        //Apply Angular Velocity to Rigid Body
+        rb.angularVelocity = new Vector3(0f, -angularVelocity, 0f);
+        //Encoder Calculations 
+        frontLeftWheelEnc += (motorRPM / 60) * frontLeftWheelCmd * Time.deltaTime * encoderTicksPerRev * drivetrainGearRatio;
+        frontRightWheelEnc += (motorRPM / 60) * frontRightWheelCmd * Time.deltaTime * encoderTicksPerRev * drivetrainGearRatio;
+        backLeftWheelEnc += (motorRPM / 60) * backLeftWheelCmd * Time.deltaTime * encoderTicksPerRev * drivetrainGearRatio;
+        backRightWheelEnc += (motorRPM / 60) * backRightWheelCmd * Time.deltaTime * encoderTicksPerRev * drivetrainGearRatio;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         driveRobot();
-
         shooterControl.Commands.Process();
         intakeControl.Commands.Process();
-
     }
 
     [System.Serializable]
