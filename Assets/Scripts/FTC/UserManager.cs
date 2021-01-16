@@ -44,7 +44,7 @@ public class UserManager : MonoBehaviour
     private void Start()
     {
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
-        intake = GameObject.Find("IntakeWheels").GetComponent<IntakeControl>();
+        intake = GameObject.Find("Intake").GetComponent<IntakeControl>();
 
         setSpawn(0);
         resetField("A");

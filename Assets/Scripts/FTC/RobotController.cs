@@ -51,9 +51,11 @@ public class RobotController : MonoBehaviour
     [Header("Subsystem Controls")]
     public GameObject shooter;
     public GameObject intake;
+    public GameObject grabber;
 
-    private FtcShooterControl shooterControl;
+    private ShooterControl shooterControl;
     private IntakeControl intakeControl;
+    private GrabberControl grabberControl;
 
     private Thread sendThread;
     private Thread receiveThread;
@@ -70,7 +72,7 @@ public class RobotController : MonoBehaviour
         sendThread = new Thread(sendToRC);
         sendThread.Start();
 
-        shooterControl = shooter.GetComponent<FtcShooterControl>();
+        shooterControl = shooter.GetComponent<ShooterControl>();
         shooterControl.Commands.Add(() => motorPower6 > 0, shooterControl.shooting);
         shooterControl.Commands.Add(() => motorPower7 > 0 && motorPower8 > 0, () =>
         {
@@ -84,6 +86,16 @@ public class RobotController : MonoBehaviour
             intakeControl.deployIntake();
         });
         intakeControl.Commands.Add(() => motorPower5 == 0, intakeControl.retractIntake);
+
+        grabberControl = grabber.GetComponent<GrabberControl>();
+        grabberControl.Commands.Add(() => motorPower8 > 0, () =>
+        {
+            grabberControl.startGrab();
+        });
+        grabberControl.Commands.Add(() => motorPower8 == 0, () =>
+        {
+            grabberControl.stopGrab();
+        });
     }
 
     private void OnDestroy()
@@ -213,6 +225,7 @@ public class RobotController : MonoBehaviour
         driveRobot();
         shooterControl.Commands.Process();
         intakeControl.Commands.Process();
+        grabberControl.Commands.Process();
     }
 
     [System.Serializable]
