@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Template.RenderStreaming.Runtime", "Unity.Template.RenderStreaming.Runtime.csproj", "{812A704F-B0B3-F5F9-4C49-6340905241CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{08DF4C9B-ABBA-0D63-C8D6-A6DC63A45EB3}"
