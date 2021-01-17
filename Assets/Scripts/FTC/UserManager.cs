@@ -29,6 +29,7 @@ public class UserManager : MonoBehaviour
     private bool currentGameStart = false;
     private string currentGameSetup = "A";
     private string currentGameType = "";
+    private int currentCam = 0;
 
     private RobotCustomizer robotCustomizer;
     private GameTimer gameTimer;
@@ -40,11 +41,13 @@ public class UserManager : MonoBehaviour
 
     private ScoreKeeper scoreKeeper;
     private IntakeControl intake;
+    private CameraPosition camera;
 
     private void Start()
     {
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
         intake = GameObject.Find("Intake").GetComponent<IntakeControl>();
+        camera = GameObject.Find("Render Streaming Camera").GetComponent<CameraPosition>();
 
         setSpawn(0);
         resetField("A");
@@ -249,8 +252,16 @@ public class UserManager : MonoBehaviour
             gameTimer.setGameType(websiteCommands.gameType);
             currentGameType = websiteCommands.gameType;
         }
+        
+        // Cmaera control
+        if (websiteCommands.cam != currentCam)
+        {
+            currentCam = websiteCommands.cam;
+            camera.switchCamera(currentCam);
+        }
 
         // Robot config
+        /*
         if (websiteCommands.incSize)
         {
             print("Increase size 1");
@@ -275,7 +286,7 @@ public class UserManager : MonoBehaviour
         {
             robotCustomizer.OnPointerUp();
         }
-
+        */
     }
 
     [System.Serializable]
@@ -287,10 +298,9 @@ public class UserManager : MonoBehaviour
         public bool startGame;
         public string gameType = "";
         public string gameSetup;
-        public bool incSize;
-        public bool decSize;
-        public bool incWheel;
-        public bool decWheel;
+        public float size;
+        public float wheelSize;
+        public int cam;
 
         public static WebsiteCommands CreateFromJSON(string jsonString)
         {

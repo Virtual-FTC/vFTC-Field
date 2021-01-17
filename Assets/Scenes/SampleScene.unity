@@ -10108,9 +10108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPositions:
-  - {fileID: 1996246789}
-  - {fileID: 1962518728}
   - {fileID: 1102155999}
+  - {fileID: 1962518728}
+  - {fileID: 1996246789}
   - {fileID: 1410753523}
   - {fileID: 422227432}
 --- !u!1 &1900729263

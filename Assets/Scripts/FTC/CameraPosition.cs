@@ -8,7 +8,7 @@ public class CameraPosition : MonoBehaviour
 
     void Awake()
     {
-        switchCamera(4);
+        switchCamera(0);
     }
 
     public void switchCamera(int index)
