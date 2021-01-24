@@ -253,7 +253,7 @@ public class UserManager : MonoBehaviour
             currentGameType = websiteCommands.gameType;
         }
         
-        // Cmaera control
+        // Camera control
         if (websiteCommands.cam != currentCam)
         {
             currentCam = websiteCommands.cam;

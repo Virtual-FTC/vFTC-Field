@@ -13,12 +13,12 @@ public class BlueGoal : MonoBehaviour
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
-        if (collision.collider.tag == tagOfGameObject)
+        if (collision.tag == tagOfGameObject)
         {
             scoreKeeper.addScoreBlue(pointsPerGoal);
-            Destroy(collision.collider.gameObject);
+            Destroy(collision.gameObject.transform.parent.gameObject);
         }
     }
 }
