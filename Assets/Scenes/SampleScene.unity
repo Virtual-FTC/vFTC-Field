@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 131.16846, g: 162.5249, b: 215.10962, a: 1}
+  m_IndirectSpecularColor: {r: 131.18066, g: 162.51404, b: 215.03296, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2231,8 +2231,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02533999, y: 0.11309832, z: 0.07593453}
-  m_Center: {x: 0.0038935393, y: 0.037047714, z: -0.025734842}
+  m_Size: {x: 0.004260607, y: 0.11040014, z: 0.049194455}
+  m_Center: {x: 0.0038516931, y: 0.0310373, z: -0.012364805}
 --- !u!114 &498353787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2371,8 +2371,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02533999, y: 0.11309832, z: 0.07593453}
-  m_Center: {x: 0.0038935393, y: 0.037047714, z: -0.025734842}
+  m_Size: {x: 0.0047135055, y: 0.11630142, z: 0.072951436}
+  m_Center: {x: 0.004042849, y: 0.029819012, z: -0.024243295}
 --- !u!114 &539594657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3125,8 +3125,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02533999, y: 0.11309832, z: 0.07593453}
-  m_Center: {x: 0.0038935393, y: 0.037047714, z: -0.025734842}
+  m_Size: {x: 0.004002273, y: 0.1100319, z: 0.042056203}
+  m_Center: {x: 0.0049163103, y: 0.032963544, z: -0.008795679}
 --- !u!114 &710147191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4136,8 +4136,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02533999, y: 0.11309832, z: 0.07593453}
-  m_Center: {x: 0.0038935393, y: 0.037047714, z: -0.025734842}
+  m_Size: {x: 0.004244983, y: 0.11550069, z: 0.04637909}
+  m_Center: {x: 0.0028618276, y: 0.030879855, z: -0.010957122}
 --- !u!114 &875179378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4464,8 +4464,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02533999, y: 0.11309832, z: 0.07593453}
-  m_Center: {x: 0.0038935393, y: 0.037047714, z: -0.025734842}
+  m_Size: {x: 0.004817903, y: 0.10791999, z: 0.05239308}
+  m_Center: {x: 0.0041220784, y: 0.03050968, z: -0.013964117}
 --- !u!114 &943271562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6172,8 +6172,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.22069031, y: 0.06407326, z: 0.09968907}
-  m_Center: {x: 0, y: 0.016592987, z: 0.01626074}
+  m_Size: {x: 0.22069031, y: 0.06407326, z: 0.14346662}
+  m_Center: {x: 0, y: 0.016592981, z: 0.03814947}
 --- !u!114 &1225031181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7817,7 +7817,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe3b01ce140fb94b897396ae19ed190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerCellText: {fileID: 0}
   maxNumberBalls: 3
   numBalls: 3
   timeOfBallContact: 0.25
@@ -9537,7 +9536,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe3b01ce140fb94b897396ae19ed190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerCellText: {fileID: 0}
   maxNumberBalls: 3
   numBalls: 3
   timeOfBallContact: 0.25
@@ -11351,8 +11349,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.02533999, y: 0.11309832, z: 0.07593453}
-  m_Center: {x: 0.0038935393, y: 0.037047714, z: -0.025734842}
+  m_Size: {x: 0.0054354668, y: 0.1014992, z: 0.053142905}
+  m_Center: {x: 0.0016290545, y: 0.03240651, z: -0.01433903}
 --- !u!114 &2105644967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20615,8 +20613,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.9281688, y: 0.07879165, z: 3.7451413}
-  m_Center: {x: 0.1537571, y: -0.033017308, z: 0.018753886}
+  m_Size: {x: 3.6635473, y: 0.07879165, z: 4.2589083}
+  m_Center: {x: 0.021446347, y: -0.033017308, z: 0.27563787}
 --- !u!4 &921525199901133136
 Transform:
   m_ObjectHideFlags: 0
@@ -49831,7 +49829,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fe3b01ce140fb94b897396ae19ed190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerCellText: {fileID: 0}
   maxNumberBalls: 3
   numBalls: 3
   timeOfBallContact: 0.25

@@ -9,7 +9,6 @@ public class IntakeControl : MonoBehaviour
     public CommandProcessor Commands = new CommandProcessor();
 
     [Header("Ball Pickup")]
-    public Text powerCellText;
     public int maxNumberBalls = 5;
     public int numBalls = 3;
     public float timeOfBallContact = 1.0f;
@@ -63,19 +62,12 @@ public class IntakeControl : MonoBehaviour
         {
             numBalls++;
             Destroy(collision.gameObject);
-            updateText();
         }
     }
 
     public void subtractBall()
     {
         numBalls--;
-        updateText();
-    }
-
-    void updateText()
-    {
-        powerCellText.text = coliderTag + ": " + numBalls;
     }
 
     public void resetBalls()

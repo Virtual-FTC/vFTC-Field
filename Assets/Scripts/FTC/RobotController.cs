@@ -88,9 +88,13 @@ public class RobotController : MonoBehaviour
         intakeControl.Commands.Add(() => motorPower5 == 0, intakeControl.retractIntake);
 
         grabberControl = grabber.GetComponent<GrabberControl>();
-        grabberControl.Commands.Add(() => motorPower8 > 0, () =>
+        grabberControl.Commands.Add(() => motorPower8 > 0 && motorPower8 <= 0.5 , () =>
         {
             grabberControl.startGrab();
+        });
+        grabberControl.Commands.Add(() => motorPower8 > 0.5, () =>
+        {
+            grabberControl.lift();
         });
         grabberControl.Commands.Add(() => motorPower8 == 0, () =>
         {
@@ -204,7 +208,7 @@ public class RobotController : MonoBehaviour
         // Strafer Drivetrain Control
         var linearVelocityX = ((frontLeftWheelCmd + frontRightWheelCmd + backLeftWheelCmd + backRightWheelCmd)/4) * ((motorRPM/60) * 2 * wheelRadius * Mathf.PI);
         var linearVelocityY = ((-frontLeftWheelCmd + frontRightWheelCmd + backLeftWheelCmd - backRightWheelCmd)/4) * ((motorRPM/60) * 2 * wheelRadius * Mathf.PI);
-        var angularVelocity = (((-frontLeftWheelCmd + frontRightWheelCmd - backLeftWheelCmd + backRightWheelCmd)/3) * ((motorRPM/60) * 2 * wheelRadius * Mathf.PI) / (Mathf.PI * wheelSeparationWidth)) * 2 * Mathf.PI;
+        var angularVelocity = (((-frontLeftWheelCmd + frontRightWheelCmd - backLeftWheelCmd + backRightWheelCmd) / 3) * ((motorRPM / 60) * 2 * wheelRadius * Mathf.PI) / (Mathf.PI * wheelSeparationWidth)) * 2 * Mathf.PI;
         // Apply Local Velocity to Rigid Body        
         var locVel = transform.InverseTransformDirection(rb.velocity);
         locVel.x = -linearVelocityY;

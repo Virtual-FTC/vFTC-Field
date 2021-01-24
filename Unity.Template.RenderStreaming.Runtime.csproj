@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\FTC\GameControl\RedWobbleGoal.cs" />
      <Compile Include="Assets\Scripts\ReceiveVideoViewer.cs" />
      <Compile Include="Assets\Scripts\FTC\GameControl\RedGoal.cs" />
+     <Compile Include="Assets\Scripts\FTC\CameraPosition.cs" />
      <Compile Include="Assets\Scripts\FTC\GameControl\BlueGoal.cs" />
      <Compile Include="Assets\Scripts\FTC\GameTimer.cs" />
      <Compile Include="Assets\Scripts\FTC\Control\ShooterControl.cs" />

@@ -17,7 +17,7 @@ public class GrabberControl : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == tagOfGameObject)
+        if (collision.tag == tagOfGameObject && wobble == null)
         {
             wobble = collision.gameObject;
         }
@@ -27,6 +27,7 @@ public class GrabberControl : MonoBehaviour
     {
         if (collision.tag == tagOfGameObject)
         {
+            stopGrab();
             wobble = null;
         }
     }
@@ -38,9 +39,26 @@ public class GrabberControl : MonoBehaviour
             grabing = true;
             field = (wobble.transform.parent).gameObject;
             wobble.transform.SetParent(robot);
-            var temp = wobble.GetComponent<Rigidbody>().constraints;
-            temp = RigidbodyConstraints.FreezeAll;
-            wobble.GetComponent<Rigidbody>().constraints = temp;
+            wobble.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+            wobble.GetComponent<Rigidbody>().isKinematic = true;
+        }
+    }
+
+    public void lift()
+    {
+        if (wobble != null && grabing)
+        {
+            var temp = wobble.GetComponent<Rigidbody>();
+            var locVel = new Vector3();
+            locVel.x = 0f;
+            locVel.y = 1f;
+            locVel.z = 0f;
+            temp.velocity = locVel;
+            print(wobble.transform.position.y);
+            if(wobble.transform.position.y > 0.3)
+            {
+                wobble.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+            }
         }
     }
 
@@ -50,9 +68,8 @@ public class GrabberControl : MonoBehaviour
         {
             grabing = false;
             wobble.transform.SetParent(field.transform);
-            var temp = wobble.GetComponent<Rigidbody>().constraints;
-            temp = RigidbodyConstraints.None;
-            wobble.GetComponent<Rigidbody>().constraints = temp;
+            wobble.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            wobble.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 }
