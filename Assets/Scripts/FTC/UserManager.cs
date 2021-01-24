@@ -49,11 +49,11 @@ public class UserManager : MonoBehaviour
         intake = GameObject.Find("Intake").GetComponent<IntakeControl>();
         camera = GameObject.Find("Render Streaming Camera").GetComponent<CameraPosition>();
 
+        robotCustomizer = m_Robots[m_index].GetComponent<RobotCustomizer>();
+        gameTimer = GameObject.Find("ScoreKeeper").GetComponent<GameTimer>();
+
         setSpawn(0);
         resetField("A");
-
-        robotCustomizer = m_Robots[m_index].GetComponent<RobotCustomizer>();
-        gameTimer = GetComponent<GameTimer>();
 
         print("Started.....");
         thread = new Thread(startTCPServer);

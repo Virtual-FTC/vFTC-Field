@@ -17,7 +17,7 @@ public class BlueWobbleGoal : MonoBehaviour
     void Awake()
     {
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
-        gameTimer = GetComponent<GameTimer>();
+        gameTimer = GameObject.Find("ScoreKeeper").GetComponent<GameTimer>();
     }
 
     void OnTriggerEnter(Collider collision)

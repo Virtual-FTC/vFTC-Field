@@ -15,7 +15,7 @@ public class RedGoal : MonoBehaviour
     void Awake()
     {
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
-        gameTimer = GetComponent<GameTimer>();
+        gameTimer = GameObject.Find("ScoreKeeper").GetComponent<GameTimer>();
     }
 
     void OnTriggerEnter(Collider collision)

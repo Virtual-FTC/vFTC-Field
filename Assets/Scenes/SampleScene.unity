@@ -1078,7 +1078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerGoal: 15
   tagOfGameObject: RedWobble
-  goalType: A
+  goalType: C
 --- !u!1 &267562127
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,7 +2063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerGoal: 5
   tagOfGameObject: RedWobble
-  goalType: A
+  goalType: line
 --- !u!1 &471134961
 GameObject:
   m_ObjectHideFlags: 0
@@ -2600,7 +2600,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerGoal: 15
   tagOfGameObject: RedWobble
-  goalType: A
+  goalType: B
 --- !u!1 &653774179
 GameObject:
   m_ObjectHideFlags: 0
@@ -3361,6 +3361,66 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 757969759}
   m_Mesh: {fileID: -2121288931245327555, guid: b8a19f15c7e131d42af5bd4c8cc16234, type: 3}
+--- !u!1 &758895128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 758895129}
+  - component: {fileID: 758895131}
+  - component: {fileID: 758895130}
+  m_Layer: 0
+  m_Name: BlueDrop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &758895129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758895128}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.58, y: -0.733, z: 1.718}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2108980441}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &758895130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758895128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca106cebd8ce934ebb27a3c5e17f76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsPerGoal: 0
+  tagOfGameObject: BlueWobble
+  goalType: drop
+--- !u!65 &758895131
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758895128}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2242506, y: 0.27215737, z: 0.4365369}
+  m_Center: {x: 0.014738321, y: 0.11190382, z: 0.22286767}
 --- !u!1 &783156553
 GameObject:
   m_ObjectHideFlags: 0
@@ -6469,7 +6529,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerGoal: 5
   tagOfGameObject: BlueWobble
-  goalType: A
+  goalType: line
 --- !u!1 &1294280116
 GameObject:
   m_ObjectHideFlags: 0
@@ -6853,7 +6913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerGoal: 5
   tagOfGameObject: BlueWobble
-  goalType: A
+  goalType: line
 --- !u!1 &1332205323
 GameObject:
   m_ObjectHideFlags: 0
@@ -7106,7 +7166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerGoal: 15
   tagOfGameObject: BlueWobble
-  goalType: A
+  goalType: B
 --- !u!1 &1380112831
 GameObject:
   m_ObjectHideFlags: 0
@@ -8113,6 +8173,66 @@ MonoBehaviour:
   pointsPerGoal: 15
   tagOfGameObject: RedWobble
   goalType: A
+--- !u!1 &1522466243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1522466244}
+  - component: {fileID: 1522466246}
+  - component: {fileID: 1522466245}
+  m_Layer: 0
+  m_Name: RedDrop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1522466244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522466243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.285, y: -0.733, z: 1.718}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2108980441}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1522466245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522466243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ca106cebd8ce934ebb27a3c5e17f76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointsPerGoal: 0
+  tagOfGameObject: BlueWobble
+  goalType: drop
+--- !u!65 &1522466246
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522466243}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2242506, y: 0.27215737, z: 0.4365369}
+  m_Center: {x: 0.014738321, y: 0.11190382, z: 0.22286767}
 --- !u!1 &1525104774
 GameObject:
   m_ObjectHideFlags: 0
@@ -9476,7 +9596,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerGoal: 15
   tagOfGameObject: BlueWobble
-  goalType: A
+  goalType: C
 --- !u!1 &1830941569
 GameObject:
   m_ObjectHideFlags: 0
@@ -11243,6 +11363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2060291398}
   - component: {fileID: 2060291399}
+  - component: {fileID: 2060291400}
   m_Layer: 0
   m_Name: ScoreKeeper
   m_TagString: Untagged
@@ -11278,6 +11399,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   redScoreText: {fileID: 804755463}
   blueScoreText: {fileID: 1944246507}
+--- !u!114 &2060291400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060291397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb1b43c7b6af484d81be43626f3d1af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerTextUI: {fileID: 1480213370}
 --- !u!1 &2105644964
 GameObject:
   m_ObjectHideFlags: 0
@@ -11375,6 +11509,8 @@ Transform:
   - {fileID: 463631309}
   - {fileID: 1331720013}
   - {fileID: 1280169470}
+  - {fileID: 758895129}
+  - {fileID: 1522466244}
   m_Father: {fileID: 234635430}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11529,7 +11665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsPerGoal: 5
   tagOfGameObject: RedWobble
-  goalType: A
+  goalType: line
 --- !u!1 &2134159677
 GameObject:
   m_ObjectHideFlags: 0
