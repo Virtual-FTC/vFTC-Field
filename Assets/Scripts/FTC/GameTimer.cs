@@ -19,17 +19,24 @@ public class GameTimer : MonoBehaviour
 
     private float previousRealTime;
 
+    private AudioManager audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
         previousRealTime = Time.realtimeSinceStartup;
         timerTextUI.text = timerText;
+
+        audioManager = GetComponent<AudioManager>();
     }
 
     public void startGame()
     {
         startToggle = true;
         previousRealTime = Time.realtimeSinceStartup;
+
+        audioManager.reset();
+        audioManager.playStartSound();
 
         if (gameType == "auto")
         {
@@ -114,6 +121,7 @@ public class GameTimer : MonoBehaviour
             if (timer <= 0)
             {
                 flashTimer();
+                audioManager.playEndSound();
             }
             else
             {
