@@ -88,7 +88,7 @@ public class RobotController : MonoBehaviour
         intakeControl.Commands.Add(() => motorPower5 == 0, intakeControl.retractIntake);
 
         grabberControl = grabber.GetComponent<GrabberControl>();
-        grabberControl.Commands.Add(() => motorPower8 > 0 && motorPower8 <= 0.5 , () =>
+        grabberControl.Commands.Add(() => motorPower8 > 0 , () =>
         {
             grabberControl.startGrab();
         });

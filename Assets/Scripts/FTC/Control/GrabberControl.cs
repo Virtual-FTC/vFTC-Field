@@ -23,15 +23,6 @@ public class GrabberControl : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider collision)
-    {
-        if (collision.tag == tagOfGameObject)
-        {
-            stopGrab();
-            wobble = null;
-        }
-    }
-
     public void startGrab()
     {
         if (wobble != null && !grabing)
@@ -39,8 +30,9 @@ public class GrabberControl : MonoBehaviour
             grabing = true;
             field = (wobble.transform.parent).gameObject;
             wobble.transform.SetParent(robot);
-            wobble.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
-            wobble.GetComponent<Rigidbody>().isKinematic = true;
+            var rb = wobble.GetComponent<Rigidbody>();
+            rb.isKinematic = true;
+            wobble.transform.localPosition = new Vector3(0f,-0.39f, 0.05f);
         }
     }
 
@@ -48,17 +40,7 @@ public class GrabberControl : MonoBehaviour
     {
         if (wobble != null && grabing)
         {
-            var temp = wobble.GetComponent<Rigidbody>();
-            var locVel = new Vector3();
-            locVel.x = 0f;
-            locVel.y = 1f;
-            locVel.z = 0f;
-            temp.velocity = locVel;
-            print(wobble.transform.position.y);
-            if(wobble.transform.position.y > 0.3)
-            {
-                wobble.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-            }
+            wobble.transform.localPosition = new Vector3(0f, -0.39f, 0.3f);
         }
     }
 
@@ -68,8 +50,9 @@ public class GrabberControl : MonoBehaviour
         {
             grabing = false;
             wobble.transform.SetParent(field.transform);
-            wobble.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-            wobble.GetComponent<Rigidbody>().isKinematic = false;
+            var rb = wobble.GetComponent<Rigidbody>();
+            rb.isKinematic = false;
         }
+        wobble = null;
     }
 }
