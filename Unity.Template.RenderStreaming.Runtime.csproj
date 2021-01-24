@@ -47,7 +47,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\FTC\GameControl\RobotControl.cs" />
      <Compile Include="Assets\Scripts\FTC\Control\ScoopControl.cs" />
      <Compile Include="Assets\Scripts\FTC\GameControl\RingDispenser.cs" />
      <Compile Include="Assets\Scripts\Signaling\FurioosSignaling.cs" />
@@ -58,6 +57,7 @@
      <Compile Include="Assets\Scripts\FTC\RobotCustomizer.cs" />
      <Compile Include="Assets\Scripts\CameraStreamer.cs" />
      <Compile Include="Assets\Scripts\Signaling\HttpSignaling.cs" />
+     <Compile Include="Assets\Scripts\FTC\GameControl\WhiteLineGoal.cs" />
      <Compile Include="Assets\Scripts\FTC\GameControl\RedWobbleGoal.cs" />
      <Compile Include="Assets\Scripts\ReceiveVideoViewer.cs" />
      <Compile Include="Assets\Scripts\FTC\GameControl\RedGoal.cs" />
