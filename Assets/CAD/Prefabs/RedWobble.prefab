@@ -277,7 +277,7 @@ GameObject:
   - component: {fileID: 2049736333341021180}
   m_Layer: 0
   m_Name: RedWobble
-  m_TagString: Wobble
+  m_TagString: RedWobble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

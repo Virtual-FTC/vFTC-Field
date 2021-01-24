@@ -15,6 +15,7 @@ public class GameTimer : MonoBehaviour
     private bool startToggle = false;
 
     private string gameType = "freeplay";
+    private string gameSetup = "";
 
     private float previousRealTime;
 
@@ -75,6 +76,16 @@ public class GameTimer : MonoBehaviour
         return gameType;
     }
 
+    public void setGameSetup(string type)
+    {
+        gameSetup = type;
+    }
+
+    public string getGameSetup()
+    {
+        return gameSetup;
+    }
+
     public bool getGameStarted()
     {
         return startToggle;
@@ -98,7 +109,7 @@ public class GameTimer : MonoBehaviour
             }
             timerTextUI.text = timerText;
         }
-        else if (gameType == "auto" || gameType == "teleop")
+        else if (gameType == "auto" || gameType == "teleop" || gameType == "end")
         {
             if (timer <= 0)
             {
@@ -113,6 +124,11 @@ public class GameTimer : MonoBehaviour
                     timerText = timerText[0] + " : 0" + timerText[4];
                 }
                 timerTextUI.text = timerText;
+            }
+
+            if (gameType == "teleop" && timer <= 30)
+            {
+                gameType = "end";
             }
         }
     }

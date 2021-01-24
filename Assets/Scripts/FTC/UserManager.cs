@@ -170,6 +170,13 @@ public class UserManager : MonoBehaviour
             index = rnd.Next(3);
         }
 
+        if (index == 0)
+            gameTimer.setGameSetup("A");
+        else if (index == 1)
+            gameTimer.setGameSetup("B");
+        else if (index == 2)
+            gameTimer.setGameSetup("C");
+
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Ring");
         foreach(GameObject a in gos)
         {
@@ -232,7 +239,6 @@ public class UserManager : MonoBehaviour
             resetField(websiteCommands.gameSetup);
             resetRobot();
         }
-
 
         // Start game
         if (websiteCommands.startGame && !currentGameStart)
@@ -297,7 +303,7 @@ public class UserManager : MonoBehaviour
         public bool resetField;
         public bool startGame;
         public string gameType = "";
-        public string gameSetup;
+        public string gameSetup = "";
         public float size;
         public float wheelSize;
         public int cam;

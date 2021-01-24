@@ -15,12 +15,12 @@ C:/Users/user/Documents/GitHub/vFTC-Field
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52220
+53285
 Successfully changed project path to: C:/Users/user/Documents/GitHub/vFTC-Field
 C:/Users/user/Documents/GitHub/vFTC-Field
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 127.38 ms, found 1 plugins.
-Preloading 1 native plugins for Editor in 3.99 ms.
+Refreshing native plugins compatible for Editor in 124.94 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 3.33 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Users/user/Documents/GitHub/vFTC-Field/Assets
@@ -35,717 +35,134 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56580
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56772
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001218 seconds.
+Registered in 0.001938 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 117.95 ms, found 1 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+Refreshing native plugins compatible for Editor in 146.43 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.374 seconds
+- Completed reload, in  2.330 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002541 seconds.
+Registered in 0.002678 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 98.67 ms, found 1 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+Refreshing native plugins compatible for Editor in 124.77 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.991 seconds
+- Completed reload, in  2.215 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.92 ms, found 1 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+Refreshing native plugins compatible for Editor in 1.40 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
 Unloading 3692 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 196.1 MB.
 System memory in use after: 196.3 MB.
 
 Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 4154.
-Total: 5.710500 ms (FindLiveObjects: 1.184900 ms CreateObjectMapping: 0.533700 ms MarkObjects: 3.777200 ms  DeleteObjects: 0.212400 ms)
+Total: 5.035500 ms (FindLiveObjects: 0.722900 ms CreateObjectMapping: 0.440000 ms MarkObjects: 3.763100 ms  DeleteObjects: 0.107700 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd87f6b4daf4b533edb801b3f4f09c5d3') in 1.167984 seconds
-  Import took 1.180366 seconds .
+  path: Assets/Scripts/FTC/GameControl/WhiteLineGoal.cs
+  artifactKey: Guid(20848dae813003349a5db7269dda0bca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/GameControl/WhiteLineGoal.cs using Guid(20848dae813003349a5db7269dda0bca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd57c24415c3008dd597358717130345b') in 0.038212 seconds
+  Import took 0.048666 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000333 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6f4ed18821dcb9bd1764fc659b1345e') in 0.067726 seconds
-  Import took 0.077078 seconds .
+  Time since last request: 18.445465 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26e80a6c64e7577c17c00e78a6ec804f') in 0.048301 seconds
+  Import took 0.064465 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000329 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8e58348a7d3eb9c088317c976bdc0a3') in 0.066780 seconds
-  Import took 0.077163 seconds .
+  Time since last request: 47.541637 seconds.
+  path: Assets/Scripts/FTC/GameControl/RedWobbleGoal.cs
+  artifactKey: Guid(4911888fda6b2bf488fd644f81688c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/GameControl/RedWobbleGoal.cs using Guid(4911888fda6b2bf488fd644f81688c9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0fa5f93f85ff6f2933d72cf9be5fa3dd') in 0.034915 seconds
+  Import took 0.047368 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000352 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f16c0d51056e7bb99de324781b70487') in 0.066887 seconds
-  Import took 0.077178 seconds .
+  Time since last request: 0.712216 seconds.
+  path: Assets/Scripts/FTC/GameControl/RedGoal.cs
+  artifactKey: Guid(1d397a59c0930ca48b321b2608c971b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/GameControl/RedGoal.cs using Guid(1d397a59c0930ca48b321b2608c971b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b2e0f55cb4d3c0200ec19dd031907bd') in 0.019101 seconds
+  Import took 0.045302 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.142201 seconds.
+  path: Assets/Scripts/FTC/GameControl/BlueWobbleGoal.cs
+  artifactKey: Guid(1ca106cebd8ce934ebb27a3c5e17f76c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/GameControl/BlueWobbleGoal.cs using Guid(1ca106cebd8ce934ebb27a3c5e17f76c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10321c7726664f0a48e4365170a33f1d') in 0.024181 seconds
+  Import took 0.040857 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002286 seconds.
+Registered in 0.003082 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
-Preloading 1 native plugins for Editor in 0.17 ms.
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.766 seconds
+- Completed reload, in  1.567 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.22 ms, found 1 plugins.
-Preloading 1 native plugins for Editor in 0.14 ms.
-Unloading 3423 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 195.6 MB.
-System memory in use after: 195.8 MB.
-
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4294.
-Total: 6.179900 ms (FindLiveObjects: 0.840000 ms CreateObjectMapping: 0.586500 ms MarkObjects: 4.651200 ms  DeleteObjects: 0.099700 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 122.955742 seconds.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25a3f916da455f52b950b783ef746cfe') in 1.748201 seconds
-  Import took 1.762351 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000285 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd9f9c635e1387fdba9baefed01bcb84') in 0.060419 seconds
-  Import took 0.072188 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26e2ff4da4b29724c4a0486ccb3c670e') in 0.083748 seconds
-  Import took 0.103882 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000337 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93f701886e9a144d7b7c1062987a3e06') in 0.122732 seconds
-  Import took 0.133131 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.343444 seconds.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1839e3f8468c5d3ec7d6c28bab57277') in 0.143463 seconds
-  Import took 0.174121 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000874 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '671c814a30b7a9637b85bc3a7205d507') in 0.170368 seconds
-  Import took 0.193225 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000223 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b6c02abb6015219604c81939e55c18d') in 0.167980 seconds
-  Import took 0.200608 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004057 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc5e5e8bfb7693b3af2bba89c86ee37b') in 0.104548 seconds
-  Import took 0.120155 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.250936 seconds.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba2f629b78cd095b7304c1344bb591bd') in 0.125581 seconds
-  Import took 0.158993 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000096 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1fbac37a15d3f4550a0fabfca2c3854') in 0.215098 seconds
-  Import took 0.253303 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005749 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b533dc59f65e9ebbda275309bb77a603') in 0.183502 seconds
-  Import took 0.208674 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d6951a85032f02abd702fc12cba12ee') in 0.212341 seconds
-  Import took 0.238782 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.805913 seconds.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71bb61d81b86536c12c764d7cdca67e1') in 0.080000 seconds
-  Import took 0.094377 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08f0d9f6f78ba98d882bc09200cc7a37') in 0.075175 seconds
-  Import took 0.086891 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000282 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2eff2d0db0a6fe8477fbbf39865b650') in 0.097660 seconds
-  Import took 0.109811 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000362 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90f2898f25f763f4ed4555c5d28bad34') in 0.082211 seconds
-  Import took 0.093254 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.703502 seconds.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77c59a2d205576d05b5960a3997e6733') in 0.087728 seconds
-  Import took 0.104000 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000405 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ae896f7be9bf8026b34bf9dfa2c85ae') in 0.087120 seconds
-  Import took 0.105911 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000308 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35295e07bdf74c32c4bf1575edd6c4eb') in 0.166887 seconds
-  Import took 0.186678 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000377 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3e4a7b42723f0955cfb4417afa9790d') in 0.094341 seconds
-  Import took 0.110305 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.882261 seconds.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6c3d5aba5a3de2751a8cdf1f58b2c29') in 0.051729 seconds
-  Import took 0.070382 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000364 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36e1f89843e690593d50bfb1111c578b') in 0.161996 seconds
-  Import took 0.191591 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000361 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebb4b5a04846d6bfa7362ee59a9daecb') in 0.169584 seconds
-  Import took 0.191393 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000069 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a821cb88457398c88f06086a5e86ecf') in 0.100202 seconds
-  Import took 0.116439 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.239191 seconds.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0a10e8538f68254824a10b69a139ed8') in 0.113553 seconds
-  Import took 0.128777 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000408 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd27292535c05059fcdcd1ace2006cd37') in 0.219800 seconds
-  Import took 0.255140 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000082 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20ae82501fec80900ef4555d50c262d0') in 0.136286 seconds
-  Import took 0.165624 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000305 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae649f12daea60c39169d2d1b2683550') in 0.123145 seconds
-  Import took 0.136655 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.185006 seconds.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '328a94e04a971c16858cdd6956a0821b') in 0.078564 seconds
-  Import took 0.091632 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ddf5f363758c735478fcdca3b023e01b') in 0.080024 seconds
-  Import took 0.094044 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53c5ded61c2c109e75fd57418e50f454') in 0.089193 seconds
-  Import took 0.100699 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000314 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84219bdf76aaee27e0a0b71aa50fe8cf') in 0.092541 seconds
-  Import took 0.107276 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.772677 seconds.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '616b2ceb513f714305405b18c9839736') in 0.054263 seconds
-  Import took 0.070070 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000246 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69f79b7b01cf1411dc7bb204b359f44a') in 0.074222 seconds
-  Import took 0.084335 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000296 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eedba3b972fcf5c7521d8247ecb658f') in 0.077523 seconds
-  Import took 0.087657 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000255 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df31ce9e16c3519803633723286a5c7f') in 0.083184 seconds
-  Import took 0.094329 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.986979 seconds.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87b772debc460141aaec67a59e96595e') in 0.098671 seconds
-  Import took 0.116053 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000300 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89f3b9712fed93928bcb906dc28fa03d') in 0.083178 seconds
-  Import took 0.101711 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000347 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f9b8543ef1f5da2017cb9993867370f') in 0.077606 seconds
-  Import took 0.089505 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000264 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f9587d20a0bb285792c8591a898eeaf') in 0.074602 seconds
-  Import took 0.085117 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.155320 seconds.
-  path: Assets/CAD/Prefabs/BlueWobble.prefab
-  artifactKey: Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/BlueWobble.prefab using Guid(96d5dd336c860f34da8a193b2b3193ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd310d7454c99042dcf6ce388acec4e6f') in 0.057221 seconds
-  Import took 0.071890 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000319 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f00682c46005ef1b467cfbe97793439e') in 0.072497 seconds
-  Import took 0.085783 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000074 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '915bcdd68f0b71070e5f7afaec20d2c7') in 0.077409 seconds
-  Import took 0.094657 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000454 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46f42115c8aac4e107221dddd3fd0832') in 0.061482 seconds
-  Import took 0.073212 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 13.109267 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1be26760deab514ba73bb80bbe87d4de') in 0.106178 seconds
-  Import took 0.121369 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000413 seconds.
-  path: Assets/CAD/Prefabs/RedWobble.prefab
-  artifactKey: Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/RedWobble.prefab using Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '29157e61632ba6fabfb9b7d61c0632e3') in 0.078209 seconds
-  Import took 0.091628 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000327 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4df945d3e5b6cfea1fbe7ac009e63871') in 0.079732 seconds
-  Import took 0.092823 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000257 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2d6487113a93384aeefd6896c6a0ffb') in 0.069907 seconds
-  Import took 0.083034 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.392779 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71314dd287d5622101a08e1c252b38fb') in 0.069669 seconds
-  Import took 0.082478 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000305 seconds.
-  path: Assets/CAD/Prefabs/RedWobble.prefab
-  artifactKey: Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/RedWobble.prefab using Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa755d97427ba6d7bc16ac9c3b0fbcdc') in 0.073845 seconds
-  Import took 0.085604 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000367 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b23c6d4ca8d87bdaa583697f3e6bc164') in 0.083519 seconds
-  Import took 0.094294 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28d62ecaad56b38a09673b657ed78407') in 0.074476 seconds
-  Import took 0.085542 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.317503 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a780d776d3e05e61d13dc39a32a830ab') in 0.053987 seconds
-  Import took 0.065432 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000304 seconds.
-  path: Assets/CAD/Prefabs/RedWobble.prefab
-  artifactKey: Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/RedWobble.prefab using Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0977c394c7594e8f002d0d603913ee6') in 0.052553 seconds
-  Import took 0.062409 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000366 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8626d62b88740a8d95b074c92265d8b6') in 0.070694 seconds
-  Import took 0.081048 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000367 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9fbdb6ff8def44403d91a71dbcdc0ce') in 0.067884 seconds
-  Import took 0.080121 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.080067 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '156a0aaeaa05910f9ea3d9421b23cf4d') in 0.076551 seconds
-  Import took 0.092554 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000318 seconds.
-  path: Assets/CAD/Prefabs/RedWobble.prefab
-  artifactKey: Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/RedWobble.prefab using Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c3cd4708aca88900db264f3851f8a5b') in 0.064534 seconds
-  Import took 0.079216 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000319 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1a082b043a5228f32af74fa5db64bc07') in 0.087092 seconds
-  Import took 0.098891 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000263 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4d96ee1d6fc4224474acb90caf345a1') in 0.073381 seconds
-  Import took 0.083163 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.125488 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b21664d71adc67c58f735b6b868a8c12') in 0.080391 seconds
-  Import took 0.094022 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000304 seconds.
-  path: Assets/CAD/Prefabs/RedWobble.prefab
-  artifactKey: Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/RedWobble.prefab using Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '500bc305bac11d59188487f2bea7198e') in 0.054762 seconds
-  Import took 0.065390 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000311 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ddca09371307b4486d6b4803d4493af') in 0.068653 seconds
-  Import took 0.082720 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000407 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c928ecd752f57f1421a91d0c5940558') in 0.059737 seconds
-  Import took 0.080151 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.885067 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23b351959f68e542de000f399d67a3e7') in 0.096396 seconds
-  Import took 0.113747 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/CAD/Prefabs/RedWobble.prefab
-  artifactKey: Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/RedWobble.prefab using Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d84eb9cb978081e12f11e778a48bf2a') in 0.069738 seconds
-  Import took 0.082187 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000434 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23e14b38a27132352a552319c56414db') in 0.096123 seconds
-  Import took 0.115305 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000283 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e306c983c2c71e23251729d68964311') in 0.080373 seconds
-  Import took 0.093451 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.718877 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-A.prefab
-  artifactKey: Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-A.prefab using Guid(aa0d44529fb7bf5429220538cf38b911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49836ea51d1337516089ce953d3b873c') in 0.219673 seconds
-  Import took 0.295032 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000343 seconds.
-  path: Assets/CAD/Prefabs/RedWobble.prefab
-  artifactKey: Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/RedWobble.prefab using Guid(bb368d6d44604504bbe57d664d21d0df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef67c226c101c49417d71586f6c86c2d') in 0.135838 seconds
-  Import took 0.157629 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000276 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-B.prefab
-  artifactKey: Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-B.prefab using Guid(fcf19d3a312feb84188e376da5aeb692) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '617eeb1f1989a4350db5bcbeec756fc6') in 0.112985 seconds
-  Import took 0.125523 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000292 seconds.
-  path: Assets/CAD/Prefabs/DynamicField-C.prefab
-  artifactKey: Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/CAD/Prefabs/DynamicField-C.prefab using Guid(5642e4b12af3e3a40a0f28ec4db42ef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dada35f0877540283820eddafdcee1dd') in 0.122581 seconds
-  Import took 0.135917 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003505 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.08 ms, found 1 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.630 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.55 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
 Preloading 1 native plugins for Editor in 0.10 ms.
 Unloading 3410 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.9 MB.
-System memory in use after: 197.1 MB.
+System memory in use before: 184.1 MB.
+System memory in use after: 184.3 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4398.
-Total: 7.137300 ms (FindLiveObjects: 1.377300 ms CreateObjectMapping: 0.509200 ms MarkObjects: 5.037000 ms  DeleteObjects: 0.212100 ms)
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 4156.
+Total: 6.334000 ms (FindLiveObjects: 1.190900 ms CreateObjectMapping: 0.534700 ms MarkObjects: 4.501100 ms  DeleteObjects: 0.105500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 449.650754 seconds.
+  path: Assets/Scripts/FTC/GameControl/WhiteLineGoal.cs
+  artifactKey: Guid(20848dae813003349a5db7269dda0bca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/GameControl/WhiteLineGoal.cs using Guid(20848dae813003349a5db7269dda0bca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6293368b62c0e9f34363ea4741999572') in 0.010713 seconds
+  Import took 0.018227 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002757 seconds.
+Registered in 0.003071 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 1 plugins.
+Refreshing native plugins compatible for Editor in 1.04 ms, found 1 plugins.
 Preloading 1 native plugins for Editor in 0.12 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.592 seconds
+- Completed reload, in  1.426 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
+Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.10 ms.
 Unloading 3410 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 196.8 MB.
-System memory in use after: 197.0 MB.
+System memory in use before: 184.2 MB.
+System memory in use after: 184.4 MB.
 
-Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4400.
-Total: 5.229700 ms (FindLiveObjects: 0.766000 ms CreateObjectMapping: 0.315000 ms MarkObjects: 4.056300 ms  DeleteObjects: 0.090600 ms)
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4158.
+Total: 6.893400 ms (FindLiveObjects: 1.020100 ms CreateObjectMapping: 0.402700 ms MarkObjects: 5.379900 ms  DeleteObjects: 0.088500 ms)
 

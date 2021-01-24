@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ring
+  - BlueWobble
+  - RedWobble
   - Wobble
+  - RedRobot
+  - BlueRobot
   layers:
   - Default
   - TransparentFX
