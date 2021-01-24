@@ -9,7 +9,8 @@ public class GrabberControl : MonoBehaviour
 
     private bool grabing = false;
     public int pointsPerGoal = 0;
-    public string tagOfGameObject = "Wobble";
+    private string tagOfGameObject1 = "RedWobble";
+    private string tagOfGameObject2 = "BlueWobble";
 
     private GameObject wobble = null;
     private GameObject field;
@@ -17,7 +18,7 @@ public class GrabberControl : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == tagOfGameObject && wobble == null)
+        if ((collision.tag == tagOfGameObject1 || collision.tag == tagOfGameObject2) && wobble == null)
         {
             wobble = collision.gameObject;
         }

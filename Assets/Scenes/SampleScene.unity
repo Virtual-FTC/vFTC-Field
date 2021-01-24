@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 131.18066, g: 162.51404, b: 215.03296, a: 1}
+  m_IndirectSpecularColor: {r: 131.16846, g: 162.5249, b: 215.10962, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8214,11 +8214,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1522466243}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca106cebd8ce934ebb27a3c5e17f76c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4911888fda6b2bf488fd644f81688c9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pointsPerGoal: 0
-  tagOfGameObject: BlueWobble
+  tagOfGameObject: RedWobble
   goalType: drop
 --- !u!65 &1522466246
 BoxCollider:

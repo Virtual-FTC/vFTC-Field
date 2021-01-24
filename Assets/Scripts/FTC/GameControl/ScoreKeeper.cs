@@ -23,6 +23,16 @@ public class ScoreKeeper : MonoBehaviour
         updateBlueScore();
     }
 
+    public int getScoreRed()
+    {
+        return redScore;
+    }
+
+    public int getScoreBlue()
+    {
+        return blueScore;
+    }
+
     void updateRedScore()
     {
         redScoreText.text = "" + redScore;

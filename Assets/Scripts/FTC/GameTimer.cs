@@ -43,8 +43,9 @@ public class GameTimer : MonoBehaviour
             startTime = 30f;
             timer = 30f;
         }
-        else if (gameType == "teleop")
+        else if (gameType == "teleop" || gameType == "end")
         {
+            gameType = "teleop";
             startTime = 120f;
             timer = 120f;
         }
@@ -98,6 +99,11 @@ public class GameTimer : MonoBehaviour
         return startToggle;
     }
 
+    public float getTimer()
+    {
+        return timer;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -127,7 +133,7 @@ public class GameTimer : MonoBehaviour
             {
                 timer = startTime - (Time.realtimeSinceStartup - previousRealTime);
                 timerText = "" + (int)timer / 60 + " : " + (int)timer % 60;
-                if (timer < 10)
+                if ((int)timer % 60 < 10)
                 {
                     timerText = timerText[0] + " : 0" + timerText[4];
                 }

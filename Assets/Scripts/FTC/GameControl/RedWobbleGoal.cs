@@ -10,8 +10,6 @@ public class RedWobbleGoal : MonoBehaviour
 
     public string goalType = "A";
 
-    private bool inZone = false;
-
     private GameTimer gameTimer;
 
     void Awake()
@@ -22,7 +20,7 @@ public class RedWobbleGoal : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == tagOfGameObject && inZone == false)
+        if (collision.tag == tagOfGameObject)
         {
             if (gameTimer.getGameSetup() == goalType && gameTimer.getGameType() == "auto")
                 pointsPerGoal = 15;
@@ -33,14 +31,13 @@ public class RedWobbleGoal : MonoBehaviour
             else
                 pointsPerGoal = 0;
 
-            inZone = true;
             scoreKeeper.addScoreRed(pointsPerGoal);
         }
     }
 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.tag == tagOfGameObject && inZone == true)
+        if (collision.tag == tagOfGameObject)
         {
             if (gameTimer.getGameSetup() == goalType && gameTimer.getGameType() == "auto")
                 pointsPerGoal = 15;
@@ -51,7 +48,6 @@ public class RedWobbleGoal : MonoBehaviour
             else
                 pointsPerGoal = 0;
 
-            inZone = false;
             scoreKeeper.addScoreRed(-pointsPerGoal);
         }
     }

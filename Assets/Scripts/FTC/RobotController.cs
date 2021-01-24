@@ -226,6 +226,7 @@ public class RobotController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        print(motorPower8);
         driveRobot();
         shooterControl.Commands.Process();
         intakeControl.Commands.Process();

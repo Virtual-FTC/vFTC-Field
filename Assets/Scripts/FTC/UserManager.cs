@@ -43,6 +43,8 @@ public class UserManager : MonoBehaviour
     private IntakeControl intake;
     private CameraPosition camera;
 
+    private bool sendingScore;
+
     private void Start()
     {
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
@@ -106,7 +108,24 @@ public class UserManager : MonoBehaviour
                 string message = Encoding.ASCII.GetString(data, 0, recv);
                 print(message);
                 websiteCommands = WebsiteCommands.CreateFromJSON(message);
-                //client.Send(data, recv, SocketFlags.None);
+
+                if (sendingScore)
+                {
+                    var sendData = new byte[1024];
+                    sendingScore = false;
+                    var score = new WebsiteScore();
+                    score.gameType = websiteCommands.gameType;
+                    if (websiteCommands.robotTeam == 0)
+                        score.score = scoreKeeper.getScoreRed();
+                    else
+                        score.score = scoreKeeper.getScoreBlue();
+
+                    string scoreJSON = JsonUtility.ToJson(score);
+
+                    sendData = Encoding.ASCII.GetBytes(scoreJSON);
+                    //client.Send(data, recv, SocketFlags.None);
+                    client.Send(sendData, SocketFlags.None);
+                }
             }
             catch (SocketException)
             {
@@ -178,12 +197,12 @@ public class UserManager : MonoBehaviour
             gameTimer.setGameSetup("C");
 
         GameObject[] gos = GameObject.FindGameObjectsWithTag("Ring");
-        foreach(GameObject a in gos)
+        foreach (GameObject a in gos)
         {
             Destroy(a);
         }
 
-        setup = (GameObject)Instantiate(setupPrefab[index], new Vector3(0,0.5f,0), Quaternion.identity);
+        setup = (GameObject)Instantiate(setupPrefab[index], new Vector3(0, 0.5f, 0), Quaternion.identity);
         for (int x = 0; x < setup.GetComponentsInChildren<Rigidbody>().Length; x++)
         {
             if (setup.GetComponentsInChildren<Rigidbody>()[x].tag == "Wobble")
@@ -246,7 +265,7 @@ public class UserManager : MonoBehaviour
             currentGameStart = true;
             gameTimer.startGame();
         }
-        else if(!websiteCommands.startGame && currentGameStart)
+        else if (!websiteCommands.startGame && currentGameStart)
         {
             currentGameStart = false;
             gameTimer.stopGame();
@@ -258,12 +277,17 @@ public class UserManager : MonoBehaviour
             gameTimer.setGameType(websiteCommands.gameType);
             currentGameType = websiteCommands.gameType;
         }
-        
+
         // Camera control
         if (websiteCommands.cam != currentCam)
         {
             currentCam = websiteCommands.cam;
             camera.switchCamera(currentCam);
+        }
+        // Sending Score
+        if (gameTimer.getTimer() <= 0 && (websiteCommands.gameType == "auto" || websiteCommands.gameType == "teleop"))
+        {
+            sendingScore = true;
         }
 
         // Robot config
@@ -299,6 +323,7 @@ public class UserManager : MonoBehaviour
     public class WebsiteCommands
     {
         public int position;
+        public int robotTeam;
         public int robotType;
         public bool resetField;
         public bool startGame;
@@ -320,5 +345,12 @@ public class UserManager : MonoBehaviour
 
         // {"position":0,"robotType":0,"resetField":true, "startGame":false, "gameType": " freeplay", "gameSetup":"A", "incSize": false, "decSize":false, "incWheel":false, "decWheel":false}
         // {"position":0-4,"robotType":0-2,"resetField":true/false, "startGame":false/true, "gameType": "teleop/auto/freeplay", "gameSetup":"A/B/C/Random", "incSize":true/false, "decSize":true/false, "incWheel":true/false, "decWheel":true/false}
+    }
+
+    [System.Serializable]
+    public class WebsiteScore
+    {
+        public string gameType;
+        public int score;
     }
 }
