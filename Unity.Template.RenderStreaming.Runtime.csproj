@@ -60,12 +60,14 @@
      <Compile Include="Assets\Scripts\FTC\GameControl\WhiteLineGoal.cs" />
      <Compile Include="Assets\Scripts\FTC\GameControl\RedWobbleGoal.cs" />
      <Compile Include="Assets\Scripts\ReceiveVideoViewer.cs" />
+     <Compile Include="Assets\Scripts\FTC\AudioManager.cs" />
      <Compile Include="Assets\Scripts\FTC\GameControl\RedGoal.cs" />
      <Compile Include="Assets\Scripts\FTC\CameraPosition.cs" />
      <Compile Include="Assets\Scripts\FTC\GameControl\BlueGoal.cs" />
      <Compile Include="Assets\Scripts\FTC\GameTimer.cs" />
      <Compile Include="Assets\Scripts\FTC\Control\ShooterControl.cs" />
      <Compile Include="Assets\Scripts\DateTimeExtension.cs" />
+     <Compile Include="Assets\Scripts\FTC\MultiUserManager.cs" />
      <Compile Include="Assets\Scripts\RemoteInput.cs" />
      <Compile Include="Assets\Scripts\FTC\Control\IntakeControl.cs" />
      <Compile Include="Assets\Scripts\FTC\Control\GrabberControl.cs" />

@@ -20,6 +20,11 @@ public class UserManager : MonoBehaviour
     public GameObject[] setupPrefab;
     private GameObject setup;
 
+    public GameObject[] multiUsers;
+    private MultiUserManager user2;
+    private MultiUserManager user3;
+    private MultiUserManager user4;
+
     // TCP server
     private int recv;
     private Socket newsock;
@@ -107,7 +112,8 @@ public class UserManager : MonoBehaviour
 
                 string message = Encoding.ASCII.GetString(data, 0, recv);
                 print(message);
-                websiteCommands = WebsiteCommands.CreateFromJSON(message);
+                if (message != "ping")
+                    websiteCommands = WebsiteCommands.CreateFromJSON(message);
 
                 if (sendingScore)
                 {

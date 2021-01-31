@@ -43,7 +43,7 @@ public class RedGoal : MonoBehaviour
             if (goalType == "power")
             {
                 pointsPerGoal = 0;
-                if (gameTimer.getGameType() == "auto" || gameTimer.getGameType() == "end")
+                if (gameTimer.getGameType() == "auto" || gameTimer.getGameType() == "end" || gameTimer.getGameType() == "freeplay")
                     pointsPerGoal = 15;
             }
             scoreKeeper.addScoreRed(pointsPerGoal);

@@ -9,6 +9,9 @@ using UnityEngine;
 
 public class RobotController : MonoBehaviour
 {
+    public int sendPort = 9051;
+    public int recPort = 9050;
+
     private int RXrecv;
     private Socket RXnewsock;
     private byte[] RXdata;
@@ -113,7 +116,7 @@ public class RobotController : MonoBehaviour
 
     void sendToRC() {
         TXdata = new byte[1024];
-        IPEndPoint ipep = new IPEndPoint(IPAddress.Any, 9051);
+        IPEndPoint ipep = new IPEndPoint(IPAddress.Any, sendPort);
         TXnewsock = new Socket(AddressFamily.InterNetwork,
                     SocketType.Dgram, ProtocolType.Udp);
         TXnewsock.Bind(ipep);
@@ -160,7 +163,7 @@ public class RobotController : MonoBehaviour
 
     void receiveFromRC() {
         RXdata = new byte[1024];
-        IPEndPoint ipep = new IPEndPoint(IPAddress.Any, 9050);
+        IPEndPoint ipep = new IPEndPoint(IPAddress.Any, recPort);
 
         RXnewsock = new Socket(AddressFamily.InterNetwork,
                       SocketType.Dgram, ProtocolType.Udp);
@@ -226,7 +229,6 @@ public class RobotController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        print(motorPower8);
         driveRobot();
         shooterControl.Commands.Process();
         intakeControl.Commands.Process();
