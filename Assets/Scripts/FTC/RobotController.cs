@@ -77,7 +77,7 @@ public class RobotController : MonoBehaviour
 
         shooterControl = shooter.GetComponent<ShooterControl>();
         shooterControl.Commands.Add(() => motorPower6 > 0, shooterControl.shooting);
-        shooterControl.Commands.Add(() => motorPower7 > 0 && motorPower8 > 0, () =>
+        shooterControl.Commands.Add(() => motorPower7 > 0, () =>
         {
             shooterControl.setVelocity((motorPower7 + motorPower8) / 2f);
         });
@@ -126,8 +126,6 @@ public class RobotController : MonoBehaviour
             {
                 if (reconnectEncoderSocket)
                 {
-                    Debug.Log("Waiting for a udp client...");
-
                     IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
                     TXRemote = (EndPoint)(sender);
 
@@ -168,8 +166,8 @@ public class RobotController : MonoBehaviour
         RXnewsock = new Socket(AddressFamily.InterNetwork,
                       SocketType.Dgram, ProtocolType.Udp);
 
+        print("Waiting for a udp client... On port " + recPort);
         RXnewsock.Bind(ipep);
-        Console.WriteLine("Waiting for a udp client...");
 
         IPEndPoint sender = new IPEndPoint(IPAddress.Any, 0);
         RXRemote = (EndPoint)(sender);
@@ -178,6 +176,7 @@ public class RobotController : MonoBehaviour
             RXdata = new byte[1024];
             RXrecv = RXnewsock.ReceiveFrom(RXdata, ref RXRemote);
             string message = Encoding.ASCII.GetString(RXdata, 0, RXrecv);
+            print(message);
             if (message.Contains("reset"))
             {
                 reconnectEncoderSocket = true;

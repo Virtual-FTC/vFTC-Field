@@ -12,50 +12,39 @@ public class MultiUserManager : MonoBehaviour
 {
     public GameObject[] m_Robots = null;
 
+    public int startPos = 2;
+
     private int m_index = 0;
     private int robotPositionIndex = 0;
 
     public Transform[] spawnPositions;
 
-    public GameObject[] setupPrefab;
-    private GameObject setup;
-
     // TCP server
+    public int port = 9052;
     private int recv;
     private Socket newsock;
     private Socket client;
 
     private WebsiteCommands websiteCommands = new WebsiteCommands();
-    private bool currentGameStart = false;
-    private string currentGameSetup = "A";
-    private string currentGameType = "";
-    private int currentCam = 0;
 
     private RobotCustomizer robotCustomizer;
-    private GameTimer gameTimer;
 
     private Thread thread;
 
     private float previousRealTime;
     private bool resetCoolDown = false;
 
-    private ScoreKeeper scoreKeeper;
     private IntakeControl intake;
-    private CameraPosition camera;
 
     private bool sendingScore;
 
     private void Start()
     {
-        scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
         intake = GameObject.Find("Intake").GetComponent<IntakeControl>();
-        camera = GameObject.Find("Render Streaming Camera").GetComponent<CameraPosition>();
 
         robotCustomizer = m_Robots[m_index].GetComponent<RobotCustomizer>();
-        gameTimer = GameObject.Find("ScoreKeeper").GetComponent<GameTimer>();
 
-        setSpawn(0);
-        resetField("A");
+        setSpawn(startPos);
 
         print("Started.....");
         thread = new Thread(startTCPServer);
@@ -76,7 +65,7 @@ public class MultiUserManager : MonoBehaviour
         int recv;
         byte[] data = new byte[1024];
         IPEndPoint ipep = new IPEndPoint(IPAddress.Any,
-                               9052);
+                               port);
 
         newsock = new
             Socket(AddressFamily.InterNetwork,
@@ -84,7 +73,7 @@ public class MultiUserManager : MonoBehaviour
 
         newsock.Bind(ipep);
         newsock.Listen(10);
-        print("Waiting for a TCP client...");
+        print("Waiting for a TCP client... On port " + port);
         client = newsock.Accept();
         IPEndPoint clientep =
                      (IPEndPoint)client.RemoteEndPoint;
@@ -108,24 +97,6 @@ public class MultiUserManager : MonoBehaviour
                 string message = Encoding.ASCII.GetString(data, 0, recv);
                 print(message);
                 websiteCommands = WebsiteCommands.CreateFromJSON(message);
-
-                if (sendingScore)
-                {
-                    var sendData = new byte[1024];
-                    sendingScore = false;
-                    var score = new WebsiteScore();
-                    score.gameType = websiteCommands.gameType;
-                    if (websiteCommands.robotTeam == 0)
-                        score.score = scoreKeeper.getScoreRed();
-                    else
-                        score.score = scoreKeeper.getScoreBlue();
-
-                    string scoreJSON = JsonUtility.ToJson(score);
-
-                    sendData = Encoding.ASCII.GetBytes(scoreJSON);
-                    //client.Send(data, recv, SocketFlags.None);
-                    client.Send(sendData, SocketFlags.None);
-                }
             }
             catch (SocketException)
             {
@@ -165,52 +136,6 @@ public class MultiUserManager : MonoBehaviour
         m_Robots[m_index].transform.position = transform.position;
         m_Robots[m_index].transform.rotation = newRotationQ;
     }
-
-    private void resetField(string type)
-    {
-        scoreKeeper.resetScore();
-        Destroy(setup);
-        int index;
-        if (type == "A")
-        {
-            index = 0;
-        }
-        else if (type == "B")
-        {
-            index = 1;
-        }
-        else if (type == "C")
-        {
-            index = 2;
-        }
-        else
-        {
-            Random rnd = new Random();
-            index = rnd.Next(3);
-        }
-
-        if (index == 0)
-            gameTimer.setGameSetup("A");
-        else if (index == 1)
-            gameTimer.setGameSetup("B");
-        else if (index == 2)
-            gameTimer.setGameSetup("C");
-
-        GameObject[] gos = GameObject.FindGameObjectsWithTag("Ring");
-        foreach (GameObject a in gos)
-        {
-            Destroy(a);
-        }
-
-        setup = (GameObject)Instantiate(setupPrefab[index], new Vector3(0, 0.5f, 0), Quaternion.identity);
-        for (int x = 0; x < setup.GetComponentsInChildren<Rigidbody>().Length; x++)
-        {
-            if (setup.GetComponentsInChildren<Rigidbody>()[x].tag == "Wobble")
-            {
-                setup.GetComponentsInChildren<Rigidbody>()[x].centerOfMass = new Vector3(0, -0.6f, 0);
-            }
-        }
-    }
     #endregion
 
     #region Robot Selector
@@ -231,63 +156,12 @@ public class MultiUserManager : MonoBehaviour
         // Setting new robot position
         if (websiteCommands.position != robotPositionIndex)
         {
-            setSpawn(websiteCommands.position);
+            //setSpawn(websiteCommands.position);
         }
         // Changing robot
         if (websiteCommands.robotType != m_index)
         {
             OnButtonClick(websiteCommands.robotType);
-        }
-
-        // Reset field
-        if (websiteCommands.resetField && !resetCoolDown)
-        {
-            resetCoolDown = true;
-            previousRealTime = Time.realtimeSinceStartup;
-            resetField(websiteCommands.gameSetup);
-            resetRobot();
-        }
-        else if (Time.realtimeSinceStartup - previousRealTime > 5)
-        {
-            resetCoolDown = false;
-        }
-        // Game setup
-        if (websiteCommands.gameSetup != currentGameSetup)
-        {
-            currentGameSetup = websiteCommands.gameSetup;
-            resetField(websiteCommands.gameSetup);
-            resetRobot();
-        }
-
-        // Start game
-        if (websiteCommands.startGame && !currentGameStart)
-        {
-            currentGameStart = true;
-            gameTimer.startGame();
-        }
-        else if (!websiteCommands.startGame && currentGameStart)
-        {
-            currentGameStart = false;
-            gameTimer.stopGame();
-        }
-
-        // Game type
-        if (websiteCommands.gameType != currentGameType)
-        {
-            gameTimer.setGameType(websiteCommands.gameType);
-            currentGameType = websiteCommands.gameType;
-        }
-
-        // Camera control
-        if (websiteCommands.cam != currentCam)
-        {
-            currentCam = websiteCommands.cam;
-            camera.switchCamera(currentCam);
-        }
-        // Sending Score
-        if (gameTimer.getTimer() <= 0 && (websiteCommands.gameType == "auto" || websiteCommands.gameType == "teleop"))
-        {
-            sendingScore = true;
         }
 
         // Robot config
@@ -322,16 +196,11 @@ public class MultiUserManager : MonoBehaviour
     [System.Serializable]
     public class WebsiteCommands
     {
-        public int position;
+        public int position = 2;
         public int robotTeam;
         public int robotType;
-        public bool resetField;
-        public bool startGame;
-        public string gameType = "";
-        public string gameSetup = "";
         public float size;
         public float wheelSize;
-        public int cam;
 
         public static WebsiteCommands CreateFromJSON(string jsonString)
         {
@@ -345,12 +214,5 @@ public class MultiUserManager : MonoBehaviour
 
         // {"position":0,"robotType":0,"resetField":true, "startGame":false, "gameType": " freeplay", "gameSetup":"A", "incSize": false, "decSize":false, "incWheel":false, "decWheel":false}
         // {"position":0-4,"robotType":0-2,"resetField":true/false, "startGame":false/true, "gameType": "teleop/auto/freeplay", "gameSetup":"A/B/C/Random", "incSize":true/false, "decSize":true/false, "incWheel":true/false, "decWheel":true/false}
-    }
-
-    [System.Serializable]
-    public class WebsiteScore
-    {
-        public string gameType;
-        public int score;
     }
 }
