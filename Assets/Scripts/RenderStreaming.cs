@@ -431,7 +431,7 @@ namespace Unity.RenderStreaming
                 m_remoteInputAndCameraController.Add(input, controller);
 
                 byte index = (byte)m_listController.IndexOf(controller);
-                byte[] bytes = {(byte)UnityEventType.SwitchVideo, index};
+                byte[] bytes = {(byte)UnityEventType.SwitchVideo, 0};
                 channel.Send(bytes);
             }
         }
