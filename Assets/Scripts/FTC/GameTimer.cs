@@ -32,11 +32,10 @@ public class GameTimer : MonoBehaviour
 
     public void startGame()
     {
+        audioManager.reset();
+
         startToggle = true;
         previousRealTime = Time.realtimeSinceStartup;
-
-        audioManager.reset();
-        audioManager.playStartSound();
 
         if (gameType == "auto")
         {
@@ -54,6 +53,7 @@ public class GameTimer : MonoBehaviour
     public void stopGame()
     {
         startToggle = false;
+        audioManager.playEStop();
     }
 
     private void flashTimer()
@@ -124,10 +124,28 @@ public class GameTimer : MonoBehaviour
         }
         else if (gameType == "auto" || gameType == "teleop" || gameType == "end")
         {
+            if (gameType == "auto")
+            {
+                if (audioManager.playCountDown())
+                    previousRealTime = Time.realtimeSinceStartup;
+                else if (audioManager.playStartAuto())
+                    previousRealTime = Time.realtimeSinceStartup;
+            }
+
+            if (gameType == "teleop")
+                if (audioManager.playCountDown2())
+                    previousRealTime = Time.realtimeSinceStartup;
+                else if (audioManager.playStartTeleop())
+                    previousRealTime = Time.realtimeSinceStartup;
+
+
             if (timer <= 0)
             {
                 flashTimer();
-                audioManager.playEndSound();
+                if (gameType == "end")
+                    audioManager.playEndMatch();
+                if (gameType == "auto")
+                    audioManager.playEndAuto();
             }
             else
             {
@@ -142,6 +160,7 @@ public class GameTimer : MonoBehaviour
 
             if (gameType == "teleop" && timer <= 30)
             {
+                audioManager.playStartEndGame();
                 gameType = "end";
             }
         }
