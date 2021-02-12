@@ -6,18 +6,20 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = System.Random;
 
 public class MultiUserManager : MonoBehaviour
 {
     public GameObject[] m_Robots = null;
 
-    public int startPos = 2;
-
     private int m_index = 0;
-    private int robotPositionIndex = 0;
+    private int robotPositionIndex = -1;
 
-    public Transform[] spawnPositions;
+    public Image[] robotImages;
+
+    private bool connected = false;
+    private bool settingDefaultSpawn = false;
 
     // TCP server
     public int port = 9052;
@@ -43,8 +45,6 @@ public class MultiUserManager : MonoBehaviour
         intake = GameObject.Find("Intake").GetComponent<IntakeControl>();
 
         robotCustomizer = m_Robots[m_index].GetComponent<RobotCustomizer>();
-
-        setSpawn(startPos);
 
         print("Started.....");
         thread = new Thread(startTCPServer);
@@ -80,6 +80,11 @@ public class MultiUserManager : MonoBehaviour
         print("Connected with {0} at port {1}" +
                         clientep.Address + clientep.Port);
 
+        //Spawn in robot and update the robot visual
+        print("Spawning in robot");
+        connected = true;
+        settingDefaultSpawn = true;
+
 
         string welcome = "Welcome to my test server";
         data = Encoding.ASCII.GetBytes(welcome);
@@ -106,6 +111,9 @@ public class MultiUserManager : MonoBehaviour
         }
         print("Disconnected from {0}" +
                           clientep.Address);
+
+        connected = false;
+
         client.Close();
         newsock.Close();
         startTCPServer();
@@ -113,12 +121,63 @@ public class MultiUserManager : MonoBehaviour
     #endregion 
 
     #region Game Control
+
     private void setSpawn(int index)
     {
-        robotPositionIndex = index;
-        transform.position = spawnPositions[index].position;
-        transform.rotation = spawnPositions[index].rotation;
-        resetRobot();
+        if (robotPositionIndex == -1)
+        {
+            
+        }
+        else if (index == -1)
+        {
+            UserManager.currentSpawnPositions[robotPositionIndex] = UserManager.saveSpawnPositions[robotPositionIndex];
+            Color myColor = new Color();
+            ColorUtility.TryParseHtmlString("#9092C6", out myColor);
+
+            robotImages[robotPositionIndex].color = myColor;
+            robotPositionIndex = -1;
+        }
+        else if (UserManager.currentSpawnPositions[index] != null)
+        {
+            UserManager.currentSpawnPositions[robotPositionIndex] = UserManager.saveSpawnPositions[robotPositionIndex];
+            robotPositionIndex = index;
+            transform.position = UserManager.saveSpawnPositions[index].position;
+            transform.rotation = UserManager.saveSpawnPositions[index].rotation;
+
+            UserManager.currentSpawnPositions[robotPositionIndex] = null;
+
+            Color myColor = new Color();
+            ColorUtility.TryParseHtmlString("#000AFF", out myColor);
+
+            robotImages[robotPositionIndex].color = myColor;
+
+            resetRobot();
+        }
+        
+    }
+
+    private void setDefaultSpawn()
+    {
+        for (int x = 0; x < 4; x++)
+        {
+            if (UserManager.currentSpawnPositions[x] != null)
+            {
+
+                robotPositionIndex = x;
+                transform.position = UserManager.saveSpawnPositions[x].position;
+                transform.rotation = UserManager.saveSpawnPositions[x].rotation;
+
+                UserManager.currentSpawnPositions[robotPositionIndex] = null;
+
+                Color myColor = new Color();
+                ColorUtility.TryParseHtmlString("#000AFF", out myColor);
+
+                robotImages[robotPositionIndex].color = myColor;
+
+                resetRobot();
+                break;
+            }
+        }
     }
 
     private void resetRobot()
@@ -130,8 +189,6 @@ public class MultiUserManager : MonoBehaviour
         newRotation.z = 180f;
         var newRotationQ = m_Robots[m_index].transform.rotation;
         newRotationQ.eulerAngles = newRotation;
-
-        //
 
         m_Robots[m_index].transform.position = transform.position;
         m_Robots[m_index].transform.rotation = newRotationQ;
@@ -156,12 +213,24 @@ public class MultiUserManager : MonoBehaviour
         // Setting new robot position
         if (websiteCommands.position != robotPositionIndex)
         {
-            //setSpawn(websiteCommands.position);
+            setSpawn(websiteCommands.position);
         }
         // Changing robot
         if (websiteCommands.robotType != m_index)
         {
             OnButtonClick(websiteCommands.robotType);
+        }
+
+        if (connected == true && settingDefaultSpawn == true)
+        {
+            m_Robots[m_index].SetActive(true);
+            setDefaultSpawn();
+            settingDefaultSpawn = false;
+        }
+        if (connected == false)
+        {
+            m_Robots[m_index].SetActive(false);
+            setSpawn(-1);
         }
 
         // Robot config
@@ -196,7 +265,7 @@ public class MultiUserManager : MonoBehaviour
     [System.Serializable]
     public class WebsiteCommands
     {
-        public int position = 2;
+        public int position = -1;
         public int robotTeam;
         public int robotType;
         public float size;

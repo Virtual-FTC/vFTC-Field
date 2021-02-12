@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = System.Random;
 
 public class UserManager : MonoBehaviour
@@ -16,11 +17,14 @@ public class UserManager : MonoBehaviour
     private int robotPositionIndex = 0;
 
     public Transform[] spawnPositions;
+    public static Transform[] saveSpawnPositions;
+    public static Transform[] currentSpawnPositions;
 
     public GameObject[] setupPrefab;
     private GameObject setup;
 
-    public GameObject[] multiUsers;
+    public Image[] robotImages;
+
     private MultiUserManager user2;
     private MultiUserManager user3;
     private MultiUserManager user4;
@@ -52,6 +56,10 @@ public class UserManager : MonoBehaviour
 
     private void Start()
     {
+        user2 = GameObject.Find("User-2").GetComponent<MultiUserManager>();
+        user3 = GameObject.Find("User-3").GetComponent<MultiUserManager>();
+        user4 = GameObject.Find("User-4").GetComponent<MultiUserManager>();
+
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
         intake = GameObject.Find("Intake").GetComponent<IntakeControl>();
         camera = GameObject.Find("Render Streaming Camera").GetComponent<CameraPosition>();
@@ -59,6 +67,8 @@ public class UserManager : MonoBehaviour
         robotCustomizer = m_Robots[m_index].GetComponent<RobotCustomizer>();
         gameTimer = GameObject.Find("ScoreKeeper").GetComponent<GameTimer>();
 
+        currentSpawnPositions = spawnPositions;
+        saveSpawnPositions = spawnPositions;
         setSpawn(0);
         resetField("A");
 
@@ -111,7 +121,7 @@ public class UserManager : MonoBehaviour
                     break;
 
                 string message = Encoding.ASCII.GetString(data, 0, recv);
-                print(message);
+                //print(message);
                 if (message != "ping")
                     websiteCommands = WebsiteCommands.CreateFromJSON(message);
 
@@ -121,7 +131,7 @@ public class UserManager : MonoBehaviour
                     sendingScore = false;
                     var score = new WebsiteScore();
                     score.gameType = websiteCommands.gameType;
-                    if (websiteCommands.robotTeam == 0)
+                    if (websiteCommands.position <= 1)
                         score.score = scoreKeeper.getScoreRed();
                     else
                         score.score = scoreKeeper.getScoreBlue();
@@ -150,10 +160,22 @@ public class UserManager : MonoBehaviour
     #region Game Control
     private void setSpawn(int index)
     {
-        robotPositionIndex = index;
-        transform.position = spawnPositions[index].position;
-        transform.rotation = spawnPositions[index].rotation;
-        resetRobot();
+        if(currentSpawnPositions[index] != null)
+        {
+            currentSpawnPositions[robotPositionIndex] = saveSpawnPositions[robotPositionIndex];
+            robotPositionIndex = index;
+            transform.position = saveSpawnPositions[index].position;
+            transform.rotation = saveSpawnPositions[index].rotation;
+
+            currentSpawnPositions[robotPositionIndex] = null;
+
+            Color myColor = new Color();
+            ColorUtility.TryParseHtmlString("#9092C6", out myColor);
+
+            robotImages[robotPositionIndex].color = myColor;
+
+            resetRobot();
+        }
     }
 
     private void resetRobot()
@@ -296,6 +318,7 @@ public class UserManager : MonoBehaviour
             sendingScore = true;
         }
 
+
         // Robot config
         /*
         if (websiteCommands.incSize)
@@ -329,7 +352,6 @@ public class UserManager : MonoBehaviour
     public class WebsiteCommands
     {
         public int position;
-        public int robotTeam;
         public int robotType;
         public bool resetField;
         public bool startGame;
