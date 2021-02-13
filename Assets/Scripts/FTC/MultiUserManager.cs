@@ -132,7 +132,12 @@ public class MultiUserManager : MonoBehaviour
         {
             UserManager.currentSpawnPositions[robotPositionIndex] = UserManager.saveSpawnPositions[robotPositionIndex];
             Color myColor = new Color();
-            ColorUtility.TryParseHtmlString("#9092C6", out myColor);
+            var color = "";
+            if (robotPositionIndex <= 1)
+                color = "#9092C6";
+            else
+                color = "#E2958C";
+            ColorUtility.TryParseHtmlString(color, out myColor);
 
             robotImages[robotPositionIndex].color = myColor;
             robotPositionIndex = -1;
@@ -147,7 +152,12 @@ public class MultiUserManager : MonoBehaviour
             UserManager.currentSpawnPositions[robotPositionIndex] = null;
 
             Color myColor = new Color();
-            ColorUtility.TryParseHtmlString("#000AFF", out myColor);
+            var color = "";
+            if (robotPositionIndex <= 1)
+                color = "#0000FF";
+            else
+                color = "#FF1B00";
+            ColorUtility.TryParseHtmlString(color, out myColor);
 
             robotImages[robotPositionIndex].color = myColor;
 
@@ -170,7 +180,12 @@ public class MultiUserManager : MonoBehaviour
                 UserManager.currentSpawnPositions[robotPositionIndex] = null;
 
                 Color myColor = new Color();
-                ColorUtility.TryParseHtmlString("#000AFF", out myColor);
+                var color = "";
+                if (robotPositionIndex <= 1)
+                    color = "#0000FF";
+                else
+                    color = "#FF1B00";
+                ColorUtility.TryParseHtmlString(color, out myColor);
 
                 robotImages[robotPositionIndex].color = myColor;
 

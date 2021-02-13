@@ -162,6 +162,15 @@ public class UserManager : MonoBehaviour
     {
         if(currentSpawnPositions[index] != null)
         {
+            Color myColor = new Color();
+            var color = "";
+            if (robotPositionIndex <= 1)
+                color = "#9092C6";
+            else
+                color = "#E2958C";
+            ColorUtility.TryParseHtmlString(color, out myColor);
+            robotImages[robotPositionIndex].color = myColor;
+
             currentSpawnPositions[robotPositionIndex] = saveSpawnPositions[robotPositionIndex];
             robotPositionIndex = index;
             transform.position = saveSpawnPositions[index].position;
@@ -169,8 +178,11 @@ public class UserManager : MonoBehaviour
 
             currentSpawnPositions[robotPositionIndex] = null;
 
-            Color myColor = new Color();
-            ColorUtility.TryParseHtmlString("#9092C6", out myColor);
+            if (robotPositionIndex <= 1)
+                color = "#0000FF";
+            else
+                color = "#FF1B00";
+            ColorUtility.TryParseHtmlString(color, out myColor);
 
             robotImages[robotPositionIndex].color = myColor;
 
@@ -187,8 +199,6 @@ public class UserManager : MonoBehaviour
         newRotation.z = 180f;
         var newRotationQ = m_Robots[m_index].transform.rotation;
         newRotationQ.eulerAngles = newRotation;
-
-        //
 
         m_Robots[m_index].transform.position = transform.position;
         m_Robots[m_index].transform.rotation = newRotationQ;
