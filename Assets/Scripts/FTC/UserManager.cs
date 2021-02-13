@@ -224,7 +224,7 @@ public class UserManager : MonoBehaviour
         else if (index == 2)
             gameTimer.setGameSetup("C");
 
-        GameObject[] gos = GameObject.FindGameObjectsWithTag("Ring");
+        GameObject[] gos = GameObject.FindGameObjectsWithTag("OutsideRing");
         foreach (GameObject a in gos)
         {
             Destroy(a);

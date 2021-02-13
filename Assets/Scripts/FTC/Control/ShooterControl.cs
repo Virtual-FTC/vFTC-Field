@@ -23,9 +23,12 @@ public class ShooterControl : MonoBehaviour
 
     private float wantedVelocity = 0.0f;
 
+    private AudioManager audioManager;
+
     void Awake()
     {
         intakeControl = intake.GetComponent<IntakeControl>();
+        audioManager = GameObject.Find("ScoreKeeper").GetComponent<AudioManager>();
 
         timer = Time.time;
     }
@@ -34,6 +37,7 @@ public class ShooterControl : MonoBehaviour
     {
         if (Time.time - timer >= timeBetweenShots & intakeControl.getNumberBalls() > 0)
         {
+            audioManager.playRobotShoot();
             timer = Time.time;
             var newPosition = transform.position;
             newPosition.x += 0.0f;

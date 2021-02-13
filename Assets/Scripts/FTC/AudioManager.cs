@@ -22,6 +22,22 @@ public class AudioManager : MonoBehaviour
     private bool playedStartEndGame = false;
     private bool playedEndMatch = false;
 
+    // Robot specific sounds
+    public AudioSource robotDrive;
+    public AudioSource robotImpact;
+    public AudioSource robotShoot;
+    public AudioSource shooterRev;
+    public AudioSource intakeRev;
+
+    // Ring sounds
+    public AudioSource ringBounce;
+    public AudioSource ringImpact;
+
+    void Start()
+    {
+
+    }
+
     public bool playCountDown()
     {
         if (!playedCountDown)
@@ -96,6 +112,7 @@ public class AudioManager : MonoBehaviour
     {
         eStop.Play();
     }
+
     public void reset()
     {
         playedStartAuto = false;
@@ -105,5 +122,73 @@ public class AudioManager : MonoBehaviour
         playedStartTeleop = false;
         playedStartEndGame = false;
         playedEndMatch = false;
+    }
+
+    // Robot specific sounds
+    public void playRobotDrive(float power)
+    {
+        if (power > 0)
+        {
+            robotDrive.volume = power;
+            robotDrive.loop = true;
+            if (!robotDrive.isPlaying)
+                robotDrive.Play();
+        }
+        else
+        {
+            robotDrive.Stop();
+        }
+    }
+
+    public void playRobotShoot()
+    {
+        robotShoot.Play();
+    }
+
+    public void playShooterRev(float power)
+    {
+        if (shooterRev.time < 0.1)
+            shooterRev.time = 0.1f;
+        if (shooterRev.time > 0.6)
+            shooterRev.time = 0.6f;
+
+        if (power > 0)
+        {
+            shooterRev.volume = power;
+            shooterRev.loop = true;
+            if (!shooterRev.isPlaying)
+                shooterRev.Play();
+        }
+        else
+        {
+            shooterRev.Stop();
+        }
+    }
+
+    public void playIntakeRev(float power)
+    {
+        if (power > 0)
+        {
+            print(power);
+            intakeRev.volume = power;
+            intakeRev.loop = true;
+            if (!intakeRev.isPlaying)
+                intakeRev.Play();
+        }
+        else
+        {
+            intakeRev.Stop();
+        }
+    }
+
+    public void playRingBounce()
+    {
+        ringBounce.Play();
+    }
+
+    public void playRingImpact()
+    {
+        ringImpact.volume = 0.1f;
+        ringImpact.Play();
     }
 }

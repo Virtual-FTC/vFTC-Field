@@ -11,11 +11,13 @@ public class RedGoal : MonoBehaviour
     public string goalType = "";
 
     private GameTimer gameTimer;
+    private AudioManager audioManager;
 
     void Awake()
     {
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
         gameTimer = GameObject.Find("ScoreKeeper").GetComponent<GameTimer>();
+        audioManager = GameObject.Find("ScoreKeeper").GetComponent<AudioManager>();
     }
 
     void OnTriggerEnter(Collider collision)
@@ -24,18 +26,24 @@ public class RedGoal : MonoBehaviour
         {
             if (goalType == "low")
             {
+                Destroy(collision.gameObject.transform.parent.gameObject);
+                audioManager.playRingBounce();
                 pointsPerGoal = 2;
                 if (gameTimer.getGameType() == "auto")
                     pointsPerGoal = 3;
             }
             if (goalType == "mid")
             {
+                Destroy(collision.gameObject.transform.parent.gameObject);
+                audioManager.playRingBounce();
                 pointsPerGoal = 4;
                 if (gameTimer.getGameType() == "auto")
                     pointsPerGoal = 6;
             }
             if (goalType == "high")
             {
+                Destroy(collision.gameObject.transform.parent.gameObject);
+                audioManager.playRingBounce();
                 pointsPerGoal = 6;
                 if (gameTimer.getGameType() == "auto")
                     pointsPerGoal = 12;
@@ -44,10 +52,14 @@ public class RedGoal : MonoBehaviour
             {
                 pointsPerGoal = 0;
                 if (gameTimer.getGameType() == "auto" || gameTimer.getGameType() == "end" || gameTimer.getGameType() == "freeplay")
+                {
+                    Destroy(collision.gameObject.transform.parent.gameObject);
+                    audioManager.playRingBounce();
                     pointsPerGoal = 15;
+                }
+                    
             }
             scoreKeeper.addScoreRed(pointsPerGoal);
-            Destroy(collision.gameObject.transform.parent.gameObject);
         }
     }
 }

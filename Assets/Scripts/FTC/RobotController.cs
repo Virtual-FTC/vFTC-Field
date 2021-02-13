@@ -60,12 +60,16 @@ public class RobotController : MonoBehaviour
     private IntakeControl intakeControl;
     private GrabberControl grabberControl;
 
+    private AudioManager audioManager;
+
     private Thread sendThread;
     private Thread receiveThread;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        audioManager = GameObject.Find("ScoreKeeper").GetComponent<AudioManager>();
 
         previousRealTime = Time.realtimeSinceStartup;
         Console.WriteLine("Started.....");
@@ -77,18 +81,24 @@ public class RobotController : MonoBehaviour
 
         shooterControl = shooter.GetComponent<ShooterControl>();
         shooterControl.Commands.Add(() => motorPower6 > 0, shooterControl.shooting);
-        shooterControl.Commands.Add(() => motorPower7 > 0, () =>
+        shooterControl.Commands.Add(() => motorPower7 >= 0, () =>
         {
-            shooterControl.setVelocity((motorPower7 + motorPower8) / 2f);
+            audioManager.playShooterRev(motorPower7);
+            shooterControl.setVelocity(motorPower7);
         });
 
         intakeControl = intake.GetComponent<IntakeControl>();
         intakeControl.Commands.Add(() => motorPower5 != 0, () =>
         {
+            audioManager.playIntakeRev(motorPower5);
             intakeControl.setVelocity(motorPower5 * 150);
             intakeControl.deployIntake();
         });
-        intakeControl.Commands.Add(() => motorPower5 == 0, intakeControl.retractIntake);
+        intakeControl.Commands.Add(() => motorPower5 == 0, () =>
+        {
+            audioManager.playIntakeRev(motorPower5);
+            intakeControl.retractIntake();
+        });
 
         grabberControl = grabber.GetComponent<GrabberControl>();
         grabberControl.Commands.Add(() => motorPower8 > 0 , () =>
@@ -224,6 +234,8 @@ public class RobotController : MonoBehaviour
         frontRightWheelEnc += (motorRPM / 60) * frontRightWheelCmd * Time.deltaTime * encoderTicksPerRev * drivetrainGearRatio;
         backLeftWheelEnc += (motorRPM / 60) * backLeftWheelCmd * Time.deltaTime * encoderTicksPerRev * drivetrainGearRatio;
         backRightWheelEnc += (motorRPM / 60) * backRightWheelCmd * Time.deltaTime * encoderTicksPerRev * drivetrainGearRatio;
+
+        audioManager.playRobotDrive((Mathf.Abs(frontLeftWheelCmd) + Mathf.Abs(frontRightWheelCmd) + Mathf.Abs(backLeftWheelCmd) + Mathf.Abs(backRightWheelCmd)) / 4f);
     }
 
     private void FixedUpdate()

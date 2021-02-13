@@ -12,7 +12,6 @@ public class RingDispenser : MonoBehaviour
     public GameObject prefab;
     public float shotForceMult = 0.5f;
 
-    public GameObject timer;
     private GameTimer gameTimer;
 
     private float previousRealTime;
@@ -23,7 +22,7 @@ public class RingDispenser : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameTimer = timer.GetComponent<GameTimer>();
+        gameTimer = GameObject.Find("ScoreKeeper").GetComponent<GameTimer>();
         previousRealTime = Time.realtimeSinceStartup;
     }
 
@@ -49,7 +48,7 @@ public class RingDispenser : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        gos = GameObject.FindGameObjectsWithTag("Ring");
+        gos = GameObject.FindGameObjectsWithTag("OutsideRing");
         if (gameTimer.getGameType() != "auto" && gameTimer.getGameStarted())
         {
             if (Time.realtimeSinceStartup - previousRealTime > timeBetween)

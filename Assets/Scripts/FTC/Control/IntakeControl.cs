@@ -15,7 +15,7 @@ public class IntakeControl : MonoBehaviour
     public string coliderTag = "PowerCell";
 
     [Header("Intake Motor")]
-    public float wantedVelocity = 150f;
+    public float wantedVelocity = 0f;
 
     private float timer = 0.0f;
 
@@ -44,25 +44,33 @@ public class IntakeControl : MonoBehaviour
         //motor.targetVelocity = -wantedVelocity;
 
         //hinge.motor = motor;
+        wantedVelocity = 0f;
     }
 
     // Ball Pickup
     void OnTriggerEnter(Collider collision)
     {
-        if (collision.tag == coliderTag && numBalls < maxNumberBalls)
+        if (wantedVelocity != 0)
         {
-            timer = Time.time;
+            if (collision.tag == coliderTag && numBalls < maxNumberBalls)
+            {
+                timer = Time.time;
+            }
         }
+        
     }
 
     void OnTriggerStay(Collider collision)
     {
-     
-        if (collision.tag == coliderTag && numBalls < maxNumberBalls && Time.time - timer >= timeOfBallContact)
+        if (wantedVelocity != 0)
         {
-            numBalls++;
-            Destroy(collision.gameObject);
+            if (collision.tag == coliderTag && numBalls < maxNumberBalls && Time.time - timer >= timeOfBallContact)
+            {
+                numBalls++;
+                Destroy(collision.gameObject);
+            }
         }
+        
     }
 
     public void subtractBall()
