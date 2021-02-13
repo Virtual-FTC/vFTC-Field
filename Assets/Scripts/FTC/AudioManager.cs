@@ -127,6 +127,10 @@ public class AudioManager : MonoBehaviour
     // Robot specific sounds
     public void playRobotDrive(float power)
     {
+        if (robotDrive.time < 0.1)
+            robotDrive.time = 0.1f;
+        if (robotDrive.time > 6)
+            robotDrive.time = 0.1f;
         if (power > 0)
         {
             robotDrive.volume = power;
@@ -150,7 +154,7 @@ public class AudioManager : MonoBehaviour
         if (shooterRev.time < 0.1)
             shooterRev.time = 0.1f;
         if (shooterRev.time > 0.6)
-            shooterRev.time = 0.6f;
+            shooterRev.time = 0.1f;
 
         if (power > 0)
         {
@@ -167,6 +171,10 @@ public class AudioManager : MonoBehaviour
 
     public void playIntakeRev(float power)
     {
+        if (intakeRev.time < 0.1)
+            intakeRev.time = 0.1f;
+        if (intakeRev.time > 0.6)
+            intakeRev.time = 0.1f;
         if (power > 0)
         {
             print(power);

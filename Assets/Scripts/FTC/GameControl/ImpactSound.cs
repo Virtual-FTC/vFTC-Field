@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RingSound : MonoBehaviour
+public class ImpactSound : MonoBehaviour
 {
     private AudioManager audioManager;
     void Start()
