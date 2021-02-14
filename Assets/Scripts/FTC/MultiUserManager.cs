@@ -40,6 +40,8 @@ public class MultiUserManager : MonoBehaviour
 
     private bool sendingScore;
 
+    public Material[] materials;
+
     private void Start()
     {
         intake = GameObject.Find("Intake").GetComponent<IntakeControl>();
@@ -144,6 +146,14 @@ public class MultiUserManager : MonoBehaviour
         }
         else if (UserManager.currentSpawnPositions[index] != null)
         {
+            Color myColor = new Color();
+            var color = "";
+            if (robotPositionIndex <= 1)
+                color = "#9092C6";
+            else
+                color = "#E2958C";
+            ColorUtility.TryParseHtmlString(color, out myColor);
+            robotImages[robotPositionIndex].color = myColor;
             UserManager.currentSpawnPositions[robotPositionIndex] = UserManager.saveSpawnPositions[robotPositionIndex];
             robotPositionIndex = index;
             transform.position = UserManager.saveSpawnPositions[index].position;
@@ -151,8 +161,6 @@ public class MultiUserManager : MonoBehaviour
 
             UserManager.currentSpawnPositions[robotPositionIndex] = null;
 
-            Color myColor = new Color();
-            var color = "";
             if (robotPositionIndex <= 1)
                 color = "#0000FF";
             else
@@ -160,6 +168,18 @@ public class MultiUserManager : MonoBehaviour
             ColorUtility.TryParseHtmlString(color, out myColor);
 
             robotImages[robotPositionIndex].color = myColor;
+
+            //Change color of robot
+            if (robotPositionIndex == 0)
+                color = "#3A2CDC";
+            else if (robotPositionIndex == 1)
+                color = "#0F6AD6";
+            else if (robotPositionIndex == 2)
+                color = "#FF1A1A";
+            else
+                color = "#FF6942";
+            ColorUtility.TryParseHtmlString(color, out myColor);
+            materials[int.Parse(transform.gameObject.tag) - 1].color = myColor;
 
             resetRobot();
         }

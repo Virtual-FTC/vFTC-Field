@@ -10,6 +10,13 @@ TagManager:
   - Wobble
   - RedRobot
   - BlueRobot
+  - OutsideRing
+  - Floor
+  - Robot
+  - 1
+  - 2
+  - 3
+  - 4
   layers:
   - Default
   - TransparentFX

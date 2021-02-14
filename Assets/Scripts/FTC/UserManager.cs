@@ -54,6 +54,8 @@ public class UserManager : MonoBehaviour
 
     private bool sendingScore;
 
+    public Material[] materials;
+
     private void Start()
     {
         user2 = GameObject.Find("User-2").GetComponent<MultiUserManager>();
@@ -67,8 +69,8 @@ public class UserManager : MonoBehaviour
         robotCustomizer = m_Robots[m_index].GetComponent<RobotCustomizer>();
         gameTimer = GameObject.Find("ScoreKeeper").GetComponent<GameTimer>();
 
-        currentSpawnPositions = spawnPositions;
-        saveSpawnPositions = spawnPositions;
+        currentSpawnPositions = (Transform[])spawnPositions.Clone();
+        saveSpawnPositions = (Transform[])spawnPositions.Clone();
         setSpawn(0);
         resetField("A");
 
@@ -172,6 +174,7 @@ public class UserManager : MonoBehaviour
             robotImages[robotPositionIndex].color = myColor;
 
             currentSpawnPositions[robotPositionIndex] = saveSpawnPositions[robotPositionIndex];
+            print(currentSpawnPositions[robotPositionIndex]);
             robotPositionIndex = index;
             transform.position = saveSpawnPositions[index].position;
             transform.rotation = saveSpawnPositions[index].rotation;
@@ -185,6 +188,18 @@ public class UserManager : MonoBehaviour
             ColorUtility.TryParseHtmlString(color, out myColor);
 
             robotImages[robotPositionIndex].color = myColor;
+
+            //Change color of robot
+            if (robotPositionIndex == 0)
+                color = "#3A2CDC"; 
+            else if (robotPositionIndex == 1)
+                color = "#0F6AD6";
+            else if (robotPositionIndex == 2)
+                color = "#FF1A1A";
+            else
+                color = "#FF6942";
+            ColorUtility.TryParseHtmlString(color, out myColor);
+            materials[int.Parse(transform.gameObject.tag) -1].color = myColor;
 
             resetRobot();
         }

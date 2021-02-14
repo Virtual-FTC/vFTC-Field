@@ -61,6 +61,7 @@ public class RobotController : MonoBehaviour
     private GrabberControl grabberControl;
 
     private AudioManager audioManager;
+    private RobotSoundControl robotSoundControl;
 
     private Thread sendThread;
     private Thread receiveThread;
@@ -68,6 +69,7 @@ public class RobotController : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        robotSoundControl = GetComponent<RobotSoundControl>();
 
         audioManager = GameObject.Find("ScoreKeeper").GetComponent<AudioManager>();
 
@@ -83,20 +85,20 @@ public class RobotController : MonoBehaviour
         shooterControl.Commands.Add(() => motorPower6 > 0, shooterControl.shooting);
         shooterControl.Commands.Add(() => motorPower7 >= 0, () =>
         {
-            audioManager.playShooterRev(motorPower7);
+            robotSoundControl.playShooterRev(motorPower7);
             shooterControl.setVelocity(motorPower7);
         });
 
         intakeControl = intake.GetComponent<IntakeControl>();
         intakeControl.Commands.Add(() => motorPower5 != 0, () =>
         {
-            audioManager.playIntakeRev(motorPower5);
+            robotSoundControl.playIntakeRev(motorPower5);
             intakeControl.setVelocity(motorPower5 * 150);
             intakeControl.deployIntake();
         });
         intakeControl.Commands.Add(() => motorPower5 == 0, () =>
         {
-            audioManager.playIntakeRev(motorPower5);
+            robotSoundControl.playIntakeRev(motorPower5);
             intakeControl.retractIntake();
         });
 
@@ -235,7 +237,7 @@ public class RobotController : MonoBehaviour
         backLeftWheelEnc += (motorRPM / 60) * backLeftWheelCmd * Time.deltaTime * encoderTicksPerRev * drivetrainGearRatio;
         backRightWheelEnc += (motorRPM / 60) * backRightWheelCmd * Time.deltaTime * encoderTicksPerRev * drivetrainGearRatio;
 
-        audioManager.playRobotDrive((Mathf.Abs(frontLeftWheelCmd) + Mathf.Abs(frontRightWheelCmd) + Mathf.Abs(backLeftWheelCmd) + Mathf.Abs(backRightWheelCmd)) / 4f);
+        robotSoundControl.playRobotDrive((Mathf.Abs(frontLeftWheelCmd) + Mathf.Abs(frontRightWheelCmd) + Mathf.Abs(backLeftWheelCmd) + Mathf.Abs(backRightWheelCmd)) / 4f);
     }
 
     private void FixedUpdate()
@@ -244,6 +246,14 @@ public class RobotController : MonoBehaviour
         shooterControl.Commands.Process();
         intakeControl.Commands.Process();
         grabberControl.Commands.Process();
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag != "Floor")
+        {
+            robotSoundControl.playRobotImpact();
+        }
     }
 
     [System.Serializable]
