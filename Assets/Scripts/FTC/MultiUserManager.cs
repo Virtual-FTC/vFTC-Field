@@ -103,7 +103,8 @@ public class MultiUserManager : MonoBehaviour
 
                 string message = Encoding.ASCII.GetString(data, 0, recv);
                 print(message);
-                websiteCommands = WebsiteCommands.CreateFromJSON(message);
+                if (message != "ping")
+                    websiteCommands = WebsiteCommands.CreateFromJSON(message);
             }
             catch (SocketException)
             {
@@ -126,13 +127,13 @@ public class MultiUserManager : MonoBehaviour
 
     private void setSpawn(int index)
     {
-        if (robotPositionIndex == -1)
+        if (robotPositionIndex == -1 && index == -1)
         {
-            
+          
         }
         else if (index == -1)
         {
-            UserManager.currentSpawnPositions[robotPositionIndex] = UserManager.saveSpawnPositions[robotPositionIndex];
+            UserManager.unNullSpawnPosition(robotPositionIndex);
             Color myColor = new Color();
             var color = "";
             if (robotPositionIndex <= 1)
@@ -154,12 +155,12 @@ public class MultiUserManager : MonoBehaviour
                 color = "#E2958C";
             ColorUtility.TryParseHtmlString(color, out myColor);
             robotImages[robotPositionIndex].color = myColor;
-            UserManager.currentSpawnPositions[robotPositionIndex] = UserManager.saveSpawnPositions[robotPositionIndex];
+            UserManager.unNullSpawnPosition(robotPositionIndex);
             robotPositionIndex = index;
             transform.position = UserManager.saveSpawnPositions[index].position;
             transform.rotation = UserManager.saveSpawnPositions[index].rotation;
 
-            UserManager.currentSpawnPositions[robotPositionIndex] = null;
+            UserManager.nullSpawnPosition(robotPositionIndex);
 
             if (robotPositionIndex <= 1)
                 color = "#0000FF";
@@ -197,7 +198,7 @@ public class MultiUserManager : MonoBehaviour
                 transform.position = UserManager.saveSpawnPositions[x].position;
                 transform.rotation = UserManager.saveSpawnPositions[x].rotation;
 
-                UserManager.currentSpawnPositions[robotPositionIndex] = null;
+                UserManager.nullSpawnPosition(robotPositionIndex);
 
                 Color myColor = new Color();
                 var color = "";
@@ -209,24 +210,40 @@ public class MultiUserManager : MonoBehaviour
 
                 robotImages[robotPositionIndex].color = myColor;
 
+                //Change color of robot
+                if (robotPositionIndex == 0)
+                    color = "#3A2CDC";
+                else if (robotPositionIndex == 1)
+                    color = "#0F6AD6";
+                else if (robotPositionIndex == 2)
+                    color = "#FF1A1A";
+                else
+                    color = "#FF6942";
+                ColorUtility.TryParseHtmlString(color, out myColor);
+                materials[int.Parse(transform.gameObject.tag) - 1].color = myColor;
+
                 resetRobot();
                 break;
             }
         }
     }
 
-    private void resetRobot()
+    public void resetRobot()
     {
-        intake.resetBalls();
-        var newRotation = m_Robots[m_index].transform.rotation.eulerAngles;
-        newRotation.x = -90f;
-        newRotation.y = 0f;
-        newRotation.z = 180f;
-        var newRotationQ = m_Robots[m_index].transform.rotation;
-        newRotationQ.eulerAngles = newRotation;
+        if (connected)
+        {
+            intake.resetBalls();
+            var newRotation = m_Robots[m_index].transform.rotation.eulerAngles;
+            newRotation.x = -90f;
+            newRotation.y = 0f;
+            newRotation.z = 180f;
+            var newRotationQ = m_Robots[m_index].transform.rotation;
+            newRotationQ.eulerAngles = newRotation;
 
-        m_Robots[m_index].transform.position = transform.position;
-        m_Robots[m_index].transform.rotation = newRotationQ;
+            m_Robots[m_index].transform.position = transform.position;
+            m_Robots[m_index].transform.rotation = newRotationQ;
+        }
+        
     }
     #endregion
 
@@ -245,17 +262,6 @@ public class MultiUserManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Setting new robot position
-        if (websiteCommands.position != robotPositionIndex)
-        {
-            setSpawn(websiteCommands.position);
-        }
-        // Changing robot
-        if (websiteCommands.robotType != m_index)
-        {
-            OnButtonClick(websiteCommands.robotType);
-        }
-
         if (connected == true && settingDefaultSpawn == true)
         {
             m_Robots[m_index].SetActive(true);
@@ -267,41 +273,53 @@ public class MultiUserManager : MonoBehaviour
             m_Robots[m_index].SetActive(false);
             setSpawn(-1);
         }
+        if (connected)
+        {
+            // Setting new robot position
+            if (websiteCommands.position != robotPositionIndex && websiteCommands.position != -1)
+            {
+                setSpawn(websiteCommands.position);
+            }
+            // Changing robot
+            if (websiteCommands.robotType != m_index)
+            {
+                OnButtonClick(websiteCommands.robotType);
+            }
 
-        // Robot config
-        /*
-        if (websiteCommands.incSize)
-        {
-            print("Increase size 1");
-            robotCustomizer.IncreaseRobotSize_PointerDown();
+            // Robot config
+            /*
+            if (websiteCommands.incSize)
+            {
+                print("Increase size 1");
+                robotCustomizer.IncreaseRobotSize_PointerDown();
+            }
+            else if (websiteCommands.decSize)
+            {
+                print("Dec size 1");
+                robotCustomizer.DecreaseRobotSize_PointerDown();
+            }
+            else if (websiteCommands.incWheel)
+            {
+                print("Increase wheel 1");
+                robotCustomizer.IncAxelDis_PointerDown();
+            }
+            else if (websiteCommands.decWheel)
+            {
+                print("Dec wheel 1");
+                robotCustomizer.DecAxelDis_PointerDown();
+            }
+            else
+            {
+                robotCustomizer.OnPointerUp();
+            }
+            */
         }
-        else if (websiteCommands.decSize)
-        {
-            print("Dec size 1");
-            robotCustomizer.DecreaseRobotSize_PointerDown();
-        }
-        else if (websiteCommands.incWheel)
-        {
-            print("Increase wheel 1");
-            robotCustomizer.IncAxelDis_PointerDown();
-        }
-        else if (websiteCommands.decWheel)
-        {
-            print("Dec wheel 1");
-            robotCustomizer.DecAxelDis_PointerDown();
-        }
-        else
-        {
-            robotCustomizer.OnPointerUp();
-        }
-        */
     }
 
     [System.Serializable]
     public class WebsiteCommands
     {
         public int position = -1;
-        public int robotTeam;
         public int robotType;
         public float size;
         public float wheelSize;

@@ -86,6 +86,16 @@ public class UserManager : MonoBehaviour
         thread.Abort();
     }
 
+    public static void nullSpawnPosition(int pos)
+    {
+        currentSpawnPositions[pos] = null;
+    }
+
+    public static void unNullSpawnPosition(int pos)
+    {
+        currentSpawnPositions[pos] = saveSpawnPositions[pos];
+    }
+
     // Some sort of TCP connection to the website to handle user pref like which robot, position of the robot, dimensions of the robot, color of the robot, team number of the robot, start/stop game, and select which game mode to run (freeplay, autonomous, teleop, and full match) 
     #region TCP server for sending and receiving data  
     void startTCPServer()
@@ -217,6 +227,12 @@ public class UserManager : MonoBehaviour
 
         m_Robots[m_index].transform.position = transform.position;
         m_Robots[m_index].transform.rotation = newRotationQ;
+
+        
+        user2.resetRobot();
+        user2.resetRobot();
+        user3.resetRobot();
+        
     }
 
     private void resetField(string type)
@@ -260,7 +276,7 @@ public class UserManager : MonoBehaviour
         {
             if (setup.GetComponentsInChildren<Rigidbody>()[x].tag == "Wobble")
             {
-                setup.GetComponentsInChildren<Rigidbody>()[x].centerOfMass = new Vector3(0, -0.6f, 0);
+                setup.GetComponentsInChildren<Rigidbody>()[x].centerOfMass = new Vector3(0, -0.9f, 0);
             }
         }
     }
