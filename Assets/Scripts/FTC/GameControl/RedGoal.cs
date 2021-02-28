@@ -13,8 +13,13 @@ public class RedGoal : MonoBehaviour
     private GameTimer gameTimer;
     private AudioManager audioManager;
 
+    private GameObject particle;
+    private ParticleSystem partSystem;
+
     void Awake()
     {
+        particle = GameObject.Find("ScoreFlash");
+        partSystem = particle.GetComponent<ParticleSystem>();
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
         gameTimer = GameObject.Find("ScoreKeeper").GetComponent<GameTimer>();
         audioManager = GameObject.Find("ScoreKeeper").GetComponent<AudioManager>();
@@ -60,6 +65,9 @@ public class RedGoal : MonoBehaviour
                     
             }
             scoreKeeper.addScoreRed(pointsPerGoal);
+
+            particle.transform.position = transform.position;
+            partSystem.Play();
         }
     }
 }

@@ -1,0 +1,793 @@
+/target:library
+/out:Temp/Unity.VisualEffectGraph.Editor.dll
+/nowarn:0169
+/nowarn:0649
+/refout:Temp/Unity.VisualEffectGraph.Editor.dll.ref
+/deterministic
+/debug:portable
+/optimize+
+/nostdlib+
+/preferreduilang:en-US
+/langversion:8.0
+/reference:Library/ScriptAssemblies/Unity.RenderPipelines.HighDefinition.Runtime.dll
+/reference:Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll
+/reference:Library/ScriptAssemblies/Unity.VisualEffectGraph.Runtime.dll
+/reference:Assets/Plugins/websocket-sharp.dll
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
+/reference:C:/Users/user/Documents/GitHub/vFTC-Field/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll
+/reference:C:/Users/user/Documents/GitHub/vFTC-Field/Library/PackageCache/com.unity.ext.nunit@1.0.5/net35/unity-custom/nunit.framework.dll
+/reference:C:/Users/user/Documents/GitHub/vFTC-Field/Library/PackageCache/com.unity.render-pipelines.core@10.2.2/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.GraphViewModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.PackageManagerUIModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.SceneTemplateModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIElementsSamplesModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.UIServiceModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEditor.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AndroidJNIModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.DSPGraphModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.GIModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.HotReloadModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputLegacyModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.LocalizationModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ProfilerModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.StreamingModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubstanceModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.SubsystemsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TLSModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextCoreModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsNativeModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UmbraModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityCurlModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityTestProtocolModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAssetBundleModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VFXModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.VirtualTexturingModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/Microsoft.Win32.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.AppContext.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Concurrent.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.NonGeneric.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.Specialized.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Collections.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Annotations.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.EventBasedAsync.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.TypeConverter.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ComponentModel.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Console.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Data.Common.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Contracts.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Debug.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.FileVersionInfo.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Process.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.StackTrace.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TextWriterTraceListener.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.Tools.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Diagnostics.TraceSource.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Drawing.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Dynamic.Runtime.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Calendars.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.Extensions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Globalization.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Compression.ZipFile.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.DriveInfo.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.Watcher.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.FileSystem.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.IsolatedStorage.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.MemoryMappedFiles.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.Pipes.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.UnmanagedMemoryStream.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.IO.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Expressions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Parallel.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.Queryable.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Linq.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Http.Rtc.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NameResolution.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.NetworkInformation.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Ping.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Requests.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Security.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.Sockets.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebHeaderCollection.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.Client.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Net.WebSockets.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ObjectModel.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.ILGeneration.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.Lightweight.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Emit.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Extensions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Reflection.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Reader.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.ResourceManager.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Resources.Writer.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.CompilerServices.VisualC.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Extensions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Handles.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.RuntimeInformation.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.WindowsRuntime.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.InteropServices.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Numerics.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Formatters.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Json.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.Serialization.Xml.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Runtime.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Claims.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Algorithms.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Csp.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Encoding.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Cryptography.X509Certificates.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.Principal.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Security.SecureString.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Duplex.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Http.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.NetTcp.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Primitives.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ServiceModel.Security.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.Extensions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.Encoding.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Text.RegularExpressions.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Overlapped.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.Parallel.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Tasks.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Thread.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.ThreadPool.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.Timer.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Threading.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.ValueTuple.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.ReaderWriter.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XDocument.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlDocument.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XmlSerializer.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/netstandard.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Microsoft.CSharp.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Core.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Data.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Net.Http.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.Vectors.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Numerics.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Runtime.Serialization.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.Linq.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll"
+/reference:"C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll"
+/reference:Library/ScriptAssemblies/Unity.Timeline.dll
+/reference:Library/ScriptAssemblies/UnityEditor.TestRunner.dll
+/reference:Library/ScriptAssemblies/UnityEditor.UI.dll
+/reference:Library/ScriptAssemblies/UnityEngine.TestRunner.dll
+/reference:Library/ScriptAssemblies/UnityEngine.UI.dll
+/define:CSHARP_7_3_OR_NEWER
+/define:CSHARP_7_OR_LATER
+/define:DEBUG
+/define:ENABLE_AR
+/define:ENABLE_AUDIO
+/define:ENABLE_BURST_AOT
+/define:ENABLE_CACHING
+/define:ENABLE_CLOTH
+/define:ENABLE_CLOUD_LICENSE
+/define:ENABLE_CLOUD_SERVICES
+/define:ENABLE_CLOUD_SERVICES_ADS
+/define:ENABLE_CLOUD_SERVICES_ANALYTICS
+/define:ENABLE_CLOUD_SERVICES_BUILD
+/define:ENABLE_CLOUD_SERVICES_COLLAB
+/define:ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS
+/define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+/define:ENABLE_CLOUD_SERVICES_PURCHASING
+/define:ENABLE_CLOUD_SERVICES_UNET
+/define:ENABLE_CLOUD_SERVICES_USE_WEBREQUEST
+/define:ENABLE_CLUSTERINPUT
+/define:ENABLE_CLUSTER_SYNC
+/define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+/define:ENABLE_CUSTOM_RENDER_TEXTURE
+/define:ENABLE_DIRECTOR
+/define:ENABLE_DIRECTOR_AUDIO
+/define:ENABLE_DIRECTOR_TEXTURE
+/define:ENABLE_EDITOR_HUB_LICENSE
+/define:ENABLE_EVENT_QUEUE
+/define:ENABLE_INPUT_SYSTEM
+/define:ENABLE_LOCALIZATION
+/define:ENABLE_LZMA
+/define:ENABLE_MANAGED_ANIMATION_JOBS
+/define:ENABLE_MANAGED_AUDIO_JOBS
+/define:ENABLE_MANAGED_JOBS
+/define:ENABLE_MANAGED_TRANSFORM_JOBS
+/define:ENABLE_MICROPHONE
+/define:ENABLE_MONO
+/define:ENABLE_MONO_BDWGC
+/define:ENABLE_MOVIES
+/define:ENABLE_MULTIPLE_DISPLAYS
+/define:ENABLE_NETWORK
+/define:ENABLE_OUT_OF_PROCESS_CRASH_HANDLER
+/define:ENABLE_PHYSICS
+/define:ENABLE_PROFILER
+/define:ENABLE_RUNTIME_GI
+/define:ENABLE_SCRIPTING_GC_WBARRIERS
+/define:ENABLE_SPRITES
+/define:ENABLE_TERRAIN
+/define:ENABLE_TEXTURE_STREAMING
+/define:ENABLE_TILEMAP
+/define:ENABLE_TIMELINE
+/define:ENABLE_UNET
+/define:ENABLE_UNITYEVENTS
+/define:ENABLE_UNITYWEBREQUEST
+/define:ENABLE_UNITY_COLLECTIONS_CHECKS
+/define:ENABLE_VIDEO
+/define:ENABLE_VIRTUALTEXTURING
+/define:ENABLE_VR
+/define:ENABLE_WEBCAM
+/define:ENABLE_WEBSOCKET_CLIENT
+/define:ENABLE_WEBSOCKET_HOST
+/define:ENABLE_WWW
+/define:GFXDEVICE_WAITFOREVENT_MESSAGEPUMP
+/define:INCLUDE_DYNAMIC_GI
+/define:NET_4_6
+/define:PLATFORM_ARCH_64
+/define:PLATFORM_STANDALONE
+/define:PLATFORM_STANDALONE_WIN
+/define:PLATFORM_SUPPORTS_MONO
+/define:PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP
+/define:RENDER_SOFTWARE_CURSOR
+/define:SCENE_TEMPLATE_MODULE
+/define:TRACE
+/define:UNITY_2017_1_OR_NEWER
+/define:UNITY_2017_2_OR_NEWER
+/define:UNITY_2017_3_OR_NEWER
+/define:UNITY_2017_4_OR_NEWER
+/define:UNITY_2018_1_OR_NEWER
+/define:UNITY_2018_2_OR_NEWER
+/define:UNITY_2018_3_OR_NEWER
+/define:UNITY_2018_4_OR_NEWER
+/define:UNITY_2019_1_OR_NEWER
+/define:UNITY_2019_2_OR_NEWER
+/define:UNITY_2019_3_OR_NEWER
+/define:UNITY_2019_4_OR_NEWER
+/define:UNITY_2020
+/define:UNITY_2020_1_OR_NEWER
+/define:UNITY_2020_2
+/define:UNITY_2020_2_1
+/define:UNITY_2020_2_OR_NEWER
+/define:UNITY_5_3_OR_NEWER
+/define:UNITY_5_4_OR_NEWER
+/define:UNITY_5_5_OR_NEWER
+/define:UNITY_5_6_OR_NEWER
+/define:UNITY_64
+/define:UNITY_ASSERTIONS
+/define:UNITY_EDITOR
+/define:UNITY_EDITOR_64
+/define:UNITY_EDITOR_WIN
+/define:UNITY_INCLUDE_TESTS
+/define:UNITY_STANDALONE
+/define:UNITY_STANDALONE_WIN
+/define:UNITY_TEAM_LICENSE
+/define:USE_SEARCH_ENGINE_API
+/define:VFX_HAS_HDRP
+/define:VFX_HAS_TIMELINE
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Compiler\VFXCodeGenerator.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Compiler\VFXExpressionGraph.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Compiler\VFXExpressionMapper.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Compiler\VFXGraphCompiledData.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Compiler\VFXShaderWriter.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Compiler\VFXUniformMapper.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\Element3D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXBitField.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXColorField.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXControl.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXEnumField.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXEnumValuePopup.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXFlipBookField.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXLabeledField.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXMatrix4x4Field.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXReorderableList.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXSliderField.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXStringField.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXStringFieldProvider.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXStringFieldPushButton.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXVector2Field.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXVector3Field.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Controls\VFXVector4Field.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Core\VFXConverter.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Core\VFXEnums.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Core\VFXLibrary.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Core\VFXSerializer.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Core\VFXSettingAttribute.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Data\VFXData.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Data\VFXDataMesh.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Data\VFXDataOutputEvent.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Data\VFXDataParticle.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Data\VFXDataSpawner.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Debug\DotGraphOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Debug\VFXUIDebug.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXAttributeExpression.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXBuiltInExpression.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionAbstract.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionAbstractBoolOperation.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionAbstractFloatOperation.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionAbstractNumericOperation.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionAbstractUintOperation.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionAbstractValues.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionBakeCurve.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionBakeGradient.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionCamera.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionCast.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionColor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionCombine.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionContext.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionExtractComponent.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionFlow.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionLoadTexture.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionMath.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionMesh.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionNoise.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionRandom.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionSampleCurve.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionSampleGradient.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionSampleSDF.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionSampleTexture2D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionSampleTexture2DArray.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionSampleTexture3D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionSampleTextureCube.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionSampleTextureCubeArray.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionSpawnerState.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionStrips.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionTextureDim.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionTextureValues.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Expressions\VFXExpressionTransform.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\FilterPopup\VFXBlockProvider.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\FilterPopup\VFXFilterWindow.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Gizmo\VFXGizmo.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Gizmo\VFXGizmoUtility.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Blackboard\VFXBlackboard.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Blackboard\VFXBlackboardCategory.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Blackboard\VFXBlackboardField.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Blackboard\VFXBlackboardPropertyView.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Blackboard\VFXBlackboardRow.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Controllers\Controller.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Controllers\IControlledElement.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\3D\Preview3D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\3D\Rotate3DManipulator.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXBlockController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXContextController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXContextDataAnchorController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXDataAnchorController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXDataEdgeController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXFlowAnchorController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXFlowEdgeController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXGroupNodeController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXNodeController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXOperatorAnchorController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXOperatorController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXParameterController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXParameterNodeController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXSettingController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\Controllers\VFXSlotContainerController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXBlockUI.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXContextUI.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXDataAnchor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXDataEdge.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXEdgeConnector.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXEdgeDragInfo.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXEditableDataAnchor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXElement.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXFlowAnchor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXFlowEdge.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXGroupNode.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXMultiOperatorEdit.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXNodeUI.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXOperatorUI.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXOutputDataAnchor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXParameterUI.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Elements\VFXStickyNote.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\VFXComponentBoard.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\VFXTypeDefinition.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\VFXViewPreference.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\VFXViewWindow.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Controller\VFXGraphUndoCursor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Controller\VFXGraphValidation.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Controller\VFXSystemController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Controller\VFXViewController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Controller\VFXViewControllerExpressions.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Controller\VFXViewControllerUndo.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\BoolPropertyRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\ColorPropertyRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\CurvePropertyRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\GradientPropertyRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\ListPropertiesRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\NumericPropertiesRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\ObjectPropertyRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\PropertyRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\SimplePropertiesRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\SpaceablePropertiesRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\StringPropertyRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\VFXParameterEnumValuePropertyRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\Vector3PropertyRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\Properties\VectorPropertiesRM.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\VFXConvertSubgraph.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\VFXCopy.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\VFXCopyPasteCommon.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\VFXNodeProvider.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\VFXPaste.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\GraphView\Views\VFXView.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Inspector\AdvancedVisualEffectEditor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Inspector\GizmoController.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Inspector\VFXAssetEditor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Inspector\VFXBlockEditor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Inspector\VFXContextEditor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Inspector\VFXManagerEditor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Inspector\VFXParameterEditor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Inspector\VFXSlotContainerEditor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Inspector\VisualEffectEditor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Manipulators\DownClickable.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Manipulators\SuperCollapser.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Attribute\AttributeFromCurve.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Attribute\AttributeFromMap.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Attribute\AttributeMassFromVolume.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Attribute\SetCustomAttribute.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\CameraHelper.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Collision\CollisionAABox.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Collision\CollisionBase.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Collision\CollisionCylinder.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Collision\CollisionDepth.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Collision\CollisionPlane.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Collision\CollisionSDF.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Collision\CollisionSphere.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Color\ColorOverLife.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\FlipBook\FlipbookPlay.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Forces\ConformToSDF.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Forces\ConformToSphere.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Forces\Drag.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Forces\Force.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Forces\ForceHelper.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Forces\Gravity.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Forces\Turbulence.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Forces\VectorFieldForce.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\GPUEvent\GPUEventAlways.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\GPUEvent\GPUEventOnDie.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\GPUEvent\GPUEventRate.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Kill\KillAABox.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Kill\KillSphere.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Orientation\ConnectTarget.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Orientation\Orient.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Output\CameraFade.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Output\SubpixelAA.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\PositionAABox.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\PositionBase.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\PositionCircle.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\PositionCone.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\PositionDepth.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\PositionLine.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\PositionMesh.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\PositionSDF.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\PositionSequential.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\PositionSphere.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\PositionTorus.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Position\TileWarp.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\SetAttribute.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Size\ScreenSpaceSize.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Spawn\VFXAbstractSpawner.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Spawn\VFXSpawnerBurst.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Spawn\VFXSpawnerBurstOld.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Spawn\VFXSpawnerConstantRate.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Spawn\VFXSpawnerCustomWrapper.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Spawn\VFXSpawnerPeriodicBurst.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Spawn\VFXSpawnerSetAttribute.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Spawn\VFXSpawnerVariableRate.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Update\Age.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Update\AngularEulerIntegration.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Update\BackupOldPosition.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Update\EulerIntegration.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Update\Reap.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\VFXBlockUtility.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Velocity\VelocityBase.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Velocity\VelocityDirection.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Velocity\VelocityRandomize.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Velocity\VelocitySpeed.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Velocity\VelocitySpherical.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\Implementations\Velocity\VelocityTangent.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\VFXBlock.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Blocks\VFXSubgraphBlock.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\IVFXSubRenderer.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXAbstractParticleOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXAbstractRenderedOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXBasicCubeOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXBasicEvent.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXBasicGPUEvent.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXBasicInitialize.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXBasicSpawner.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXBasicUpdate.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXCubeTestOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXDecalOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXLineOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXLineStripOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXMeshOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXOutputEvent.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXPlanarPrimitiveHelper.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXPlanarPrimitiveOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXPointOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXQuadStripOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\Implementations\VFXStaticMeshOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\VFXBlockSubgraphContext.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\VFXCameraSort.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\VFXContext.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\VFXMultiMeshHelper.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\VFXOutputUpdate.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\VFXSRPSubOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Contexts\VFXSubgraphContext.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\AABoxVolume.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Absolute.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Acos.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Add.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\AgeOverLifetime.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\AppendVector.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Asin.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Atan.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Atan2.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\BitwiseAnd.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\BitwiseComplement.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\BitwiseLeftShift.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\BitwiseOr.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\BitwiseRightShift.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\BitwiseXor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Branch.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Ceiling.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\ChangeSpace.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\CircleArea.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Clamp.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\ColorLuma.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Condition.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\ConeVolume.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\ConstructMatrix.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Cosine.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\CrossProduct.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\CrossProductDeprecated.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\CurlNoise.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\CylinderVolume.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Deprecated\CellularNoise.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Deprecated\NoiseBaseOld.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Deprecated\PerlinNoise.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Deprecated\SanitizeHelper.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Deprecated\SimplexNoise.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Deprecated\ValueNoise.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Discretize.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Distance.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\DistanceToLine.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\DistanceToPlane.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\DistanceToSphere.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Divide.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\DotProduct.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Epsilon.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Exp.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Floor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Fractional.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\GetCustomAttribute.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\GetSpawnCount.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\HSVtoRGB.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\InverseLerp.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\InverseTRSMatrix.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Length.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Lerp.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\LoadTexture2D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\LoadTexture2DArray.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\LoadTexture3D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Log.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\LogicalAnd.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\LogicalNand.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\LogicalNor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\LogicalNot.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\LogicalOr.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\LookAt.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\MainCamera.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Maximum.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\MeshVertexCount.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Minimum.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Modulo.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Multiply.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Negate.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Noise.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\NoiseBase.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Normalize.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\OneMinus.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\OrientedBoxVolume.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\PerParticleTotalTime.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\PeriodicTotalTime.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Pi.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\PolarToRectangular.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\PositionDepth.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Power.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\ProbabilitySampling.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\RGBtoHSV.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Random.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Reciprocal.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\RectangularToPolar.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\RectangularToSpherical.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Remap.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\RemapToNegOnePosOne.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\RemapToZeroOne.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Rotate2D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Rotate3D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Round.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SampleBezier.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SampleCurve.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SampleGradient.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SampleMesh.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SampleSDF.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SampleTexture2D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SampleTexture2DArray.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SampleTexture3D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SampleTextureCube.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SampleTextureCubeArray.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Saturate.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SawtoothWave.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Sequential3D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SequentialCircle.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SequentialLine.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Sign.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Sine.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SineWave.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Smoothstep.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SpawnState.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SphereVolume.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SphericalToRectangular.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SquareRoot.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SquareWave.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SquaredDistance.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\SquaredLength.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Step.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Subtract.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Switch.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Swizzle.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\Tangent.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\TextureDimensions.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\TorusVolume.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\TransformDirection.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\TransformMatrix.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\TransformPosition.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\TransformVector.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\TransformVector4.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\TransposeMatrix.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\TriangleWave.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\ViewportToWorldPoint.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\VoroNoise2D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\Implementations\WorldToViewportPoint.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\VFXAbstractOperatorNew.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\VFXOperator.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\VFXOperatorUtility.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Operators\VFXSubgraphOperator.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Parameters\Deprecated\VFXBuiltInParameter.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Parameters\VFXAttributeParameter.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Parameters\VFXCurrentAttributeParameter.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Parameters\VFXDynamicBuiltInParameter.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Parameters\VFXInlineOperator.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Parameters\VFXParameter.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Parameters\VFXSourceAttributeParameter.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotAnimationCurve.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotBool.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotColor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotDirection.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotEncapsulated.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotFlipBook.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotFloat.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotFloat2.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotFloat3.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotFloat4.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotGradient.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotInt.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotMatrix4x4.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotMesh.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotObject.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotOrientedBox.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotPosition.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotTexture2D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotTexture2DArray.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotTexture3D.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotTextureCube.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotTextureCubeArray.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotTransform.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotUint.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\Implementations\VFXSlotVector.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\Slots\VFXSlot.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\VFXErrorManager.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\VFXGraph.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\VFXModel.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\VFXParameterInfo.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\VFXSlotContainerModel.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\VFXSystemNames.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Models\VFXUI.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\PackageInfo.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\ShaderGraph\VFXShaderGraphParticleOutput.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\ShaderGraph\VFXShaderGraphPostProcessor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXBoxGizmos.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXCircleGizmos.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXConeGizmos.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXCylinderGizmo.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXLineGizmos.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXPlaneGizmos.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXProperty.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXPropertyAttribute.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXSphereGizmos.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXTorusGizmos.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXTransformGizmos.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXTypeExtension.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXTypeUtility.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXTypes.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Types\VFXTypesGizmos.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\DotGraph\DotAttribute.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\DotGraph\DotElement.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\DotGraph\DotGraph.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\EventTester\VFXEventTesterWindow.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\ExposedProperty\ExposedPropertyDrawer.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\PropertyBinding\VFXBinderEditor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\PropertyBinding\VFXPropertyBinderEditor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\VectorFieldImporter\Editor\VectorFieldImporter.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\VectorFieldImporter\Editor\VectorFieldImporterEditor.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\VisualEffectActivationBehaviourInspector.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\pCache\BakeTool\PointCacheBakeTool.Mesh.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\pCache\BakeTool\PointCacheBakeTool.Texture.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\pCache\BakeTool\PointCacheBakeTool.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\pCache\Importer\PointCacheImporter.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\pCache\Operator\VFXOperatorPointCache.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\pCache\PCache.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\pCache\PointCache.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utilities\pCache\PointCacheAsset.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utils\VFXContextBorder.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utils\VFXDebugWindow.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utils\VFXResources.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\Utils\VFXSystemBorder.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\VFXAssetEditorUtility.cs
+C:\Users\user\Documents\GitHub\vFTC-Field\Library\PackageCache\com.unity.visualeffectgraph@10.2.2\Editor\VisualElementExtensions.cs
