@@ -266,6 +266,21 @@ public class UserManager : MonoBehaviour
             gameTimer.setGameSetup("C");
 
         GameObject[] gos = GameObject.FindGameObjectsWithTag("OutsideRing");
+ 
+        foreach (GameObject a in gos)
+        {
+            Destroy(a);
+        }
+
+        gos = GameObject.FindGameObjectsWithTag("BlueWobble");
+
+        foreach (GameObject a in gos)
+        {
+            Destroy(a);
+        }
+
+        gos = GameObject.FindGameObjectsWithTag("RedWobble");
+
         foreach (GameObject a in gos)
         {
             Destroy(a);
