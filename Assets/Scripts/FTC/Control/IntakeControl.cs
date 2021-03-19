@@ -21,6 +21,8 @@ public class IntakeControl : MonoBehaviour
 
     private int resetNum = 3;
 
+    public GameObject[] rings;
+
     // Intake Motor Control
     void Start()
     {
@@ -67,6 +69,7 @@ public class IntakeControl : MonoBehaviour
             if (collision.tag == coliderTag && numBalls < maxNumberBalls && Time.time - timer >= timeOfBallContact)
             {
                 numBalls++;
+                rings[numBalls-1].SetActive(true);
                 Destroy(collision.gameObject);
             }
         }
@@ -76,11 +79,16 @@ public class IntakeControl : MonoBehaviour
     public void subtractBall()
     {
         numBalls--;
+        rings[numBalls].SetActive(false);
     }
 
     public void resetBalls()
     {
         numBalls = resetNum;
+        for (int x = 0; x < 3; x++)
+        {
+            rings[x].SetActive(true);
+        }
     }
 
     public int getNumberBalls()

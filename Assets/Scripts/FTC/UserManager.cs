@@ -230,8 +230,8 @@ public class UserManager : MonoBehaviour
 
         
         user2.resetRobot();
-        user2.resetRobot();
         user3.resetRobot();
+        user4.resetRobot();
         
     }
 

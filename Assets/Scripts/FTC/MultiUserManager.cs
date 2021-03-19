@@ -189,43 +189,82 @@ public class MultiUserManager : MonoBehaviour
 
     private void setDefaultSpawn()
     {
-        for (int x = 0; x < 4; x++)
+        int spot = int.Parse(transform.gameObject.tag) - 1;
+
+        if (UserManager.currentSpawnPositions[spot] != null)
         {
-            if (UserManager.currentSpawnPositions[x] != null)
+            robotPositionIndex = spot;
+            transform.position = UserManager.saveSpawnPositions[spot].position;
+            transform.rotation = UserManager.saveSpawnPositions[spot].rotation;
+
+            UserManager.nullSpawnPosition(robotPositionIndex);
+
+            Color myColor = new Color();
+            var color = "";
+            if (robotPositionIndex <= 1)
+                color = "#0000FF";
+            else
+                color = "#FF1B00";
+            ColorUtility.TryParseHtmlString(color, out myColor);
+
+            robotImages[robotPositionIndex].color = myColor;
+
+            //Change color of robot
+            if (robotPositionIndex == 0)
+                color = "#3A2CDC";
+            else if (robotPositionIndex == 1)
+                color = "#0F6AD6";
+            else if (robotPositionIndex == 2)
+                color = "#FF1A1A";
+            else
+                color = "#FF6942";
+            ColorUtility.TryParseHtmlString(color, out myColor);
+            materials[int.Parse(transform.gameObject.tag) - 1].color = myColor;
+
+            resetRobot();
+        }
+        else
+        {
+            for (int x = 0; x < 4; x++)
             {
+                if (UserManager.currentSpawnPositions[x] != null)
+                {
 
-                robotPositionIndex = x;
-                transform.position = UserManager.saveSpawnPositions[x].position;
-                transform.rotation = UserManager.saveSpawnPositions[x].rotation;
+                    robotPositionIndex = x;
+                    transform.position = UserManager.saveSpawnPositions[x].position;
+                    transform.rotation = UserManager.saveSpawnPositions[x].rotation;
 
-                UserManager.nullSpawnPosition(robotPositionIndex);
+                    UserManager.nullSpawnPosition(robotPositionIndex);
 
-                Color myColor = new Color();
-                var color = "";
-                if (robotPositionIndex <= 1)
-                    color = "#0000FF";
-                else
-                    color = "#FF1B00";
-                ColorUtility.TryParseHtmlString(color, out myColor);
+                    Color myColor = new Color();
+                    var color = "";
+                    if (robotPositionIndex <= 1)
+                        color = "#0000FF";
+                    else
+                        color = "#FF1B00";
+                    ColorUtility.TryParseHtmlString(color, out myColor);
 
-                robotImages[robotPositionIndex].color = myColor;
+                    robotImages[robotPositionIndex].color = myColor;
 
-                //Change color of robot
-                if (robotPositionIndex == 0)
-                    color = "#3A2CDC";
-                else if (robotPositionIndex == 1)
-                    color = "#0F6AD6";
-                else if (robotPositionIndex == 2)
-                    color = "#FF1A1A";
-                else
-                    color = "#FF6942";
-                ColorUtility.TryParseHtmlString(color, out myColor);
-                materials[int.Parse(transform.gameObject.tag) - 1].color = myColor;
+                    //Change color of robot
+                    if (robotPositionIndex == 0)
+                        color = "#3A2CDC";
+                    else if (robotPositionIndex == 1)
+                        color = "#0F6AD6";
+                    else if (robotPositionIndex == 2)
+                        color = "#FF1A1A";
+                    else
+                        color = "#FF6942";
+                    ColorUtility.TryParseHtmlString(color, out myColor);
+                    materials[int.Parse(transform.gameObject.tag) - 1].color = myColor;
 
-                resetRobot();
-                break;
+                    resetRobot();
+                    break;
+                }
             }
         }
+
+        
     }
 
     public void resetRobot()
