@@ -12,6 +12,8 @@ public class ImpactSound : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        audioManager.playRingImpact();   
+        if(audioManager != null) {
+            audioManager.playRingImpact();   
+        }
     }
 }
