@@ -18,7 +18,7 @@ public class RedGoal : MonoBehaviour
 
     void Awake()
     {
-        particle = GameObject.Find("ScoreFlash");
+        particle = GameObject.Find("ScoreFlash-Yellow");
         partSystem = particle.GetComponent<ParticleSystem>();
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
         gameTimer = GameObject.Find("ScoreKeeper").GetComponent<GameTimer>();

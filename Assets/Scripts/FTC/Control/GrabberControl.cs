@@ -32,7 +32,7 @@ public class GrabberControl : MonoBehaviour
             field = (wobble.transform.parent).gameObject;
             wobble.transform.SetParent(robot);
             var rb = wobble.GetComponent<Rigidbody>();
-            rb.isKinematic = true;
+            rb.isKinematic = false;
             wobble.transform.localPosition = new Vector3(0f,-0.39f, 0.05f);
         }
     }

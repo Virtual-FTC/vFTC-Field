@@ -16,9 +16,11 @@ public class BlueGoal : MonoBehaviour
     private GameObject particle;
     private ParticleSystem partSystem;
 
+    //public Material mat;
+
     void Awake()
     {
-        particle = GameObject.Find("ScoreFlash");
+        particle = GameObject.Find("ScoreFlash-Blue");
         partSystem = particle.GetComponent<ParticleSystem>();
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
         gameTimer = GameObject.Find("ScoreKeeper").GetComponent<GameTimer>();
@@ -65,6 +67,13 @@ public class BlueGoal : MonoBehaviour
             }
 
             scoreKeeper.addScoreBlue(pointsPerGoal);
+
+            //mat.EnableKeyword("_EMISSION");
+            //Color myColor = new Color();
+            //var color = "#3A2CDC";
+            //ColorUtility.TryParseHtmlString(color, out myColor);
+            //mat.color = myColor;
+            //mat.SetColor("_EmissionColor", myColor);
 
             particle.transform.position = transform.position;
             partSystem.Play();

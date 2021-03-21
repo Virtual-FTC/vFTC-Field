@@ -347,6 +347,8 @@ public class UserManager : MonoBehaviour
         if (websiteCommands.startGame && !currentGameStart)
         {
             currentGameStart = true;
+            resetRobot();
+            resetField(websiteCommands.gameSetup);
             gameTimer.startGame();
         }
         else if (!websiteCommands.startGame && currentGameStart)
@@ -371,6 +373,7 @@ public class UserManager : MonoBehaviour
         // Sending Score
         if (gameTimer.getTimer() <= 0 && (websiteCommands.gameType == "auto" || websiteCommands.gameType == "teleop"))
         {
+            scoreKeeper.freezeScore();
             sendingScore = true;
         }
 

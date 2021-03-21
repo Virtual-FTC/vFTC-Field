@@ -11,15 +11,19 @@ public class ScoreKeeper : MonoBehaviour
     private int redScore = 0;
     private int blueScore = 0;
 
+    private bool freeze = false;
+
     public void addScoreRed(int points)
     {
-        redScore += points;
+        if (!freeze)
+            redScore += points;
         updateRedScore();
     }
 
     public void addScoreBlue(int points)
     {
-        blueScore += points;
+        if (!freeze)
+            blueScore += points;
         updateBlueScore();
     }
 
@@ -45,9 +49,15 @@ public class ScoreKeeper : MonoBehaviour
 
     public void resetScore()
     {
+        freeze = false;
         redScore = 0;
         blueScore = 0;
         updateRedScore();
         updateBlueScore();
+    }
+
+    public void freezeScore()
+    {
+        freeze = true;
     }
 }
