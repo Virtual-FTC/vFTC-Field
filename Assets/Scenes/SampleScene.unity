@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 131.16846, g: 162.5249, b: 215.10962, a: 1}
+  m_IndirectSpecularColor: {r: 131.18066, g: 162.51404, b: 215.03296, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -602,6 +602,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290415611}
   m_CullTransparentMesh: 1
+--- !u!1 &292089046 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6056820987972060401, guid: b507e88014f6d9c4e97d0e53b63756d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 714975023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &341749388
 GameObject:
   m_ObjectHideFlags: 0
@@ -8942,6 +8948,12 @@ Transform:
   m_Father: {fileID: 1513372435}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!1 &872488311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6056820987972060401, guid: b507e88014f6d9c4e97d0e53b63756d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 662084447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &875179375
 GameObject:
   m_ObjectHideFlags: 0
@@ -10202,6 +10214,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1080641949}
   m_Mesh: {fileID: 5321825189721793516, guid: a903d504dc81c344c8d1d73e48d21485, type: 3}
+--- !u!1 &1091629525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6056820987972060401, guid: b507e88014f6d9c4e97d0e53b63756d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 567387450}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1092728832
 GameObject:
   m_ObjectHideFlags: 0
@@ -10424,6 +10442,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 61884a7a2b3f4a8409a0662710c7e11f, type: 2}
   - {fileID: 2100000, guid: 9cb9072cb8196a54ca5eb4f7ad6daef2, type: 2}
   - {fileID: 2100000, guid: 92540bf33ecdb4f48ac476eba8425c7d, type: 2}
+  intakeObject: {fileID: 1091629525}
 --- !u!4 &1189785281
 Transform:
   m_ObjectHideFlags: 0
@@ -11357,6 +11376,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 61884a7a2b3f4a8409a0662710c7e11f, type: 2}
   - {fileID: 2100000, guid: 9cb9072cb8196a54ca5eb4f7ad6daef2, type: 2}
   - {fileID: 2100000, guid: 92540bf33ecdb4f48ac476eba8425c7d, type: 2}
+  intakeObject: {fileID: 872488311}
 --- !u!4 &1352801847
 Transform:
   m_ObjectHideFlags: 0
@@ -13234,6 +13254,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 61884a7a2b3f4a8409a0662710c7e11f, type: 2}
   - {fileID: 2100000, guid: 9cb9072cb8196a54ca5eb4f7ad6daef2, type: 2}
   - {fileID: 2100000, guid: 92540bf33ecdb4f48ac476eba8425c7d, type: 2}
+  intakeObject: {fileID: 292089046}
 --- !u!4 &1721663763
 Transform:
   m_ObjectHideFlags: 0
