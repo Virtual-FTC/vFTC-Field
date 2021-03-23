@@ -42,9 +42,11 @@ public class MultiUserManager : MonoBehaviour
 
     public Material[] materials;
 
+    public GameObject intakeObject;
+
     private void Start()
     {
-        intake = GameObject.Find("Intake").GetComponent<IntakeControl>();
+        intake = intakeObject.GetComponent<IntakeControl>();
 
         robotCustomizer = m_Robots[m_index].GetComponent<RobotCustomizer>();
 
@@ -102,7 +104,7 @@ public class MultiUserManager : MonoBehaviour
                     break;
 
                 string message = Encoding.ASCII.GetString(data, 0, recv);
-                print(message);
+                //print(message);
                 if (message != "ping")
                     websiteCommands = WebsiteCommands.CreateFromJSON(message);
             }
@@ -272,6 +274,7 @@ public class MultiUserManager : MonoBehaviour
         if (connected)
         {
             intake.resetBalls();
+            print("RESET BALLS");
             var newRotation = m_Robots[m_index].transform.rotation.eulerAngles;
             newRotation.x = -90f;
             newRotation.y = 0f;
@@ -285,6 +288,11 @@ public class MultiUserManager : MonoBehaviour
         
     }
     #endregion
+
+    public void setResetNum(int num)
+    {
+        intake.setResetNum(num);
+    }
 
     #region Robot Selector
     public void OnButtonClick(int index)

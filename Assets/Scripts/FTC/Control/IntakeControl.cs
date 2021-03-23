@@ -96,6 +96,11 @@ public class IntakeControl : MonoBehaviour
         return numBalls;
     }
 
+    public void setResetNum(int num)
+    {
+        resetNum = num;
+    }
+
     public void setVelocity(float x)
     {
         wantedVelocity = x;

@@ -362,6 +362,20 @@ public class UserManager : MonoBehaviour
         {
             gameTimer.setGameType(websiteCommands.gameType);
             currentGameType = websiteCommands.gameType;
+            if (currentGameType == "telop")
+            {
+                intake.setResetNum(0);
+                user2.setResetNum(0);
+                user3.setResetNum(0);
+                user4.setResetNum(0);
+            }
+            else
+            {
+                intake.setResetNum(3);
+                user2.setResetNum(3);
+                user3.setResetNum(3);
+                user4.setResetNum(3);
+            }
         }
 
         // Camera control
