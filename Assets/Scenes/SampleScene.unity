@@ -6634,10 +6634,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0edaecd5e40e2cc408e1ad0e9bb20a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robotDrive: {fileID: 493414830}
-  robotImpact: {fileID: 493414829}
-  robotShoot: {fileID: 493414826}
-  shooterRev: {fileID: 493414825}
+  robotDrive: {fileID: 493414826}
+  robotImpact: {fileID: 493414825}
+  robotShoot: {fileID: 493414830}
+  shooterRev: {fileID: 493414829}
   intakeRev: {fileID: 493414820}
 --- !u!4 &493414824 stripped
 Transform:
