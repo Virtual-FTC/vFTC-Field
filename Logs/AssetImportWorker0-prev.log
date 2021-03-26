@@ -1,0 +1,611 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 15358 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/user/Documents/GitHub/vFTC-Field
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+49910
+Successfully changed project path to: C:/Users/user/Documents/GitHub/vFTC-Field
+C:/Users/user/Documents/GitHub/vFTC-Field
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 146.27 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 2.95 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/user/Documents/GitHub/vFTC-Field/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA Tesla T4 (ID=0x1eb8)
+    Vendor:   
+    VRAM:     15158 MB
+    Driver:   27.21.14.5239
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56100
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002431 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 104.08 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.650 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002992 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 138.31 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.17 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.017 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 1.43 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Unloading 3816 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 275.6 MB.
+System memory in use after: 275.8 MB.
+
+Unloading 18 unused Assets to reduce memory usage. Loaded Objects now: 4282.
+Total: 5.078600 ms (FindLiveObjects: 0.788900 ms CreateObjectMapping: 0.337400 ms MarkObjects: 3.817600 ms  DeleteObjects: 0.132700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Materials/Robot4.mat
+  artifactKey: Guid(92540bf33ecdb4f48ac476eba8425c7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Robot4.mat using Guid(92540bf33ecdb4f48ac476eba8425c7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '668dd806480dd8fe90c8bc81b7e1bd71') in 2.046175 seconds
+  Import took 2.058790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000373 seconds.
+  path: Assets/Materials/Robot2.mat
+  artifactKey: Guid(61884a7a2b3f4a8409a0662710c7e11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/Robot2.mat using Guid(61884a7a2b3f4a8409a0662710c7e11f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '725c1a0dc4c3fd71bd98777a3e2af9cc') in 0.058387 seconds
+  Import took 0.086514 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005643 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.995 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.18 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Unloading 3520 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 272.5 MB.
+System memory in use after: 272.7 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4455.
+Total: 7.828200 ms (FindLiveObjects: 1.949100 ms CreateObjectMapping: 0.509700 ms MarkObjects: 5.268000 ms  DeleteObjects: 0.095600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 498.433913 seconds.
+  path: Assets/Scripts/FTC/MultiUserManager.cs
+  artifactKey: Guid(bdea53c8f90bc2c419f5e11b7009c1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/MultiUserManager.cs using Guid(bdea53c8f90bc2c419f5e11b7009c1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acb5f1ddde6e5d1240a47d934a7402fa') in 0.036431 seconds
+  Import took 0.049779 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.095316 seconds.
+  path: Assets/Scripts/FTC/MultiUserManager.cs
+  artifactKey: Guid(bdea53c8f90bc2c419f5e11b7009c1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/FTC/MultiUserManager.cs using Guid(bdea53c8f90bc2c419f5e11b7009c1eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acb5f1ddde6e5d1240a47d934a7402fa') in 0.014313 seconds
+  Import took 0.027852 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004053 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.73 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.26 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  5.112 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.44 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Unloading 3507 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 272.1 MB.
+System memory in use after: 272.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4457.
+Total: 22.046000 ms (FindLiveObjects: 3.384000 ms CreateObjectMapping: 9.701000 ms MarkObjects: 8.836500 ms  DeleteObjects: 0.122100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002915 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.426 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.61 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.20 ms.
+Unloading 3507 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 272.1 MB.
+System memory in use after: 272.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4459.
+Total: 6.361200 ms (FindLiveObjects: 0.787500 ms CreateObjectMapping: 0.342300 ms MarkObjects: 5.131200 ms  DeleteObjects: 0.098000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003394 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.469 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.70 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.27 ms.
+Unloading 3507 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 272.1 MB.
+System memory in use after: 272.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4461.
+Total: 16.051700 ms (FindLiveObjects: 2.899500 ms CreateObjectMapping: 1.161000 ms MarkObjects: 11.854500 ms  DeleteObjects: 0.133500 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003717 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.034 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.25 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
+Unloading 3507 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 272.1 MB.
+System memory in use after: 272.3 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4463.
+Total: 7.022700 ms (FindLiveObjects: 1.372800 ms CreateObjectMapping: 0.377800 ms MarkObjects: 5.164800 ms  DeleteObjects: 0.105200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002658 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.14 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.17 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.547 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.99 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Unloading 3507 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 272.2 MB.
+System memory in use after: 272.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4465.
+Total: 27.874200 ms (FindLiveObjects: 1.991900 ms CreateObjectMapping: 0.682400 ms MarkObjects: 25.085400 ms  DeleteObjects: 0.111600 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004730 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.62 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.294 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.11 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.11 ms.
+Unloading 3507 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 272.2 MB.
+System memory in use after: 272.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4467.
+Total: 8.136300 ms (FindLiveObjects: 1.599400 ms CreateObjectMapping: 0.817800 ms MarkObjects: 5.517700 ms  DeleteObjects: 0.198800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 27618.288145 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Female 1 Clapping.fbx
+  artifactKey: Guid(f098820362efe414ab359d6431533bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Female 1 Clapping.fbx using Guid(f098820362efe414ab359d6431533bb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40263b573e61670d3b9a370a1f3dd0d2') in 1.253041 seconds
+  Import took 1.267118 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male1 FBX@Clapping.fbx
+  artifactKey: Guid(fb6450a6a712bc04ba6569d355834aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male1 FBX@Clapping.fbx using Guid(fb6450a6a712bc04ba6569d355834aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7df3c19aeb69fb90e17691ec9a0532fe') in 0.245105 seconds
+  Import took 0.257668 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbx
+  artifactKey: Guid(37d9c6e8d5435b34e9689782449a32e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbx using Guid(37d9c6e8d5435b34e9689782449a32e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d50d89ca08b68dfd2ab73e7d02f48cc') in 0.182429 seconds
+  Import took 0.195685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000347 seconds.
+  path: Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbx
+  artifactKey: Guid(2e519da1cc736364e8b19dce12c62b7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbx using Guid(2e519da1cc736364e8b19dce12c62b7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be8e95c332f874d29cb69a2f12e25c5d') in 0.185379 seconds
+  Import took 0.199715 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbx
+  artifactKey: Guid(8d71daa07697ecb4e8f20a475ee9c9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbx using Guid(8d71daa07697ecb4e8f20a475ee9c9bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '020f48a2ee7b2dca7d1631628df0ed57') in 0.199361 seconds
+  Import took 0.212301 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003020 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.48 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.13 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.945 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.37 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.12 ms.
+Unloading 3507 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 284.3 MB.
+System memory in use after: 284.5 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 4575.
+Total: 7.919600 ms (FindLiveObjects: 1.465000 ms CreateObjectMapping: 0.763900 ms MarkObjects: 5.589100 ms  DeleteObjects: 0.099200 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 90.834946 seconds.
+  path: Assets/Crowd Animations/blue team/Materials
+  artifactKey: Guid(1ad215d8a69cc9744b0ed4f501a4b26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Materials using Guid(1ad215d8a69cc9744b0ed4f501a4b26a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b120254527f8823fe6341b4774eba395') in 0.080026 seconds
+  Import took 0.093353 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.651196 seconds.
+  path: Assets/Crowd Animations/blue team/Materials/Female_1_obj_Packed0_Diffuse.mat
+  artifactKey: Guid(ba36257d037bc6f45917aa5a92f7e727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Materials/Female_1_obj_Packed0_Diffuse.mat using Guid(ba36257d037bc6f45917aa5a92f7e727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06b9ed6ab8db51f5cbdd2d7fb0cd0c17') in 1.026592 seconds
+  Import took 1.039276 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000353 seconds.
+  path: Assets/Crowd Animations/blue team/Materials/Male1_Obj_Packed1_Diffuse.mat
+  artifactKey: Guid(bce2407ff23d9ed4c97af4f60f21bae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Materials/Male1_Obj_Packed1_Diffuse.mat using Guid(bce2407ff23d9ed4c97af4f60f21bae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ecff3a7adba2398307631167bacfde8') in 0.077642 seconds
+  Import took 0.090813 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000316 seconds.
+  path: Assets/Crowd Animations/blue team/Materials/Male1_Obj_Packed0_Diffuse.mat
+  artifactKey: Guid(63f82ee49a8b19d4892159af729d053c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Materials/Male1_Obj_Packed0_Diffuse.mat using Guid(63f82ee49a8b19d4892159af729d053c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0f98a7479e1bb1e874c316453b42f2c') in 0.067035 seconds
+  Import took 0.084425 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000484 seconds.
+  path: Assets/Crowd Animations/blue team/Materials/male_2_obj_Packed0_Diffuse.mat
+  artifactKey: Guid(9992a392363b0044a98da8b605fa8bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Materials/male_2_obj_Packed0_Diffuse.mat using Guid(9992a392363b0044a98da8b605fa8bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57e961b284248085f1dc61985f4648b3') in 0.070508 seconds
+  Import took 0.087310 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000295 seconds.
+  path: Assets/Crowd Animations/blue team/Materials/male_3_obj_Packed1_Diffuse.mat
+  artifactKey: Guid(c777c1f5f69b59c41b5811b692bae084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Materials/male_3_obj_Packed1_Diffuse.mat using Guid(c777c1f5f69b59c41b5811b692bae084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b02c6fb92808c36a681cc425c19a0ef') in 0.059358 seconds
+  Import took 0.074088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Crowd Animations/blue team/Materials/Female_1_obj_Packed1_Diffuse.mat
+  artifactKey: Guid(d75b169fb409f3845ab535c495ff9172) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Materials/Female_1_obj_Packed1_Diffuse.mat using Guid(d75b169fb409f3845ab535c495ff9172) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93ba4e55b8efe6d75a259a7de38a7f6f') in 0.067524 seconds
+  Import took 0.082280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000386 seconds.
+  path: Assets/Crowd Animations/blue team/Materials/male_4_obj_Packed1_Diffuse.mat
+  artifactKey: Guid(8a6fef9b4a6e624499557ee6ec9a7951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Materials/male_4_obj_Packed1_Diffuse.mat using Guid(8a6fef9b4a6e624499557ee6ec9a7951) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1720a00b7e58e5a1d315a737bf83dceb') in 0.083323 seconds
+  Import took 0.099853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000334 seconds.
+  path: Assets/Crowd Animations/blue team/Materials/male_2_obj_Packed1_Diffuse.mat
+  artifactKey: Guid(9e08536dff1384c48acec269de80ed78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Materials/male_2_obj_Packed1_Diffuse.mat using Guid(9e08536dff1384c48acec269de80ed78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aef97f80bbd66e1b20c637318e1daaf') in 0.099438 seconds
+  Import took 0.113361 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000365 seconds.
+  path: Assets/Crowd Animations/blue team/Materials/male_4_obj_Packed0_Diffuse.mat
+  artifactKey: Guid(c153e16667be5824288adf322079c522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Materials/male_4_obj_Packed0_Diffuse.mat using Guid(c153e16667be5824288adf322079c522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc57ea000c571c519ecdc2f0c680b60b') in 0.050152 seconds
+  Import took 0.062829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000363 seconds.
+  path: Assets/Crowd Animations/blue team/Materials/male_3_obj_Packed0_Diffuse.mat
+  artifactKey: Guid(a5ef8ac444f7e514f9fcb01168b66de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Materials/male_3_obj_Packed0_Diffuse.mat using Guid(a5ef8ac444f7e514f9fcb01168b66de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee06b4dc5c1033f5722d620beaff178e') in 0.229176 seconds
+  Import took 0.247070 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 46.741499 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male1 FBX@Clapping.fbm/Male1_Obj_Packed0_Diffuse.png
+  artifactKey: Guid(f032ad501880eb04aaa375e948af2498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male1 FBX@Clapping.fbm/Male1_Obj_Packed0_Diffuse.png using Guid(f032ad501880eb04aaa375e948af2498) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a23b898d359d07c10638a6083f96f528') in 0.076511 seconds
+  Import took 0.093913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000472 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male1 FBX@Clapping.fbm/Male1_Obj_Packed1_Specular.png
+  artifactKey: Guid(1124de2f7d3dde6419d2ad0c6a911c9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male1 FBX@Clapping.fbm/Male1_Obj_Packed1_Specular.png using Guid(1124de2f7d3dde6419d2ad0c6a911c9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecb2d5dd6af30ed2e96bea67ea511efc') in 0.134460 seconds
+  Import took 0.146055 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000380 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male1 FBX@Clapping.fbm/Male1_Obj_Packed1_Diffuse.png
+  artifactKey: Guid(b992b6536b0d1a94bbc3b1103ebbb328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male1 FBX@Clapping.fbm/Male1_Obj_Packed1_Diffuse.png using Guid(b992b6536b0d1a94bbc3b1103ebbb328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '369b8aec296a7642b43b6651ad7be784') in 0.047588 seconds
+  Import took 0.064503 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000331 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male1 FBX@Clapping.fbm/Male1_Obj_Packed0_Specular.png
+  artifactKey: Guid(99badc2cd78632d4aade39df2fc0e46a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male1 FBX@Clapping.fbm/Male1_Obj_Packed0_Specular.png using Guid(99badc2cd78632d4aade39df2fc0e46a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3064316723b71e579f0a11440d788bf0') in 0.063499 seconds
+  Import took 0.081816 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.353292 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbm/male_4_obj_Packed0_Diffuse.png
+  artifactKey: Guid(4f4dcd5dbda42114491457d9fd710f69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbm/male_4_obj_Packed0_Diffuse.png using Guid(4f4dcd5dbda42114491457d9fd710f69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02f6ba4d9e632a26c9e8c41e2f40e1b1') in 0.024260 seconds
+  Import took 0.038577 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000421 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbm/male_4_obj_Packed1_Diffuse.png
+  artifactKey: Guid(85609407cdadd6f408c8e04672478a7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbm/male_4_obj_Packed1_Diffuse.png using Guid(85609407cdadd6f408c8e04672478a7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62ad461e302c25988eef6c5f03184bd7') in 0.034351 seconds
+  Import took 0.045864 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbm/male_4_obj_Packed1_Specular.png
+  artifactKey: Guid(19cd00a2951b2f8438e81cffd849225e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbm/male_4_obj_Packed1_Specular.png using Guid(19cd00a2951b2f8438e81cffd849225e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dac8a53d1cf89cb44b9c4cef737e6038') in 0.058929 seconds
+  Import took 0.072143 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000407 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbm/male_4_obj_Packed0_Specular.png
+  artifactKey: Guid(d265510dd53c2eb44bd14ebdcd679bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbm/male_4_obj_Packed0_Specular.png using Guid(d265510dd53c2eb44bd14ebdcd679bef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26e1a03552d8c4db7608cf872e91de79') in 0.032290 seconds
+  Import took 0.043879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.016623 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbm/male_4_obj_Packed1_Specular.png
+  artifactKey: Guid(19cd00a2951b2f8438e81cffd849225e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 4 FBX Clapping.fbm/male_4_obj_Packed1_Specular.png using Guid(19cd00a2951b2f8438e81cffd849225e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dac8a53d1cf89cb44b9c4cef737e6038') in 0.033445 seconds
+  Import took 0.058612 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 157.449348 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Female 1 Clapping.fbm/Female_1_obj_Packed0_Diffuse.png
+  artifactKey: Guid(9a32eccf9e9cae647a2f25768f1edb7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Female 1 Clapping.fbm/Female_1_obj_Packed0_Diffuse.png using Guid(9a32eccf9e9cae647a2f25768f1edb7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f463df8a6cf6916dbf061cfe47323e71') in 0.041067 seconds
+  Import took 0.053145 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000365 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Female 1 Clapping.fbm/Female_1_obj_Packed1_Diffuse.png
+  artifactKey: Guid(d4f51ad0230e6284d8b95c6b96a35a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Female 1 Clapping.fbm/Female_1_obj_Packed1_Diffuse.png using Guid(d4f51ad0230e6284d8b95c6b96a35a1b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2862c219b08fd76cb0ab70d0931461ee') in 0.132892 seconds
+  Import took 0.152385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000425 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Female 1 Clapping.fbm/Female_1_obj_Packed1_Specular.png
+  artifactKey: Guid(9fb1d897be00f334391e0eded505c3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Female 1 Clapping.fbm/Female_1_obj_Packed1_Specular.png using Guid(9fb1d897be00f334391e0eded505c3a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f23743f796ef857b42e4bdd0297ef0b3') in 0.071924 seconds
+  Import took 0.088204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003426 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Female 1 Clapping.fbm/Female_1_obj_Packed0_Specular.png
+  artifactKey: Guid(5be4bba46e7a0dd4b918f492d0044d5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Female 1 Clapping.fbm/Female_1_obj_Packed0_Specular.png using Guid(5be4bba46e7a0dd4b918f492d0044d5b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b799b7798f36978f656a08ff52bbc3') in 0.068521 seconds
+  Import took 0.084521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.298004 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed0_Diffuse.png
+  artifactKey: Guid(51230ae1a54e60e4293e26e4e7db0b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed0_Diffuse.png using Guid(51230ae1a54e60e4293e26e4e7db0b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e7d40ca706b5b67970bb466ebb6f0d57') in 0.025613 seconds
+  Import took 0.038546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000451 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed0_Specular.png
+  artifactKey: Guid(e1cbb587531efa24a95c0a525619019f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed0_Specular.png using Guid(e1cbb587531efa24a95c0a525619019f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86f4d4461d2ed8242ba2a172d0886f94') in 0.044074 seconds
+  Import took 0.058902 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000339 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed1_Diffuse.png
+  artifactKey: Guid(d4180d45496e42c42b8b3952edae1cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed1_Diffuse.png using Guid(d4180d45496e42c42b8b3952edae1cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaf099c825f00885edba3bd16c257c9a') in 0.050251 seconds
+  Import took 0.063134 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000432 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed0_Specular.png
+  artifactKey: Guid(e1cbb587531efa24a95c0a525619019f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed0_Specular.png using Guid(e1cbb587531efa24a95c0a525619019f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86f4d4461d2ed8242ba2a172d0886f94') in 0.033151 seconds
+  Import took 0.045560 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000371 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed1_Diffuse.png
+  artifactKey: Guid(d4180d45496e42c42b8b3952edae1cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed1_Diffuse.png using Guid(d4180d45496e42c42b8b3952edae1cef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaf099c825f00885edba3bd16c257c9a') in 0.039154 seconds
+  Import took 0.053132 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000332 seconds.
+  path: Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed1_Specular.png
+  artifactKey: Guid(3026e7306460bd94daf6659fb2007dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue Male 2 FBX@Clapping.fbm/male_2_obj_Packed1_Specular.png using Guid(3026e7306460bd94daf6659fb2007dad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe7387a6e40c58f6605771aa440b8b30') in 0.046736 seconds
+  Import took 0.063176 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.692668 seconds.
+  path: Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbm/male_3_obj_Packed0_Diffuse.png
+  artifactKey: Guid(49b8488b05c872a4a904e5939f8883c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbm/male_3_obj_Packed0_Diffuse.png using Guid(49b8488b05c872a4a904e5939f8883c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70680a99f08e710a4cd631020253e230') in 0.037156 seconds
+  Import took 0.049891 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000402 seconds.
+  path: Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbm/male_3_obj_Packed1_Diffuse.png
+  artifactKey: Guid(8b3efe8c1d554c245a820f1ad841a3e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbm/male_3_obj_Packed1_Diffuse.png using Guid(8b3efe8c1d554c245a820f1ad841a3e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3dca2d83d8c2791eb6dc7943bc2e848') in 0.123240 seconds
+  Import took 0.145561 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000327 seconds.
+  path: Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbm/male_3_obj_Packed0_Specular.png
+  artifactKey: Guid(8c53dd6aa902e21418fce4a9358e016d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbm/male_3_obj_Packed0_Specular.png using Guid(8c53dd6aa902e21418fce4a9358e016d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ba5f3b2b5af25e9d5cd4d47276b7d19') in 0.079198 seconds
+  Import took 0.099792 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000406 seconds.
+  path: Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbm/male_3_obj_Packed1_Specular.png
+  artifactKey: Guid(4bc8cbbdf639ff44d946837eba8a5eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbm/male_3_obj_Packed1_Specular.png using Guid(4bc8cbbdf639ff44d946837eba8a5eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e16c84ee5f1062afba442e8ebf73b70f') in 0.067308 seconds
+  Import took 0.080225 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001947 seconds.
+  path: Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbm/male_3_obj_Packed1_Specular.png
+  artifactKey: Guid(4bc8cbbdf639ff44d946837eba8a5eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Crowd Animations/blue team/Blue male 3 FBX@Happy Idle.fbm/male_3_obj_Packed1_Specular.png using Guid(4bc8cbbdf639ff44d946837eba8a5eb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e16c84ee5f1062afba442e8ebf73b70f') in 0.058431 seconds
+  Import took 0.072204 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
