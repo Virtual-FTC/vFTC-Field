@@ -13,11 +13,19 @@ public class ScoreKeeper : MonoBehaviour
 
     private bool freeze = false;
 
+    public Light[] lights;
+
     public void addScoreRed(int points)
     {
         if (!freeze)
             redScore += points;
         updateRedScore();
+        if (redScore > blueScore)
+            setLightsRed();
+        else if (blueScore > redScore)
+            setLightsBlue();
+        else
+            setLightsNorm();
     }
 
     public void addScoreBlue(int points)
@@ -25,6 +33,12 @@ public class ScoreKeeper : MonoBehaviour
         if (!freeze)
             blueScore += points;
         updateBlueScore();
+        if (redScore > blueScore)
+            setLightsRed();
+        else if (blueScore > redScore)
+            setLightsBlue();
+        else
+            setLightsNorm();
     }
 
     public int getScoreRed()
@@ -54,10 +68,56 @@ public class ScoreKeeper : MonoBehaviour
         blueScore = 0;
         updateRedScore();
         updateBlueScore();
+
+        setLightsNorm();
     }
 
     public void freezeScore()
     {
         freeze = true;
+    }
+
+    public void setLightsNorm()
+    {
+        Color myColor = new Color();
+        var color = "#846032";
+        ColorUtility.TryParseHtmlString(color, out myColor);
+        for (int x = 0; x < lights.Length; x++)
+        {
+            lights[x].color = myColor;
+        }
+    }
+
+    public void setLightsBlue()
+    {
+        Color myColor = new Color();
+        var color = "#323E84";
+        ColorUtility.TryParseHtmlString(color, out myColor);
+        for (int x = 0; x < lights.Length; x++)
+        {
+            lights[x].color = myColor;
+        }
+    }
+
+    public void setLightsRed()
+    {
+        Color myColor = new Color();
+        var color = "#A93C4E";
+        ColorUtility.TryParseHtmlString(color, out myColor);
+        for (int x = 0; x < lights.Length; x++)
+        {
+            lights[x].color = myColor;
+        }
+    }
+
+    public void setLightsGreen()
+    {
+        Color myColor = new Color();
+        var color = "#41A83C";
+        ColorUtility.TryParseHtmlString(color, out myColor);
+        for (int x = 0; x < lights.Length; x++)
+        {
+            lights[x].color = myColor;
+        }
     }
 }

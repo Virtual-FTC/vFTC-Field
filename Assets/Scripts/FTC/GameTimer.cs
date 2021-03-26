@@ -21,6 +21,8 @@ public class GameTimer : MonoBehaviour
 
     private AudioManager audioManager;
 
+    private ScoreKeeper scoreKeeper;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +30,7 @@ public class GameTimer : MonoBehaviour
         timerTextUI.text = timerText;
 
         audioManager = GetComponent<AudioManager>();
+        scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
     }
 
     public void startGame()
@@ -127,16 +130,28 @@ public class GameTimer : MonoBehaviour
             if (gameType == "auto")
             {
                 if (audioManager.playCountDown())
+                {
+                    scoreKeeper.setLightsGreen();
                     previousRealTime = Time.realtimeSinceStartup;
+                }
                 else if (audioManager.playStartAuto())
+                {
                     previousRealTime = Time.realtimeSinceStartup;
+                    scoreKeeper.setLightsNorm();
+                }
             }
 
             if (gameType == "teleop")
                 if (audioManager.playCountDown2())
+                {
                     previousRealTime = Time.realtimeSinceStartup;
+                    scoreKeeper.setLightsGreen();
+                }
                 else if (audioManager.playStartTeleop())
+                {
                     previousRealTime = Time.realtimeSinceStartup;
+                    scoreKeeper.setLightsNorm();
+                }
 
 
             if (timer <= 0)
