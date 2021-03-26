@@ -362,7 +362,7 @@ public class UserManager : MonoBehaviour
         {
             gameTimer.setGameType(websiteCommands.gameType);
             currentGameType = websiteCommands.gameType;
-            if (currentGameType == "telop")
+            if (currentGameType == "teleop")
             {
                 intake.setResetNum(0);
                 user2.setResetNum(0);
