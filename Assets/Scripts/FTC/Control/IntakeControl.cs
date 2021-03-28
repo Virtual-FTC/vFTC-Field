@@ -87,7 +87,10 @@ public class IntakeControl : MonoBehaviour
         numBalls = resetNum;
         for (int x = 0; x < 3; x++)
         {
-            rings[x].SetActive(true);
+            if (resetNum == 3)
+                rings[x].SetActive(true);
+            else
+                rings[x].SetActive(false);
         }
     }
 
