@@ -2091,6 +2091,7 @@ MonoBehaviour:
   timeOfBallContact: 0.25
   coliderTag: OutsideRing
   wantedVelocity: 150
+  rings: []
 --- !u!1 &6056820988404976129
 GameObject:
   m_ObjectHideFlags: 0
@@ -3246,6 +3247,7 @@ MonoBehaviour:
   shotForceMult: 3.16
   shootingAngle: {fileID: 8782886097279466913}
   prefab: {fileID: 4940796868498771376, guid: 7ace453621e9f174b9323ad5f515de05, type: 3}
+  robot: {fileID: 0}
 --- !u!1 &8782886098370415384
 GameObject:
   m_ObjectHideFlags: 0
