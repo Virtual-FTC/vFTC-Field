@@ -75,11 +75,11 @@ public class RobotController : MonoBehaviour
 
         previousRealTime = Time.realtimeSinceStartup;
         Console.WriteLine("Started.....");
-        receiveThread = new Thread(receiveFromRC);
-        receiveThread.Start();
+        //receiveThread = new Thread(receiveFromRC);
+        //receiveThread.Start();
 
-        sendThread = new Thread(sendToRC);
-        sendThread.Start();
+        //sendThread = new Thread(sendToRC);
+        //sendThread.Start();
 
         shooterControl = shooter.GetComponent<ShooterControl>();
         shooterControl.Commands.Add(() => motorPower6 > 0, shooterControl.shooting);
@@ -121,11 +121,12 @@ public class RobotController : MonoBehaviour
     {
         TXnewsock.Close();
         RXnewsock.Close();
-        sendThread.Abort();
-        receiveThread.Abort();
+        //sendThread.Abort();
+        //receiveThread.Abort();
 
     }
 
+    /*
     void sendToRC() {
         TXdata = new byte[1024];
         IPEndPoint ipep = new IPEndPoint(IPAddress.Any, sendPort);
@@ -215,6 +216,8 @@ public class RobotController : MonoBehaviour
             }
         }
     }
+
+    */
 
     private void driveRobot()
     {

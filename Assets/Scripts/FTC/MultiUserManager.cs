@@ -51,19 +51,20 @@ public class MultiUserManager : MonoBehaviour
         robotCustomizer = m_Robots[m_index].GetComponent<RobotCustomizer>();
 
         print("Started.....");
-        thread = new Thread(startTCPServer);
-        thread.Start();
+        //thread = new Thread(startTCPServer);
+        //thread.Start();
     }
 
     private void OnDestroy()
     {
         client.Close();
         newsock.Close();
-        thread.Abort();
+        //thread.Abort();
     }
 
     // Some sort of TCP connection to the website to handle user pref like which robot, position of the robot, dimensions of the robot, color of the robot, team number of the robot, start/stop game, and select which game mode to run (freeplay, autonomous, teleop, and full match) 
     #region TCP server for sending and receiving data  
+    /*
     void startTCPServer()
     {
         int recv;
@@ -123,6 +124,7 @@ public class MultiUserManager : MonoBehaviour
         newsock.Close();
         startTCPServer();
     }
+    */
     #endregion 
 
     #region Game Control
