@@ -78,3 +78,11 @@ Update Mode: updateDependencies
 The following packages were updated:
   com.unity.render-pipelines.high-definition from version 10.4.0 to 10.5.0
   com.unity.render-pipelines.universal from version 10.4.0 to 10.5.0
+
+=== Thu Jun  3 16:02:36 2021
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.2d.sprite@1.0.0

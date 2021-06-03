@@ -1,0 +1,494 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.8f1 (507919d4fff5) revision 5273881'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Pro; OS build 19041.985; Version 2004; 64bit' Language: 'en' Physical Memory: 16344 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.8f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Vassilis/Documents/GitHub/vFTC-Field
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+59486
+Successfully changed project path to: C:/Users/Vassilis/Documents/GitHub/vFTC-Field
+C:/Users/Vassilis/Documents/GitHub/vFTC-Field
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 80.41 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 1.62 ms.
+Initialize engine version: 2020.3.8f1 (507919d4fff5)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Vassilis/Documents/GitHub/vFTC-Field/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1080 (ID=0x1b80)
+    Vendor:   
+    VRAM:     8079 MB
+    Driver:   27.21.14.5671
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56100
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001948 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 76.88 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.984 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003117 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 82.75 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.029 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.64 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 4348 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 285.7 MB.
+System memory in use after: 285.9 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 4803.
+Total: 2.471600 ms (FindLiveObjects: 0.316300 ms CreateObjectMapping: 0.190300 ms MarkObjects: 1.893100 ms  DeleteObjects: 0.071200 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Quantum Tek/Quantum UI
+  artifactKey: Guid(05163b67ec479a0468e63cb1faeda054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI using Guid(05163b67ec479a0468e63cb1faeda054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9bbd4113f26f858396ba135066dea36') in 0.011710 seconds
+  Import took 0.017848 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.280193 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs
+  artifactKey: Guid(fcdc9fa5b9f254b2ea36342dc7a15635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs using Guid(fcdc9fa5b9f254b2ea36342dc7a15635) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2bb762e309a7d03b69a118421b1a4d3') in 0.004945 seconds
+  Import took 0.010660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.600594 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Menus
+  artifactKey: Guid(613cf235ec87d4f7aaab6ac4fb4addc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Menus using Guid(613cf235ec87d4f7aaab6ac4fb4addc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92925a912d60f71b6406302bfff81436') in 0.005119 seconds
+  Import took 0.010753 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.109799 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Menus/Main Menu.prefab
+  artifactKey: Guid(0fd0845f1842d44e583bfe03cd1864aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Menus/Main Menu.prefab using Guid(0fd0845f1842d44e583bfe03cd1864aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e914838328dd98d476867055ddc1375c') in 0.112813 seconds
+  Import took 0.118376 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Menus/Pause Menu.prefab
+  artifactKey: Guid(3032ad3f9ada44e60adb2c670beadfd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Menus/Pause Menu.prefab using Guid(3032ad3f9ada44e60adb2c670beadfd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c74931ce4abc9f0b94745d3c33f8953') in 0.034147 seconds
+  Import took 0.039535 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.536972 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Windows
+  artifactKey: Guid(f2d157845c66f46bcb9bc8d57867d980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Windows using Guid(f2d157845c66f46bcb9bc8d57867d980) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c2570d6fd68b8a646ec8ee593f54c25') in 0.005388 seconds
+  Import took 0.011523 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.067292 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Windows/Confirm Window.prefab
+  artifactKey: Guid(8a9cb57d0f938478590160ae92e4c337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Windows/Confirm Window.prefab using Guid(8a9cb57d0f938478590160ae92e4c337) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '708d499b5458f9cea387939932fa50dc') in 0.011748 seconds
+  Import took 0.017653 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Windows/Login Window.prefab
+  artifactKey: Guid(10d329ec520b5441cab19f9d8742996b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Windows/Login Window.prefab using Guid(10d329ec520b5441cab19f9d8742996b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f123f06b61815fda88eb2d65e137f26d') in 0.025812 seconds
+  Import took 0.030937 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000235 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Windows/Pause Window.prefab
+  artifactKey: Guid(89327a6e9c72e4e65b669faa90bd3b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Windows/Pause Window.prefab using Guid(89327a6e9c72e4e65b669faa90bd3b1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24348daa6b459a3b84a9d63e610c6323') in 0.012805 seconds
+  Import took 0.018570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Windows/Settings Tab Group.prefab
+  artifactKey: Guid(d3bee2b5e70b74f94a0b33605a4efc76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Windows/Settings Tab Group.prefab using Guid(d3bee2b5e70b74f94a0b33605a4efc76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70b6cea60a5b20e76deccab38a0b698b') in 0.032944 seconds
+  Import took 0.038611 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Windows/Loading Window.prefab
+  artifactKey: Guid(5ec3bcee11f3045e39155d310acbe935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Windows/Loading Window.prefab using Guid(5ec3bcee11f3045e39155d310acbe935) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0eb85608dae79742241c2ef724f856c') in 0.011360 seconds
+  Import took 0.016498 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.851501 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements
+  artifactKey: Guid(4d5ac6769ee8b4039a6f56aae31f85cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements using Guid(4d5ac6769ee8b4039a6f56aae31f85cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b228b09d53eea6223dde6d2d45874782') in 0.011683 seconds
+  Import took 0.017170 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.036680 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Animated Text.prefab
+  artifactKey: Guid(8e6ec20e79c62481baf292059c269bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Animated Text.prefab using Guid(8e6ec20e79c62481baf292059c269bee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b62b5635b9cdcd7c8eaa649acc228132') in 0.009905 seconds
+  Import took 0.015268 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Switch Toggle.prefab
+  artifactKey: Guid(ef6c0f3c22f2c4cc992d6c624fa72d03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Switch Toggle.prefab using Guid(ef6c0f3c22f2c4cc992d6c624fa72d03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f2788c88fdd94a50d42c7d29fd73ab1') in 0.006851 seconds
+  Import took 0.012954 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Option List.prefab
+  artifactKey: Guid(849610b926fb64ccf9dbdfaa112dea32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Option List.prefab using Guid(849610b926fb64ccf9dbdfaa112dea32) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c6bee36a7c61307643bab9483a55dc0') in 0.011754 seconds
+  Import took 0.017156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000239 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Bar.prefab
+  artifactKey: Guid(ec019941f90ec41e5ad2df28607525e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Bar.prefab using Guid(ec019941f90ec41e5ad2df28607525e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1178921b4f1454a4f20f275bcd8be60') in 0.007752 seconds
+  Import took 0.013074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Scroll View.prefab
+  artifactKey: Guid(14edf48f871294664b92fe1d685d401b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Scroll View.prefab using Guid(14edf48f871294664b92fe1d685d401b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9017a59ff01ec608bf9815435096e2c7') in 0.006951 seconds
+  Import took 0.012411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000219 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Slider.prefab
+  artifactKey: Guid(cc47b5e80b09f4e7a91bb90909a1f535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Slider.prefab using Guid(cc47b5e80b09f4e7a91bb90909a1f535) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1de620198bc7b776a867b1efb602a24d') in 0.006662 seconds
+  Import took 0.012625 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab Group.prefab
+  artifactKey: Guid(16e628df1adfe430ebb078de05c75122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab Group.prefab using Guid(16e628df1adfe430ebb078de05c75122) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09193394f7282865bab08f8879ed8898') in 0.007232 seconds
+  Import took 0.013270 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000225 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab.prefab
+  artifactKey: Guid(33e441ac813c7455ba8dd07d49958fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab.prefab using Guid(33e441ac813c7455ba8dd07d49958fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78310c16651d9c3f0dcb4c1c1336900c') in 0.022783 seconds
+  Import took 0.028368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000242 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Window.prefab
+  artifactKey: Guid(59004e2d9368943e4bd1b117b7a18ee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Window.prefab using Guid(59004e2d9368943e4bd1b117b7a18ee2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daba6407a4286f57f681baf0a58874aa') in 0.006512 seconds
+  Import took 0.011550 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000201 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Radial Bar.prefab
+  artifactKey: Guid(dd369b5fa8cbe4671971e8b1d6c74c25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Radial Bar.prefab using Guid(dd369b5fa8cbe4671971e8b1d6c74c25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96d7c620160ec223b58c170b611823d4') in 0.007589 seconds
+  Import took 0.013346 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Text.prefab
+  artifactKey: Guid(14a9e06947ddf416ab7c504ac90e5545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Text.prefab using Guid(14a9e06947ddf416ab7c504ac90e5545) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37093d379248f2823ed6eeccf2f281ac') in 0.010182 seconds
+  Import took 0.015605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000247 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab Window.prefab
+  artifactKey: Guid(1544b70604b7949b685039eafaa3c761) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Tab Window.prefab using Guid(1544b70604b7949b685039eafaa3c761) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eb1dc028973e4ac66fa9b60ebc303a9') in 0.024537 seconds
+  Import took 0.029866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000181 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Toggle.prefab
+  artifactKey: Guid(19deb05d9974e4ce8a4516ed7506874b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Toggle.prefab using Guid(19deb05d9974e4ce8a4516ed7506874b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc02db6fcc9288d7b09960b79e40b10e') in 0.007184 seconds
+  Import took 0.012258 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000185 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Slider With Label.prefab
+  artifactKey: Guid(b573c9c130ea34495bfe74f5e6c55792) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Slider With Label.prefab using Guid(b573c9c130ea34495bfe74f5e6c55792) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f21bc06430be9271d56b565000f47f9f') in 0.011088 seconds
+  Import took 0.016411 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000165 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Menu.prefab
+  artifactKey: Guid(5d556420a6baa4cadb7cac29e63fb404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Menu.prefab using Guid(5d556420a6baa4cadb7cac29e63fb404) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa9fff183af9b3036187488977d9a224') in 0.006543 seconds
+  Import took 0.011924 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Button.prefab
+  artifactKey: Guid(ce875ceeaf5474c83a7ae0fce3b869b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Button.prefab using Guid(ce875ceeaf5474c83a7ae0fce3b869b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c1bda6ade1826fc126b80cc34a0d497') in 0.006446 seconds
+  Import took 0.011760 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Scene Transition.prefab
+  artifactKey: Guid(852a72783af074a9e958f397827aa3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Scene Transition.prefab using Guid(852a72783af074a9e958f397827aa3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4b5906d095a92306b61287b80e8de6') in 0.011700 seconds
+  Import took 0.017652 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Toggle Group.prefab
+  artifactKey: Guid(1e9a30bfdef7949729eaad6c9296ef51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Toggle Group.prefab using Guid(1e9a30bfdef7949729eaad6c9296ef51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a84c1cc4744f176c7857cdf80d87fbb5') in 0.011590 seconds
+  Import took 0.017370 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000190 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Button.prefab
+  artifactKey: Guid(8de8f6c5f34274e569ac1bd4d57c3c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Button.prefab using Guid(8de8f6c5f34274e569ac1bd4d57c3c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '011432e86d9a544bf65174ac4205c718') in 0.010825 seconds
+  Import took 0.016133 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Dropdown.prefab
+  artifactKey: Guid(542b3538f7c95493b8f589fdc88a1db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Dropdown.prefab using Guid(542b3538f7c95493b8f589fdc88a1db0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c77a43d449355b7683e6ff0a506cad0') in 0.013369 seconds
+  Import took 0.018790 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Switch Toggle With Label.prefab
+  artifactKey: Guid(a11973c57522447e8a0a115112cf750c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Switch Toggle With Label.prefab using Guid(a11973c57522447e8a0a115112cf750c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cec9c21725357558ec243e1e9671f75') in 0.011460 seconds
+  Import took 0.016528 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000240 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Toggle.prefab
+  artifactKey: Guid(cf0b2f901ffcc4cfc85df08d1633891a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Toggle.prefab using Guid(cf0b2f901ffcc4cfc85df08d1633891a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae4135ba42a6cb0dea48ed7b855c8648') in 0.012225 seconds
+  Import took 0.017833 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Background.prefab
+  artifactKey: Guid(b2f8f03f176bd4e54a78d89af62e6daa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Background.prefab using Guid(b2f8f03f176bd4e54a78d89af62e6daa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f38e4583de31479e2e29282beb01c5a') in 0.006291 seconds
+  Import took 0.011638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000238 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Button With Background.prefab
+  artifactKey: Guid(47a7d99d823864bbd90ebe911d1dd081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Button With Background.prefab using Guid(47a7d99d823864bbd90ebe911d1dd081) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e75513730f55df58287944372c2c046b') in 0.006340 seconds
+  Import took 0.012058 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000154 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Input Field.prefab
+  artifactKey: Guid(b70a0d4e683c84847974b6ddea172fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Input Field.prefab using Guid(b70a0d4e683c84847974b6ddea172fea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d0c4dc5cb21eb4c913b627ed9d46082') in 0.010662 seconds
+  Import took 0.015969 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000237 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Loading UI.prefab
+  artifactKey: Guid(f833ace1a5ea04d86b57461ae4327732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Loading UI.prefab using Guid(f833ace1a5ea04d86b57461ae4327732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da4b619ac845f33210c4ce88a2cbe655') in 0.011254 seconds
+  Import took 0.016426 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Toggle With Background.prefab
+  artifactKey: Guid(32a1b081f803741708be7a0a3af17658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Prefabs/Elements/Icon Toggle With Background.prefab using Guid(32a1b081f803741708be7a0a3af17658) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39a8120a41bd45d96352b33df8ca0b4c') in 0.006548 seconds
+  Import took 0.011879 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.314626 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Scenes
+  artifactKey: Guid(76c90469059ce467eb852961347ca81d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Scenes using Guid(76c90469059ce467eb852961347ca81d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36cf2263a8d91d581038cf0bd2f60186') in 0.005117 seconds
+  Import took 0.010997 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.253282 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Scenes/UI Elements Demo.unity
+  artifactKey: Guid(e78d08e5d3b1042bd90dd8198ef14724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Scenes/UI Elements Demo.unity using Guid(e78d08e5d3b1042bd90dd8198ef14724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80b2f77155e2e86f8fc34a95037db076') in 0.005230 seconds
+  Import took 0.010868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Scenes/UI Elements Demo.unity
+  artifactKey: Guid(e78d08e5d3b1042bd90dd8198ef14724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Scenes/UI Elements Demo.unity using Guid(e78d08e5d3b1042bd90dd8198ef14724) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80b2f77155e2e86f8fc34a95037db076') in 0.001846 seconds
+  Import took 0.007211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.862046 seconds.
+  path: Assets/Quantum Tek/Quantum UI/Scenes/Main Menu Demo.unity
+  artifactKey: Guid(2ea1e15421ef1436d902c08e7005e6c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Quantum Tek/Quantum UI/Scenes/Main Menu Demo.unity using Guid(2ea1e15421ef1436d902c08e7005e6c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22830cceaab5a07751b1fad5ea70b881') in 0.005110 seconds
+  Import took 0.010802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.747719 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Code/NetworkManager.cs
+  artifactKey: Guid(47745a73e77cb3a48bb515e775b313ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Code/NetworkManager.cs using Guid(47745a73e77cb3a48bb515e775b313ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78ba7dd0b18c27e641e6f6c22ed8f3d1') in 0.014443 seconds
+  Import took 0.020843 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001332 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Code/NetworkManager.cs
+  artifactKey: Guid(47745a73e77cb3a48bb515e775b313ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Code/NetworkManager.cs using Guid(47745a73e77cb3a48bb515e775b313ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78ba7dd0b18c27e641e6f6c22ed8f3d1') in 0.001672 seconds
+  Import took 0.007118 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 39.286710 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Code/NetworkManager.cs
+  artifactKey: Guid(47745a73e77cb3a48bb515e775b313ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Code/NetworkManager.cs using Guid(47745a73e77cb3a48bb515e775b313ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b308d09bd5ceaf80a85a9a09b68fb32') in 0.035066 seconds
+  Import took 0.045755 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.710004 seconds.
+  path: Assets/Photon/PhotonUnityNetworking/Code/NetworkManager.cs
+  artifactKey: Guid(47745a73e77cb3a48bb515e775b313ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Photon/PhotonUnityNetworking/Code/NetworkManager.cs using Guid(47745a73e77cb3a48bb515e775b313ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a11042e0efc2f642848aabfd4fc70fb') in 0.002789 seconds
+  Import took 0.010185 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002909 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.923 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 4116 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 267.3 MB.
+System memory in use after: 267.5 MB.
+
+Unloading 17 unused Assets to reduce memory usage. Loaded Objects now: 4806.
+Total: 2.567200 ms (FindLiveObjects: 0.306700 ms CreateObjectMapping: 0.188000 ms MarkObjects: 2.015700 ms  DeleteObjects: 0.055800 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002942 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.901 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 1 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 4116 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 267.4 MB.
+System memory in use after: 267.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 4809.
+Total: 2.504100 ms (FindLiveObjects: 0.337000 ms CreateObjectMapping: 0.276200 ms MarkObjects: 1.843500 ms  DeleteObjects: 0.046500 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
