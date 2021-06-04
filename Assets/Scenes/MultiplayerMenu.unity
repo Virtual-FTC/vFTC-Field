@@ -129,6 +129,49 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 1032802270}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &645185646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 645185647}
+  - component: {fileID: 645185648}
+  m_Layer: 0
+  m_Name: NetworkManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &645185647
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645185646}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 930.08984, y: 448.831, z: 972.5963}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &645185648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 645185646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47745a73e77cb3a48bb515e775b313ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &744180799
 GameObject:
   m_ObjectHideFlags: 0
@@ -1128,9 +1171,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1066346469923867530}
-  - component: {fileID: 1066346469923867531}
-  - component: {fileID: 1066346469923867528}
-  - component: {fileID: 1066346469923867529}
   m_Layer: 5
   m_Name: Create Field
   m_TagString: Untagged
@@ -1138,39 +1178,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1066346469923867528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066346469923867525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8fbc07f0117f4e9484b3952f6f7837e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1066346469923867529}
-  animationPreset: {fileID: 11400000, guid: 59d83b836d79148fe87ebdfb4bc4a508, type: 2}
---- !u!95 &1066346469923867529
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066346469923867525}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7128042ec398847a5a6a3052b5e44a8b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &1066346469923867530
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1191,54 +1198,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -102}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1066346469923867531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1066346469923867525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a515eb926d3bf4b1c8ecae3c514887f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  startActive: 1
-  startActiveAnimation: Active
-  startInactiveAnimation: Inactive
-  active: 0
-  animator: {fileID: 1066346469923867528}
-  audio: {fileID: 0}
-  onActive:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1066346469923867528}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: PlayAnimation
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Active
-          m_BoolArgument: 0
-        m_CallState: 2
-  onInactive:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1066346469923867528}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: PlayAnimation
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Inactive
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1109510850573346357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1467,6 +1426,7 @@ GameObject:
   - component: {fileID: 1629634732758539574}
   - component: {fileID: 1629634732758539572}
   - component: {fileID: 1629634732758539575}
+  - component: {fileID: 1629634732758539571}
   m_Layer: 5
   m_Name: Option List
   m_TagString: Untagged
@@ -1474,6 +1434,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1629634732758539571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629634732758539570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d78f3bce41f0f4b9582021d622a47a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joinField: {fileID: 1483195817082921634}
+  createField: {fileID: 1066346469923867525}
 --- !u!114 &1629634732758539572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1603,7 +1577,19 @@ MonoBehaviour:
   - Create Field
   onChangeOption:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1629634732758539571}
+        m_TargetAssemblyTypeName: JoinCreateField, Unity.Template.RenderStreaming.Runtime
+        m_MethodName: switchUI
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   optionIndex: 0
   option: 
 --- !u!222 &1629634732758539575
@@ -1695,7 +1681,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1683444440724224152}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 645185648}
+        m_TargetAssemblyTypeName: NetworkManager, PhotonUnityNetworking
+        m_MethodName: CreateRoom
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 645185648}
+        m_TargetAssemblyTypeName: NetworkManager, PhotonUnityNetworking
+        m_MethodName: ChangeScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &1683444440724224154
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2560,7 +2570,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3636024805122292659}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7874658922093871718}
+        m_TargetAssemblyTypeName: BasicMenu, Unity.Template.RenderStreaming.Runtime
+        m_MethodName: ChangeToScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3636024805122292659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3118,7 +3140,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 645185648}
+        m_TargetAssemblyTypeName: NetworkManager, PhotonUnityNetworking
+        m_MethodName: setFieldName
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3331,7 +3365,19 @@ MonoBehaviour:
       m_Calls: []
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 645185648}
+        m_TargetAssemblyTypeName: NetworkManager, PhotonUnityNetworking
+        m_MethodName: setPlayerName
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnTouchScreenKeyboardStatusChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3949,6 +3995,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 645185648}
+        m_TargetAssemblyTypeName: NetworkManager, PhotonUnityNetworking
+        m_MethodName: setMaxPlayers
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6242730917698765133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4074,6 +4132,18 @@ MonoBehaviour:
       - m_Target: {fileID: 4063004743450887586}
         m_TargetAssemblyTypeName: 
         m_MethodName: ChangeOption
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: -1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 645185648}
+        m_TargetAssemblyTypeName: NetworkManager, PhotonUnityNetworking
+        m_MethodName: setMaxPlayers
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4545,6 +4615,7 @@ GameObject:
   - component: {fileID: 7874658922093871722}
   - component: {fileID: 7874658922093871723}
   - component: {fileID: 7874658922093871716}
+  - component: {fileID: 7874658922093871718}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -4552,6 +4623,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7874658922093871718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874658922093871717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b22371e4c1ff824398629a30b151787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7874658922093871720
 MonoBehaviour:
   m_ObjectHideFlags: 0

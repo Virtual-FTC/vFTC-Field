@@ -4,51 +4,53 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
-public class NetworkManager : MonoBehaviour
+public class NetworkManager : MonoBehaviourPunCallbacks
 {
-    public static NetworkManager instance;
-
     private string playerName;
 
-    public Text roomNameField;
+    // Join Field
+
+
+    // Create Field
+    private string fieldName;
+    private int maxPlayers = 1;
 
     // Start is called before the first frame update
-    void Awake()
-    {
-        if (instance != null && instance != this)
-            gameObject.SetActive(false);
-        else
-        {
-            // set the instance
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        PhotonNetwork.AutomaticallySyncScene = true;
-    }
-
-    // Update is called once per frame
     void Start()
     {
-        PlayerPrefs.DeleteAll();
-
-        PhotonNetwork.ConnectUsingSettings();
-    }
-
-    public void SetPlayerName(string name)
-    {
-        playerName = name;
-    }
-
-    public void JoinRoom(string roomName)
-    {
-        if (PhotonNetwork.IsConnected)
+       if (!PhotonNetwork.IsConnected)
         {
-            PhotonNetwork.LocalPlayer.NickName = playerName; //1
-            Debug.Log("PhotonNetwork.IsConnected! | Trying to Create/Join Room " + roomName);
-            RoomOptions roomOptions = new RoomOptions(); //2
-            TypedLobby typedLobby = new TypedLobby(roomName, LobbyType.Default); //3
-            PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, typedLobby); //4
+            PhotonNetwork.AutomaticallySyncScene = true;
+            PhotonNetwork.ConnectUsingSettings();
+        }
+
+        loadFieldOptions();
+    }
+
+    // Callbacks
+    public override void OnConnectedToMaster()
+    {
+        Debug.Log("Connected to the master!");
+        PhotonNetwork.JoinLobby();
+    }
+
+    public override void OnJoinedLobby()
+    {
+        Debug.Log("Connected to lobby");
+    }
+
+    public override void OnJoinedRoom()
+    {
+        // 4
+        if (PhotonNetwork.IsMasterClient)
+        {
+            Debug.Log("You are room leader");
+        }
+        else
+        {
+            Debug.Log("Connected to room");
         }
     }
 
@@ -87,10 +89,63 @@ public class NetworkManager : MonoBehaviour
             playerStatus.text = "Connected to Lobby";
         }
     }
+
     */
 
-    public void ChangeScene(string sceneName)
+    // Setting var
+    public void setPlayerName(string name)
     {
-        PhotonNetwork.LoadLevel(sceneName);
+        playerName = name;
+    }
+
+    public void setFieldName(string name)
+    {
+        fieldName = name;
+    }
+
+    public void setMaxPlayers(int num)
+    {
+        maxPlayers += num;
+        if (maxPlayers > 4)
+            maxPlayers = 1;
+        else if (maxPlayers < 1)
+            maxPlayers = 4;
+        Debug.Log(maxPlayers);
+    }
+
+    private void loadFieldOptions()
+    {
+
+    }
+
+    public void OnJointBreak(float breakForce)
+    {
+
+    }
+
+    public void CreateRoom()
+    {
+        if (PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.LocalPlayer.NickName = playerName; //1
+            PhotonNetwork.CreateRoom(fieldName, new RoomOptions() { MaxPlayers = (byte)maxPlayers }, null); //4
+        }
+    }
+
+    public void JoinRoom(string roomName)
+    {
+        if (PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.LocalPlayer.NickName = playerName; //1
+            Debug.Log("PhotonNetwork.IsConnected! | Trying to Create/Join Room " + roomName);
+            RoomOptions roomOptions = new RoomOptions(); //2
+            TypedLobby typedLobby = new TypedLobby(roomName, LobbyType.Default); //3
+            PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, typedLobby); //4
+        }
+    }
+
+    public void ChangeScene(int sceneInx)
+    {
+        PhotonNetwork.LoadLevel(sceneInx);
     }
 }
