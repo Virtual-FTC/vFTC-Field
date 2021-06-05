@@ -11,7 +11,8 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     private string playerName;
 
     // Join Field
-
+    public GameObject[] objList;
+    private List<RoomInfo> rooms;
 
     // Create Field
     private string fieldName;
@@ -25,8 +26,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             PhotonNetwork.AutomaticallySyncScene = true;
             PhotonNetwork.ConnectUsingSettings();
         }
-
-        loadFieldOptions();
     }
 
     // Callbacks
@@ -51,6 +50,26 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         else
         {
             Debug.Log("Connected to room");
+        }
+    }
+
+    public override void OnRoomListUpdate(List<RoomInfo> roomList)
+    {
+        rooms = roomList;
+        for (int i = 0; i < objList.Length; ++i)
+        {
+            objList[i].SetActive(false);
+        }
+        if (roomList.Count > 0)
+        {
+            for (int i = 0; i < roomList.Count; ++i)
+            {
+                RoomInfo room = roomList[i];
+                GameObject gam = objList[i];
+
+                gam.GetComponent<Text>().text = room.Name;
+                gam.SetActive(true);
+            }
         }
     }
 
@@ -113,11 +132,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Debug.Log(maxPlayers);
     }
 
-    private void loadFieldOptions()
-    {
-
-    }
-
     public void OnJointBreak(float breakForce)
     {
 
@@ -132,15 +146,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
     }
 
-    public void JoinRoom(string roomName)
+    public void JoinRoom(int index)
     {
         if (PhotonNetwork.IsConnected)
         {
             PhotonNetwork.LocalPlayer.NickName = playerName; //1
-            Debug.Log("PhotonNetwork.IsConnected! | Trying to Create/Join Room " + roomName);
-            RoomOptions roomOptions = new RoomOptions(); //2
-            TypedLobby typedLobby = new TypedLobby(roomName, LobbyType.Default); //3
-            PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, typedLobby); //4
+            PhotonNetwork.JoinRoom(rooms[index].Name);
         }
     }
 
