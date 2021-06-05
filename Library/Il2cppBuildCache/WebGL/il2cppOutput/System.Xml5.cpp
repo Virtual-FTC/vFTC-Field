@@ -11950,7 +11950,7 @@ IL_00e4:
 		ParsingState_t5C1CDFE140B4F180AE0AB39A21AAA0E361F691EF * L_42 = __this->get_address_of_ps_5();
 		int32_t L_43 = L_42->get_bytesUsed_9();
 		int32_t L_44;
-		L_44 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(26 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_35, L_37, L_39, ((int32_t)il2cpp_codegen_subtract((int32_t)((int32_t)((int32_t)(((RuntimeArray*)L_41)->max_length))), (int32_t)L_43)));
+		L_44 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(28 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_35, L_37, L_39, ((int32_t)il2cpp_codegen_subtract((int32_t)((int32_t)((int32_t)(((RuntimeArray*)L_41)->max_length))), (int32_t)L_43)));
 		V_4 = L_44;
 		int32_t L_45 = V_4;
 		if (L_45)
@@ -12999,7 +12999,7 @@ IL_0081:
 		ParsingState_t5C1CDFE140B4F180AE0AB39A21AAA0E361F691EF * L_18 = __this->get_address_of_ps_5();
 		Encoding_tE901442411E2E70039D2A4AE77FB81C3D6064827 * L_19 = ___encoding0;
 		Decoder_t91B2ED8AEC25AA24D23A00265203BE992B12C370 * L_20;
-		L_20 = VirtFuncInvoker0< Decoder_t91B2ED8AEC25AA24D23A00265203BE992B12C370 * >::Invoke(28 /* System.Text.Decoder System.Text.Encoding::GetDecoder() */, L_19);
+		L_20 = VirtFuncInvoker0< Decoder_t91B2ED8AEC25AA24D23A00265203BE992B12C370 * >::Invoke(29 /* System.Text.Decoder System.Text.Encoding::GetDecoder() */, L_19);
 		L_18->set_decoder_6(L_20);
 		return;
 	}
@@ -13766,7 +13766,7 @@ IL_0312:
 		ParsingState_t5C1CDFE140B4F180AE0AB39A21AAA0E361F691EF * L_140 = __this->get_address_of_ps_5();
 		int32_t L_141 = L_140->get_bytesUsed_9();
 		int32_t L_142;
-		L_142 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(26 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_133, L_135, L_137, ((int32_t)il2cpp_codegen_subtract((int32_t)((int32_t)((int32_t)(((RuntimeArray*)L_139)->max_length))), (int32_t)L_141)));
+		L_142 = VirtFuncInvoker3< int32_t, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*, int32_t, int32_t >::Invoke(28 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_133, L_135, L_137, ((int32_t)il2cpp_codegen_subtract((int32_t)((int32_t)((int32_t)(((RuntimeArray*)L_139)->max_length))), (int32_t)L_141)));
 		V_10 = L_142;
 		int32_t L_143 = V_10;
 		if (L_143)

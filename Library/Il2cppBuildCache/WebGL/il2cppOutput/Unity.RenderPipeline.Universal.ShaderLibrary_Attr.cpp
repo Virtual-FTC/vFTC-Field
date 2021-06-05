@@ -377,7 +377,7 @@ static void Unity_RenderPipeline_Universal_ShaderLibrary_CustomAttributesCacheGe
 	}
 	{
 		DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B * tmp = (DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B *)cache->attributes[2];
-		DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550(tmp, 2LL, NULL);
+		DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550(tmp, 263LL, NULL);
 	}
 }
 static void LightData_t8C139E4D07ED1FF86DF198773F7F41736AE9B135_CustomAttributesCacheGenerator(CustomAttributesCache* cache)

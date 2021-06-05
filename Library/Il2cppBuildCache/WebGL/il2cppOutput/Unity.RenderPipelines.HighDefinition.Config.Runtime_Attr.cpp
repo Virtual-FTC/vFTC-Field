@@ -377,7 +377,7 @@ static void Unity_RenderPipelines_HighDefinition_Config_Runtime_CustomAttributes
 	}
 	{
 		DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B * tmp = (DebuggableAttribute_tA8054EBD0FC7511695D494B690B5771658E3191B *)cache->attributes[2];
-		DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550(tmp, 2LL, NULL);
+		DebuggableAttribute__ctor_m7FF445C8435494A4847123A668D889E692E55550(tmp, 263LL, NULL);
 	}
 }
 static void ProbeVolumesEvaluationModes_tEF50C2FF3A2C69FB0305F3F09C6F890BC5089CCC_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
