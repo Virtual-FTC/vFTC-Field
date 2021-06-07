@@ -40,23 +40,10 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Debug.Log("Connected to lobby");
     }
 
-    public override void OnJoinedRoom()
-    {
-        // 4
-        if (PhotonNetwork.IsMasterClient)
-        {
-            Debug.Log("You are room leader");
-        }
-        else
-        {
-            Debug.Log("Connected to room");
-        }
-    }
-
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
         rooms = roomList;
-        for (int i = 0; i < objList.Length; ++i)
+        for (int i = 0; i < objList.Length; i++)
         {
             objList[i].SetActive(false);
         }
@@ -67,7 +54,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
                 RoomInfo room = roomList[i];
                 GameObject gam = objList[i];
 
-                gam.GetComponent<Text>().text = room.Name;
+                gam.GetComponentInChildren<Text>().text = room.Name;
                 gam.SetActive(true);
             }
         }
@@ -132,11 +119,6 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         Debug.Log(maxPlayers);
     }
 
-    public void OnJointBreak(float breakForce)
-    {
-
-    }
-
     public void CreateRoom()
     {
         if (PhotonNetwork.IsConnected)
@@ -152,6 +134,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         {
             PhotonNetwork.LocalPlayer.NickName = playerName; //1
             PhotonNetwork.JoinRoom(rooms[index].Name);
+            Debug.Log("Trying to join room");
         }
     }
 

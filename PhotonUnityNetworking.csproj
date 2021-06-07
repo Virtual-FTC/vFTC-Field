@@ -67,6 +67,7 @@
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Utilities\NestedComponentUtilities.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonStreamQueue.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonNetworkPart.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\MultiplayerManager.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Interfaces\IPhotonViewCallbacks.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonHandler.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonAnimatorView.cs" />
@@ -74,6 +75,8 @@
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonRigidbodyView.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformView.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\ServerSettings.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonRoom.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\MultiplayerSetting.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonUnityNetworking.asmdef" />

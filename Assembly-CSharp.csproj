@@ -57,24 +57,47 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Robot Modules\Scripts\Chassis.cs" />
+    <Compile Include="Assets\Scripts\FTC\Control\ScoopControl.cs" />
+    <Compile Include="Assets\Scripts\FTC\GameControl\RingDispenser.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\SocketWebTcp.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_SwitchToggle.cs" />
+    <Compile Include="Assets\Scripts\FTC\RobotController.cs" />
     <Compile Include="Assets\RTCDataChan.cs" />
+    <Compile Include="Assets\Scripts\FTC\GameControl\BlueWobbleGoal.cs" />
+    <Compile Include="Assets\Scripts\UI\BasicMenu.cs" />
+    <Compile Include="Assets\Scripts\FTC\Control\RobotSoundControl.cs" />
+    <Compile Include="Assets\Scripts\FTC\RobotCustomizer.cs" />
+    <Compile Include="Assets\Scripts\FTC\GameControl\WhiteLineGoal.cs" />
+    <Compile Include="Assets\Scripts\FTC\GameControl\RedWobbleGoal.cs" />
+    <Compile Include="Assets\Scripts\FTC\AudioManager.cs" />
+    <Compile Include="Assets\Scripts\FTC\GameControl\RedGoal.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_Tab.cs" />
+    <Compile Include="Assets\Scripts\FTC\CameraPosition.cs" />
+    <Compile Include="Assets\Scripts\FTC\GameControl\BlueGoal.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_Bar.cs" />
+    <Compile Include="Assets\Scripts\FTC\GameTimer.cs" />
+    <Compile Include="Assets\Scripts\FTC\Control\ShooterControl.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_OptionList.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_TabGroup.cs" />
+    <Compile Include="Assets\Scripts\FTC\GameControl\ImpactSound.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_ElementAudioPreset.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_ElementAudioClip.cs" />
+    <Compile Include="Assets\Scripts\FTC\MultiUserManager.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_SceneTransition.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_ElementAudio.cs" />
+    <Compile Include="Assets\Scripts\FTC\Control\IntakeControl.cs" />
+    <Compile Include="Assets\Scripts\FTC\Control\GrabberControl.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_TabWindow.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_Menu.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_ElementAnimation.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_ElementAnimator.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_ElementAnimationPreset.cs" />
+    <Compile Include="Assets\Scripts\UI\JoinCreateField.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_Element.cs" />
+    <Compile Include="Assets\Scripts\FTC\Control\CommandProcessor.cs" />
+    <Compile Include="Assets\Scripts\FTC\UserManager.cs" />
+    <Compile Include="Assets\Scripts\FTC\GameControl\ScoreKeeper.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_Window.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -671,17 +694,11 @@
     <Reference Include="System.Xml.Serialization">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.8f1\Editor\Data\NetStandard\compat\2.0.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderStreaming.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderStreaming.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
@@ -692,20 +709,11 @@
     <Reference Include="Unity.VisualStudio.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.WebRTC">
-      <HintPath>Library\ScriptAssemblies\Unity.WebRTC.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualEffectGraph.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Timeline">
       <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.RenderPipelines.HighDefinition.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Searcher.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
@@ -716,32 +724,20 @@
     <Reference Include="Unity.RenderPipelines.Core.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.HighDefinition.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Editor.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.InputSystem">
-      <HintPath>Library\ScriptAssemblies\Unity.InputSystem.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.WebRTC.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.WebRTC.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Mathematics">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
@@ -767,18 +763,11 @@
     <Reference Include="Unity.Mathematics.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.RenderPipelines.HighDefinition.Config.Runtime">
-      <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.HighDefinition.Config.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.Template.RenderStreaming.Runtime.csproj">
-      <Project>{812A704F-B0B3-F5F9-4C49-6340905241CF}</Project>
-      <Name>Unity.Template.RenderStreaming.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="PhotonChat.csproj">
       <Project>{1016D6F5-213D-CBA9-7043-EEB6FF422AB4}</Project>
       <Name>PhotonChat</Name>
@@ -802,10 +791,6 @@
     <ProjectReference Include="PhotonUnityNetworking.csproj">
       <Project>{6F1FA738-6B2F-3BCD-F2C7-369C27CB28E0}</Project>
       <Name>PhotonUnityNetworking</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.Template.RenderStreaming.Editor.csproj">
-      <Project>{F7732BC0-1CD6-2310-338C-74C289D3A0DD}</Project>
-      <Name>Unity.Template.RenderStreaming.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="PhotonUnityNetworking.Utilities.Culling.Editor.csproj">
       <Project>{8EDBB242-EF9D-64E7-4A5E-386C5E8A9629}</Project>

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MultiplayerMenu.unity
     guid: 9d994d3bb022f0e4d9ab98ed295d9421
   - enabled: 1
+    path: Assets/Scenes/FieldSetupMenu.unity
+    guid: 11521e0a7a79f0746956c63618c4ce98
+  - enabled: 1
     path: Assets/Scenes/Field2020.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

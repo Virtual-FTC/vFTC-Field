@@ -731,7 +731,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7874658922423044210}
-        m_TargetAssemblyTypeName: ChangeScene, Unity.Template.RenderStreaming.Runtime
+        m_TargetAssemblyTypeName: BasicMenu, Unity.Template.RenderStreaming.Runtime
         m_MethodName: ChangeToScene
         m_Mode: 3
         m_Arguments:
@@ -7572,7 +7572,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7874658922423044210}
-        m_TargetAssemblyTypeName: ChangeScene, Unity.Template.RenderStreaming.Runtime
+        m_TargetAssemblyTypeName: BasicMenu, Unity.Template.RenderStreaming.Runtime
         m_MethodName: ChangeToScene
         m_Mode: 3
         m_Arguments:

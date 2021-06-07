@@ -79,6 +79,7 @@ public class ScoreKeeper : MonoBehaviour
 
     public void setLightsNorm()
     {
+        /*
         Color myColor = new Color();
         var color = "#846032";
         ColorUtility.TryParseHtmlString(color, out myColor);
@@ -86,10 +87,12 @@ public class ScoreKeeper : MonoBehaviour
         {
             lights[x].color = myColor;
         }
+        */
     }
 
     public void setLightsBlue()
     {
+        /*
         Color myColor = new Color();
         var color = "#323E84";
         ColorUtility.TryParseHtmlString(color, out myColor);
@@ -97,10 +100,12 @@ public class ScoreKeeper : MonoBehaviour
         {
             lights[x].color = myColor;
         }
+        */
     }
 
     public void setLightsRed()
     {
+        /*
         Color myColor = new Color();
         var color = "#A93C4E";
         ColorUtility.TryParseHtmlString(color, out myColor);
@@ -108,10 +113,12 @@ public class ScoreKeeper : MonoBehaviour
         {
             lights[x].color = myColor;
         }
+        */
     }
 
     public void setLightsGreen()
     {
+        /*
         Color myColor = new Color();
         var color = "#41A83C";
         ColorUtility.TryParseHtmlString(color, out myColor);
@@ -119,5 +126,6 @@ public class ScoreKeeper : MonoBehaviour
         {
             lights[x].color = myColor;
         }
+        */
     }
 }

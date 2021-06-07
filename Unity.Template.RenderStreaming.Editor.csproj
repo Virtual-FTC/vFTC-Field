@@ -668,10 +668,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Unity.Template.RenderStreaming.Runtime.csproj">
-      <Project>{812A704F-B0B3-F5F9-4C49-6340905241CF}</Project>
-      <Name>Unity.Template.RenderStreaming.Runtime</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

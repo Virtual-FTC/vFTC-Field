@@ -58,9 +58,11 @@ public class UserManager : MonoBehaviour
 
     private void Start()
     {
+        /*
         user2 = GameObject.Find("User-2").GetComponent<MultiUserManager>();
         user3 = GameObject.Find("User-3").GetComponent<MultiUserManager>();
         user4 = GameObject.Find("User-4").GetComponent<MultiUserManager>();
+        */
 
         scoreKeeper = GameObject.Find("ScoreKeeper").GetComponent<ScoreKeeper>();
         intake = GameObject.Find("Intake").GetComponent<IntakeControl>();
@@ -387,11 +389,13 @@ public class UserManager : MonoBehaviour
             camera.switchCamera(currentCam);
         }
         // Sending Score
+        /*
         if (gameTimer.getTimer() <= 0 && (websiteCommands.gameType == "auto" || websiteCommands.gameType == "teleop"))
         {
             scoreKeeper.freezeScore();
             sendingScore = true;
         }
+        */
 
 
         // Robot config

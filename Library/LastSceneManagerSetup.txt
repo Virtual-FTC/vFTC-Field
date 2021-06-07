@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Field2020.unity
+- path: Assets/Scenes/FieldSetupMenu.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
