@@ -56,28 +56,28 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnClickRpc.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonView\SmoothSyncMovement.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\OnPointerOverTooltip.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\PunPlayerScores.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\PlayerNumbering.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Room\CountdownTimer.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\ConnectAndJoinRandom.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnEscapeQuit.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnClickInstantiate.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\CullingHandler.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\PointedAtGameObjectInfo.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnClickDestroy.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\GraphicToggleIsOnTransition.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\CullArea.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\TextButtonTransition.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\PunTeams.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnJoinedInstantiate.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\ButtonInsideScrollList.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\TabViewManager.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\StatesGui.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\PhotonLagSimulationGui.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnClickRpc.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonView\SmoothSyncMovement.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\PhotonPlayer\PunPlayerScores.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\PointedAtGameObjectInfo.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnClickDestroy.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\TextToggleIsOnTransition.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Culling\CullArea.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\TextButtonTransition.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\OnJoinedInstantiate.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Prototyping\MoveByKeys.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\Debugging\PhotonStatsGui.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\UtilityScripts\UI\EventSystemSpawner.cs" />

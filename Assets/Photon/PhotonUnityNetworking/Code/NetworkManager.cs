@@ -124,6 +124,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsConnected)
         {
             PhotonNetwork.LocalPlayer.NickName = playerName; //1
+            Debug.Log(PhotonNetwork.LocalPlayer.NickName);
             PhotonNetwork.CreateRoom(fieldName, new RoomOptions() { MaxPlayers = (byte)maxPlayers }, null); //4
         }
     }

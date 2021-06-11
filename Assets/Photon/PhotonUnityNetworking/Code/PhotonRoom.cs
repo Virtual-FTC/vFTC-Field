@@ -5,6 +5,7 @@ using System.IO;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
 {
@@ -23,6 +24,11 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
 
     public int playersInGame;
 
+    public GameObject[] playerUI;
+    public GameObject[] spawnPositions;
+    public CustomPlayer[] customPlayers = new CustomPlayer[4];
+    public GameObject positionGam;
+
     // Delayed start
     private bool readyToCount;
     private bool readyToStart;
@@ -35,6 +41,13 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     // Start is called before the first frame update
     void Awake()
     {
+        if (!PhotonNetwork.IsMasterClient)
+        {
+            for(int x = 0; x < playerUI.Length; x++)
+            {
+                playerUI[x].SetActive(false);
+            }
+        }
         // Setup singleton (error over photonview is ok)
         if(PhotonRoom.room == null)
         {
@@ -49,6 +62,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
             }
         }
         DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(positionGam);
     }
 
     public override void OnEnable()
@@ -99,33 +113,50 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         playersInGame++;
         if (playersInGame == PhotonNetwork.PlayerList.Length)
         {
-            PV.RPC("RPC_CreatePlayer", RpcTarget.All);
+            PV.RPC("CreatePlayer", RpcTarget.All);
         }
     }
 
+    [PunRPC]
     private void CreatePlayer()
     {
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), transform.position, Quaternion.identity, 0);
+        for(int x = 0; x < customPlayers.Length; x++)
+        {
+            if (customPlayers[x].player.UserId == PhotonNetwork.LocalPlayer.UserId)
+            {
+                PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), spawnPositions[x].transform.position, spawnPositions[x].transform.rotation, 0);
+            }
+        }
     }
 
     public override void OnJoinedRoom()
     {
         base.OnJoinedRoom();
         Debug.Log("You are now in a room");
+        checkPlayers();
+        addNewPlayerToUI(PhotonNetwork.LocalPlayer);
+    }
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        checkPlayers();
+        addNewPlayerToUI(newPlayer);
+    }
+
+    private void checkPlayers()
+    {
         photonPlayers = PhotonNetwork.PlayerList;
         playersInRoom = photonPlayers.Length;
         myNumberInRoom = playersInRoom;
-        PhotonNetwork.NickName = myNumberInRoom.ToString();
 
         //Delay Start
         if (MultiplayerSetting.multiplayerSetting.delayStart)
         {
             Debug.Log("Players in room " + playersInRoom);
-            if(playersInRoom > 1)
+            if (playersInRoom > 1)
             {
                 readyToCount = true;
             }
-            if(playersInRoom == PhotonNetwork.CurrentRoom.MaxPlayers)
+            if (playersInRoom == PhotonNetwork.CurrentRoom.MaxPlayers)
             {
                 readyToStart = true;
                 if (!PhotonNetwork.IsMasterClient)
@@ -138,27 +169,94 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
             StartGame();
         }
     }
-    public void OnPlayerEnteredRoom(Player newPlayer)
+
+    private void updatePlayerUI()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            for (int x = 0; x < customPlayers.Length; x++)
+            {
+                if (customPlayers[x] != null)
+                {
+                    playerUI[x].GetComponent<Text>().text = customPlayers[x].player.NickName;
+                    playerUI[x].SetActive(true);
+                    return;
+                }
+                else
+                    playerUI[x].SetActive(false);
+            }
+        }
+    }
+
+    public void updateTeam(int val)
     {
         
     }
 
-    public void OnPlayerLeftRoom(Player otherPlayer)
+    public void updatePos(int val)
     {
-        
+
     }
 
-    public void OnRoomPropertiesUpdate(ExitGames.Client.Photon.Hashtable propertiesThatChanged)
+    private void addNewPlayerToUI(Player p)
+    {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            Debug.Log(customPlayers.Length);
+            for (int x = 0; x < customPlayers.Length; x++)
+            {
+                if (customPlayers[x] == null)
+                {
+                    customPlayers[x] = new CustomPlayer();
+                    if (x < 2)
+                    {
+                        customPlayers[x].team = 0;
+                        customPlayers[x].pos = x;
+                    }
+                    else
+                    {
+                        customPlayers[x].team = 1;
+                        customPlayers[x].pos = x - 2;
+                    }
+                    customPlayers[x].player = p;
+                    Debug.Log(customPlayers[x].player.NickName);
+                    playerUI[x].GetComponentInChildren<Text>().text = customPlayers[x].player.NickName;
+                    playerUI[x].SetActive(true);
+                    return;
+                }
+            }
+        }
+    }
+
+    private void removeNewPlayerFromUI(Player p)
+    {
+        for (int x = 0; x < customPlayers.Length; x++)
+        {
+            if (customPlayers[x].player.UserId == p.UserId)
+            {
+                customPlayers[x] = null;
+                playerUI[x].SetActive(false);
+            }
+        }
+    }
+
+    public override void OnPlayerLeftRoom(Player otherPlayer)
+    {
+        photonPlayers = PhotonNetwork.PlayerList;
+        removeNewPlayerFromUI(otherPlayer);
+    }
+
+    public override void OnRoomPropertiesUpdate(ExitGames.Client.Photon.Hashtable propertiesThatChanged)
     {
        
     }
 
-    public void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
+    public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps)
     {
         
     }
 
-    public void OnMasterClientSwitched(Player newMasterClient)
+    public override void OnMasterClientSwitched(Player newMasterClient)
     {
         
     }
@@ -171,6 +269,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
 
     public void joinGame()
     {
+        Debug.Log(readyToStart);
         if (readyToStart)
         {
             StartGame();
@@ -188,5 +287,12 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
         }
         PhotonNetwork.LoadLevel(multiplayScene);
 
+    }
+
+    public class CustomPlayer
+    {
+        public int team; // Tells me team as well as UI slot
+        public int pos; // Tells me position as well as UI slot
+        public Player player; // Tells me name
     }
 }
