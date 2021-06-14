@@ -56,27 +56,27 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonStreamQueue.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\NetworkManager.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonRoom.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonNetworkPart.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\MultiplayerManager.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Interfaces\IPhotonViewCallbacks.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformViewClassic.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonHandler.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PunClasses.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonRigidbody2DView.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonNetwork.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonView.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonAnimatorView.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\CustomTypes.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonRigidbodyView.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Enums.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Interfaces\IPunCallbacks.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\MultiplayerSetting.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Utilities\NestedComponentUtilities.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonStreamQueue.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonRoom.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonNetworkPart.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\MultiplayerManager.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Interfaces\IPhotonViewCallbacks.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonHandler.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonAnimatorView.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\CustomTypes.cs" />
+    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonRigidbodyView.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Views\PhotonTransformView.cs" />
     <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\ServerSettings.cs" />
-    <Compile Include="Assets\Photon\PhotonUnityNetworking\Code\Utilities\NestedComponentUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Photon\PhotonUnityNetworking\Code\PhotonUnityNetworking.asmdef" />

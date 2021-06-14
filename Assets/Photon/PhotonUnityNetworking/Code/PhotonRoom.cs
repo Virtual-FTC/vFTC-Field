@@ -99,11 +99,11 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
             {
                 PV.RPC("RPC_LoadedGameScene", RpcTarget.MasterClient);
             }
-            else
-            {
-                CreatePlayer();
-            }
 
+            if (PhotonNetwork.IsMasterClient)
+            {
+                PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "DynamicField-B"), Vector3.zero, Quaternion.identity, 0);
+            }
         }
     }
 
@@ -120,11 +120,15 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
     [PunRPC]
     private void CreatePlayer()
     {
-        for(int x = 0; x < customPlayers.Length; x++)
+        var masterPlayers = PhotonNetwork.PlayerList;
+        for (int x = 0; x < masterPlayers.Length; x++)
         {
-            if (customPlayers[x].player.UserId == PhotonNetwork.LocalPlayer.UserId)
+            if(masterPlayers[x] != null)
             {
-                PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), spawnPositions[x].transform.position, spawnPositions[x].transform.rotation, 0);
+                if (masterPlayers[x].UserId == PhotonNetwork.LocalPlayer.UserId)
+                {
+                    PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), spawnPositions[x].transform.position, spawnPositions[x].transform.rotation, 0);
+                }
             }
         }
     }
@@ -263,8 +267,13 @@ public class PhotonRoom : MonoBehaviourPunCallbacks, IInRoomCallbacks
 
     public void leaveRoom()
     {
-        PhotonNetwork.Disconnect();
-        SceneManager.LoadScene(0);
+        PhotonNetwork.LeaveRoom();
+    }
+
+    public override void OnLeftRoom()
+    {
+        base.OnLeftRoom();
+        PhotonNetwork.LoadLevel(0);
     }
 
     public void joinGame()

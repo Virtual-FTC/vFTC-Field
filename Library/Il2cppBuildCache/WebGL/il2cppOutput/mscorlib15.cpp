@@ -27434,7 +27434,7 @@ IL_002c:
 		Type_t * L_10 = ___type1;
 		Type_t * L_11 = V_0;
 		bool L_12;
-		L_12 = VirtFuncInvoker1< bool, Type_t * >::Invoke(110 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_10, L_11);
+		L_12 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_10, L_11);
 		if (L_12)
 		{
 			goto IL_0046;
@@ -27503,7 +27503,7 @@ IL_000f:
 		Type_t * L_5 = ___type1;
 		Type_t * L_6 = V_0;
 		bool L_7;
-		L_7 = VirtFuncInvoker1< bool, Type_t * >::Invoke(110 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_5, L_6);
+		L_7 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_5, L_6);
 		if (L_7)
 		{
 			goto IL_001f;

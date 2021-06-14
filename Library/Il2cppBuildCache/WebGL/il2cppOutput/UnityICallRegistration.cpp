@@ -6,6 +6,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_IsBlittable();
 		Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_IsBlittable();
 
+		//System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemCmp(System.Void*,System.Void*,System.Int64)
+		void Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemCmp();
+		Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemCmp();
+
 		//System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf(System.Type)
 		void Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_SizeOf();
 		Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_SizeOf();
@@ -21,6 +25,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemCpyStride(System.Void*,System.Int32,System.Void*,System.Int32,System.Int32,System.Int32)
 		void Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemCpyStride();
 		Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemCpyStride();
+
+		//System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemMove(System.Void*,System.Void*,System.Int64)
+		void Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemMove();
+		Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemMove();
 
 		//System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemSet(System.Void*,System.Byte,System.Int64)
 		void Register_Unity_Collections_LowLevel_Unsafe_UnsafeUtility_MemSet();
@@ -178,6 +186,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Application
 
+		//System.Boolean UnityEngine.Application::get_isBatchMode()
+		void Register_UnityEngine_Application_get_isBatchMode();
+		Register_UnityEngine_Application_get_isBatchMode();
+
+		//System.Boolean UnityEngine.Application::get_isFocused()
+		void Register_UnityEngine_Application_get_isFocused();
+		Register_UnityEngine_Application_get_isFocused();
+
 		//System.Boolean UnityEngine.Application::get_isMobilePlatform()
 		void Register_UnityEngine_Application_get_isMobilePlatform();
 		Register_UnityEngine_Application_get_isMobilePlatform();
@@ -186,9 +202,17 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Application_get_isPlaying();
 		Register_UnityEngine_Application_get_isPlaying();
 
+		//System.Boolean UnityEngine.Application::get_runInBackground()
+		void Register_UnityEngine_Application_get_runInBackground();
+		Register_UnityEngine_Application_get_runInBackground();
+
 		//System.String UnityEngine.Application::get_absoluteURL()
 		void Register_UnityEngine_Application_get_absoluteURL();
 		Register_UnityEngine_Application_get_absoluteURL();
+
+		//System.String UnityEngine.Application::get_productName()
+		void Register_UnityEngine_Application_get_productName();
+		Register_UnityEngine_Application_get_productName();
 
 		//System.String UnityEngine.Application::get_unityVersion()
 		void Register_UnityEngine_Application_get_unityVersion();
@@ -798,9 +822,17 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Component
 
+		//System.Void UnityEngine.Component::BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
+		void Register_UnityEngine_Component_BroadcastMessage();
+		Register_UnityEngine_Component_BroadcastMessage();
+
 		//System.Void UnityEngine.Component::GetComponentsForListInternal(System.Type,System.Object)
 		void Register_UnityEngine_Component_GetComponentsForListInternal();
 		Register_UnityEngine_Component_GetComponentsForListInternal();
+
+		//System.Void UnityEngine.Component::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
+		void Register_UnityEngine_Component_SendMessage();
+		Register_UnityEngine_Component_SendMessage();
 
 		//UnityEngine.GameObject UnityEngine.Component::get_gameObject()
 		void Register_UnityEngine_Component_get_gameObject();
@@ -1554,17 +1586,9 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Input
 
-		//System.Boolean UnityEngine.Input::GetButton(System.String)
-		void Register_UnityEngine_Input_GetButton();
-		Register_UnityEngine_Input_GetButton();
-
 		//System.Boolean UnityEngine.Input::GetButtonDown(System.String)
 		void Register_UnityEngine_Input_GetButtonDown();
 		Register_UnityEngine_Input_GetButtonDown();
-
-		//System.Boolean UnityEngine.Input::GetButtonUp(System.String)
-		void Register_UnityEngine_Input_GetButtonUp();
-		Register_UnityEngine_Input_GetButtonUp();
 
 		//System.Boolean UnityEngine.Input::GetKeyDownInt(UnityEngine.KeyCode)
 		void Register_UnityEngine_Input_GetKeyDownInt();
@@ -1573,10 +1597,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Boolean UnityEngine.Input::GetKeyInt(UnityEngine.KeyCode)
 		void Register_UnityEngine_Input_GetKeyInt();
 		Register_UnityEngine_Input_GetKeyInt();
-
-		//System.Boolean UnityEngine.Input::GetKeyUpInt(UnityEngine.KeyCode)
-		void Register_UnityEngine_Input_GetKeyUpInt();
-		Register_UnityEngine_Input_GetKeyUpInt();
 
 		//System.Boolean UnityEngine.Input::GetMouseButton(System.Int32)
 		void Register_UnityEngine_Input_GetMouseButton();
@@ -1601,10 +1621,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Int32 UnityEngine.Input::get_touchCount()
 		void Register_UnityEngine_Input_get_touchCount();
 		Register_UnityEngine_Input_get_touchCount();
-
-		//System.Single UnityEngine.Input::GetAxis(System.String)
-		void Register_UnityEngine_Input_GetAxis();
-		Register_UnityEngine_Input_GetAxis();
 
 		//System.Single UnityEngine.Input::GetAxisRaw(System.String)
 		void Register_UnityEngine_Input_GetAxisRaw();
@@ -1661,6 +1677,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Object UnityEngine.JsonUtility::FromJsonInternal(System.String,System.Object,System.Type)
 		void Register_UnityEngine_JsonUtility_FromJsonInternal();
 		Register_UnityEngine_JsonUtility_FromJsonInternal();
+
+		//System.String UnityEngine.JsonUtility::ToJsonInternal(System.Object,System.Boolean)
+		void Register_UnityEngine_JsonUtility_ToJsonInternal();
+		Register_UnityEngine_JsonUtility_ToJsonInternal();
 
 	//End Registrations for type : UnityEngine.JsonUtility
 
@@ -3302,6 +3322,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_ResourcesAPIInternal_Load();
 		Register_UnityEngine_ResourcesAPIInternal_Load();
 
+		//UnityEngine.Object[] UnityEngine.ResourcesAPIInternal::FindObjectsOfTypeAll(System.Type)
+		void Register_UnityEngine_ResourcesAPIInternal_FindObjectsOfTypeAll();
+		Register_UnityEngine_ResourcesAPIInternal_FindObjectsOfTypeAll();
+
 		//UnityEngine.Shader UnityEngine.ResourcesAPIInternal::FindShaderByName(System.String)
 		void Register_UnityEngine_ResourcesAPIInternal_FindShaderByName();
 		Register_UnityEngine_ResourcesAPIInternal_FindShaderByName();
@@ -3481,6 +3505,10 @@ void RegisterAllStrippedInternalCalls()
 		//UnityEngine.FullScreenMode UnityEngine.Screen::get_fullScreenMode()
 		void Register_UnityEngine_Screen_get_fullScreenMode();
 		Register_UnityEngine_Screen_get_fullScreenMode();
+
+		//UnityEngine.ScreenOrientation UnityEngine.Screen::GetScreenOrientation()
+		void Register_UnityEngine_Screen_GetScreenOrientation();
+		Register_UnityEngine_Screen_GetScreenOrientation();
 
 	//End Registrations for type : UnityEngine.Screen
 
@@ -4038,6 +4066,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Time_get_deltaTime();
 		Register_UnityEngine_Time_get_deltaTime();
 
+		//System.Single UnityEngine.Time::get_fixedUnscaledTime()
+		void Register_UnityEngine_Time_get_fixedUnscaledTime();
+		Register_UnityEngine_Time_get_fixedUnscaledTime();
+
 		//System.Single UnityEngine.Time::get_realtimeSinceStartup()
 		void Register_UnityEngine_Time_get_realtimeSinceStartup();
 		Register_UnityEngine_Time_get_realtimeSinceStartup();
@@ -4272,6 +4304,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.UISystemProfilerApi
 
+	//Start Registrations for type : UnityEngine.XR.XRDevice
+
+		//System.Void UnityEngine.XR.XRDevice::DisableAutoXRCameraTracking(UnityEngine.Camera,System.Boolean)
+		void Register_UnityEngine_XR_XRDevice_DisableAutoXRCameraTracking();
+		Register_UnityEngine_XR_XRDevice_DisableAutoXRCameraTracking();
+
+	//End Registrations for type : UnityEngine.XR.XRDevice
+
 	//Start Registrations for type : UnityEngine.XR.XRDisplaySubsystem
 
 		//System.Boolean UnityEngine.XR.XRDisplaySubsystem::AddGraphicsThreadMirrorViewBlit(UnityEngine.Rendering.CommandBuffer,System.Boolean,System.Int32)
@@ -4397,6 +4437,34 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.XR.XRSettings
 
 	//Start Registrations for type : UnityEngineInternal.Input.NativeInputSystem
+
+		//System.Double UnityEngineInternal.Input.NativeInputSystem::get_currentTime()
+		void Register_UnityEngineInternal_Input_NativeInputSystem_get_currentTime();
+		Register_UnityEngineInternal_Input_NativeInputSystem_get_currentTime();
+
+		//System.Double UnityEngineInternal.Input.NativeInputSystem::get_currentTimeOffsetToRealtimeSinceStartup()
+		void Register_UnityEngineInternal_Input_NativeInputSystem_get_currentTimeOffsetToRealtimeSinceStartup();
+		Register_UnityEngineInternal_Input_NativeInputSystem_get_currentTimeOffsetToRealtimeSinceStartup();
+
+		//System.Int32 UnityEngineInternal.Input.NativeInputSystem::AllocateDeviceId()
+		void Register_UnityEngineInternal_Input_NativeInputSystem_AllocateDeviceId();
+		Register_UnityEngineInternal_Input_NativeInputSystem_AllocateDeviceId();
+
+		//System.Int64 UnityEngineInternal.Input.NativeInputSystem::IOCTL(System.Int32,System.Int32,System.IntPtr,System.Int32)
+		void Register_UnityEngineInternal_Input_NativeInputSystem_IOCTL();
+		Register_UnityEngineInternal_Input_NativeInputSystem_IOCTL();
+
+		//System.Void UnityEngineInternal.Input.NativeInputSystem::QueueInputEvent(System.IntPtr)
+		void Register_UnityEngineInternal_Input_NativeInputSystem_QueueInputEvent();
+		Register_UnityEngineInternal_Input_NativeInputSystem_QueueInputEvent();
+
+		//System.Void UnityEngineInternal.Input.NativeInputSystem::SetPollingFrequency(System.Single)
+		void Register_UnityEngineInternal_Input_NativeInputSystem_SetPollingFrequency();
+		Register_UnityEngineInternal_Input_NativeInputSystem_SetPollingFrequency();
+
+		//System.Void UnityEngineInternal.Input.NativeInputSystem::Update(UnityEngineInternal.Input.NativeInputUpdateType)
+		void Register_UnityEngineInternal_Input_NativeInputSystem_Update();
+		Register_UnityEngineInternal_Input_NativeInputSystem_Update();
 
 		//System.Void UnityEngineInternal.Input.NativeInputSystem::set_hasDeviceDiscoveredCallback(System.Boolean)
 		void Register_UnityEngineInternal_Input_NativeInputSystem_set_hasDeviceDiscoveredCallback();

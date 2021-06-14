@@ -11,4 +11,9 @@ public class BasicMenu : MonoBehaviour
         Debug.Log("Test");
         SceneManager.LoadScene(sceneIndex);
     }
+
+    public void changeSinglePlayer()
+    {
+        SceneManager.LoadScene(3);
+    }
 }

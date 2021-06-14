@@ -22667,6 +22667,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_unscaledTime_m85A3479E3D78D05F
 	float icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
 }
+// System.Single UnityEngine.Time::get_fixedUnscaledTime()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_fixedUnscaledTime_m3822A5618ECBDDD2259C93548218A99A3BDF6706 (const RuntimeMethod* method)
+{
+	typedef float (*Time_get_fixedUnscaledTime_m3822A5618ECBDDD2259C93548218A99A3BDF6706_ftn) ();
+	static Time_get_fixedUnscaledTime_m3822A5618ECBDDD2259C93548218A99A3BDF6706_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Time_get_fixedUnscaledTime_m3822A5618ECBDDD2259C93548218A99A3BDF6706_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Time::get_fixedUnscaledTime()");
+	float icallRetVal = _il2cpp_icall_func();
+	return icallRetVal;
+}
 // System.Single UnityEngine.Time::get_unscaledDeltaTime()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Time_get_unscaledDeltaTime_m2C153F1E5C77C6AF655054BC6C76D0C334C0DC84 (const RuntimeMethod* method)
 {
@@ -25911,6 +25921,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeUtility_MemCpyStride_m7400D82DAD70
 	_il2cpp_icall_func = (UnsafeUtility_MemCpyStride_m7400D82DAD703E11E46C7E80BCD69CE531E152BB_ftn)il2cpp_codegen_resolve_icall ("Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemCpyStride(System.Void*,System.Int32,System.Void*,System.Int32,System.Int32,System.Int32)");
 	_il2cpp_icall_func(___destination0, ___destinationStride1, ___source2, ___sourceStride3, ___elementSize4, ___count5);
 }
+// System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemMove(System.Void*,System.Void*,System.Int64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeUtility_MemMove_m5E4EECA6E5B59D6A499E91FFF3B4F33EBBF506E6 (void* ___destination0, void* ___source1, int64_t ___size2, const RuntimeMethod* method)
+{
+	typedef void (*UnsafeUtility_MemMove_m5E4EECA6E5B59D6A499E91FFF3B4F33EBBF506E6_ftn) (void*, void*, int64_t);
+	static UnsafeUtility_MemMove_m5E4EECA6E5B59D6A499E91FFF3B4F33EBBF506E6_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (UnsafeUtility_MemMove_m5E4EECA6E5B59D6A499E91FFF3B4F33EBBF506E6_ftn)il2cpp_codegen_resolve_icall ("Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemMove(System.Void*,System.Void*,System.Int64)");
+	_il2cpp_icall_func(___destination0, ___source1, ___size2);
+}
 // System.Void Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemSet(System.Void*,System.Byte,System.Int64)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeUtility_MemSet_m963D137A8DADF01067A68EFDEF736E7216411353 (void* ___destination0, uint8_t ___value1, int64_t ___size2, const RuntimeMethod* method)
 {
@@ -25929,6 +25948,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnsafeUtility_MemClear_m9A2B75C85CB8B663
 		UnsafeUtility_MemSet_m963D137A8DADF01067A68EFDEF736E7216411353((void*)(void*)L_0, (uint8_t)0, L_1, /*hidden argument*/NULL);
 		return;
 	}
+}
+// System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemCmp(System.Void*,System.Void*,System.Int64)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_MemCmp_m31BD8BB6E2678945D06AFF2502ECA3A9DCA65346 (void* ___ptr10, void* ___ptr21, int64_t ___size2, const RuntimeMethod* method)
+{
+	typedef int32_t (*UnsafeUtility_MemCmp_m31BD8BB6E2678945D06AFF2502ECA3A9DCA65346_ftn) (void*, void*, int64_t);
+	static UnsafeUtility_MemCmp_m31BD8BB6E2678945D06AFF2502ECA3A9DCA65346_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (UnsafeUtility_MemCmp_m31BD8BB6E2678945D06AFF2502ECA3A9DCA65346_ftn)il2cpp_codegen_resolve_icall ("Unity.Collections.LowLevel.Unsafe.UnsafeUtility::MemCmp(System.Void*,System.Void*,System.Int64)");
+	int32_t icallRetVal = _il2cpp_icall_func(___ptr10, ___ptr21, ___size2);
+	return icallRetVal;
 }
 // System.Int32 Unity.Collections.LowLevel.Unsafe.UnsafeUtility::SizeOf(System.Type)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t UnsafeUtility_SizeOf_mE364EE2E10DCC0FF112874221FFD07C7C3E08676 (Type_t * ___type0, const RuntimeMethod* method)
@@ -26134,7 +26163,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UnsafeUtility_IsArrayBlittable_m1F4CE4F2
 		Type_t * L_1;
 		L_1 = Object_GetType_m571FE8360C10B98C23AAF1F066D92C08CC94F45B(L_0, /*hidden argument*/NULL);
 		Type_t * L_2;
-		L_2 = VirtFuncInvoker0< Type_t * >::Invoke(98 /* System.Type System.Type::GetElementType() */, L_1);
+		L_2 = VirtFuncInvoker0< Type_t * >::Invoke(99 /* System.Type System.Type::GetElementType() */, L_1);
 		bool L_3;
 		L_3 = UnsafeUtility_IsBlittableValueType_mC548D28E3E1FF39148C8A2D745A30AB6122485B7(L_2, /*hidden argument*/NULL);
 		V_0 = L_3;
@@ -26157,7 +26186,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* UnsafeUtility_GetReasonForArrayNonB
 		Type_t * L_1;
 		L_1 = Object_GetType_m571FE8360C10B98C23AAF1F066D92C08CC94F45B(L_0, /*hidden argument*/NULL);
 		Type_t * L_2;
-		L_2 = VirtFuncInvoker0< Type_t * >::Invoke(98 /* System.Type System.Type::GetElementType() */, L_1);
+		L_2 = VirtFuncInvoker0< Type_t * >::Invoke(99 /* System.Type System.Type::GetElementType() */, L_1);
 		V_0 = L_2;
 		Type_t * L_3 = V_0;
 		Type_t * L_4 = V_0;
@@ -26917,6 +26946,74 @@ IL_002e:
 	{
 		float L_13 = V_2;
 		return L_13;
+	}
+}
+// UnityEngine.Vector2 UnityEngine.Vector2::ClampMagnitude(UnityEngine.Vector2,System.Single)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  Vector2_ClampMagnitude_m4FFD90D646E17E41F799FC78FF652A2D75AD5074 (Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  ___vector0, float ___maxLength1, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tA269614262430118C9FC5C4D9EF4F61C812568F0_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	float V_0 = 0.0f;
+	bool V_1 = false;
+	float V_2 = 0.0f;
+	float V_3 = 0.0f;
+	float V_4 = 0.0f;
+	Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  V_5;
+	memset((&V_5), 0, sizeof(V_5));
+	{
+		float L_0;
+		L_0 = Vector2_get_sqrMagnitude_mF489F0EF7E88FF046BA36767ECC50B89674C925A((Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9 *)(&___vector0), /*hidden argument*/NULL);
+		V_0 = L_0;
+		float L_1 = V_0;
+		float L_2 = ___maxLength1;
+		float L_3 = ___maxLength1;
+		V_1 = (bool)((((float)L_1) > ((float)((float)il2cpp_codegen_multiply((float)L_2, (float)L_3))))? 1 : 0);
+		bool L_4 = V_1;
+		if (!L_4)
+		{
+			goto IL_0040;
+		}
+	}
+	{
+		float L_5 = V_0;
+		IL2CPP_RUNTIME_CLASS_INIT(Math_tA269614262430118C9FC5C4D9EF4F61C812568F0_il2cpp_TypeInfo_var);
+		double L_6;
+		L_6 = sqrt(((double)((double)L_5)));
+		V_2 = ((float)((float)L_6));
+		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_7 = ___vector0;
+		float L_8 = L_7.get_x_0();
+		float L_9 = V_2;
+		V_3 = ((float)((float)L_8/(float)L_9));
+		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_10 = ___vector0;
+		float L_11 = L_10.get_y_1();
+		float L_12 = V_2;
+		V_4 = ((float)((float)L_11/(float)L_12));
+		float L_13 = V_3;
+		float L_14 = ___maxLength1;
+		float L_15 = V_4;
+		float L_16 = ___maxLength1;
+		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_17;
+		memset((&L_17), 0, sizeof(L_17));
+		Vector2__ctor_m9F1F2D5EB5D1FF7091BB527AC8A72CBB309D115E_inline((&L_17), ((float)il2cpp_codegen_multiply((float)L_13, (float)L_14)), ((float)il2cpp_codegen_multiply((float)L_15, (float)L_16)), /*hidden argument*/NULL);
+		V_5 = L_17;
+		goto IL_0045;
+	}
+
+IL_0040:
+	{
+		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_18 = ___vector0;
+		V_5 = L_18;
+		goto IL_0045;
+	}
+
+IL_0045:
+	{
+		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_19 = V_5;
+		return L_19;
 	}
 }
 // UnityEngine.Vector2 UnityEngine.Vector2::op_Addition(UnityEngine.Vector2,UnityEngine.Vector2)

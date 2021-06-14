@@ -41531,7 +41531,7 @@ IL_004c:
 	{
 		Type_t * L_15 = ___reflectionType0;
 		Type_t * L_16;
-		L_16 = VirtFuncInvoker0< Type_t * >::Invoke(107 /* System.Type System.Type::get_UnderlyingSystemType() */, L_15);
+		L_16 = VirtFuncInvoker0< Type_t * >::Invoke(109 /* System.Type System.Type::get_UnderlyingSystemType() */, L_15);
 		return L_16;
 	}
 }
@@ -42745,7 +42745,7 @@ IL_00a5:
 		L_33 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_32, /*hidden argument*/NULL);
 		Type_t * L_34 = V_5;
 		bool L_35;
-		L_35 = VirtFuncInvoker1< bool, Type_t * >::Invoke(110 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_33, L_34);
+		L_35 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_33, L_34);
 		if (!L_35)
 		{
 			goto IL_00eb;
@@ -43912,7 +43912,7 @@ IL_0022:
 		Type_t * L_6 = ___type0;
 		RuntimeObject * L_7 = ___primary1;
 		bool L_8;
-		L_8 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(109 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_6, L_7);
+		L_8 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(111 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_6, L_7);
 		if (L_8)
 		{
 			goto IL_0109;
@@ -43989,7 +43989,7 @@ IL_0086:
 			Type_t * L_26 = ___type0;
 			RuntimeObject * L_27 = V_6;
 			bool L_28;
-			L_28 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(109 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_26, L_27);
+			L_28 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(111 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_26, L_27);
 			if (!L_28)
 			{
 				goto IL_0093;
@@ -44124,7 +44124,7 @@ IL_00ab:
 		Type_t * L_52 = ___type0;
 		RuntimeObject * L_53 = V_10;
 		bool L_54;
-		L_54 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(109 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_52, L_53);
+		L_54 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(111 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_52, L_53);
 		if (!L_54)
 		{
 			goto IL_0109;
@@ -48737,7 +48737,7 @@ IL_005b:
 				Type_t * L_13 = V_2;
 				Type_t * L_14 = V_7;
 				bool L_15;
-				L_15 = VirtFuncInvoker1< bool, Type_t * >::Invoke(110 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_13, L_14);
+				L_15 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_13, L_14);
 				if (L_15)
 				{
 					goto IL_0078;
@@ -49095,7 +49095,7 @@ IL_0051:
 				Type_t * L_11 = ___type0;
 				Type_t * L_12 = V_5;
 				bool L_13;
-				L_13 = VirtFuncInvoker1< bool, Type_t * >::Invoke(110 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_11, L_12);
+				L_13 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_11, L_12);
 				if (L_13)
 				{
 					goto IL_006e;

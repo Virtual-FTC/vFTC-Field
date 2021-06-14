@@ -78,9 +78,9 @@ public class RobotController : MonoBehaviour
         controls.GamePlay.WobbleHigh.canceled += ctx => motorPower8 = 0.0f;
 
         //Driving Controls
-        controls.GamePlay.DriveForward.performed += ctx => linearVelocityX = 1.5f*ctx.ReadValue<float>();
+        controls.GamePlay.DriveForward.performed += ctx => linearVelocityX = -1.5f*ctx.ReadValue<float>();
         controls.GamePlay.DriveForward.canceled += ctx => linearVelocityX = 0f;
-        controls.GamePlay.DriveBack.performed += ctx => linearVelocityX = -1.5f*ctx.ReadValue<float>();
+        controls.GamePlay.DriveBack.performed += ctx => linearVelocityX = 1.5f*ctx.ReadValue<float>();
         controls.GamePlay.DriveBack.canceled += ctx => linearVelocityX = 0f;
 
         controls.GamePlay.DriveLeft.performed += ctx => linearVelocityY = 1.5f*ctx.ReadValue<float>();
@@ -178,15 +178,46 @@ public class RobotController : MonoBehaviour
         backLeftWheelEnc += (motorRPM / 60) * backLeftWheelCmd * Time.deltaTime * encoderTicksPerRev * drivetrainGearRatio;
         backRightWheelEnc += (motorRPM / 60) * backRightWheelCmd * Time.deltaTime * encoderTicksPerRev * drivetrainGearRatio;
 
-        robotSoundControl.playRobotDrive((Mathf.Abs(frontLeftWheelCmd) + Mathf.Abs(frontRightWheelCmd) + Mathf.Abs(backLeftWheelCmd) + Mathf.Abs(backRightWheelCmd)) / 4f);
+        robotSoundControl.playRobotDrive((Mathf.Abs(linearVelocityX) + Mathf.Abs(linearVelocityY) + Mathf.Abs(angularVelocity)) / 4f);
+    }
+
+    public void setFrontLeftVel(float x)
+    {
+        usingJoystick = false;
+        frontLeftWheelCmd = x;
+    }
+
+    public void setFrontRightVel(float x)
+    {
+        usingJoystick = false;
+        frontRightWheelCmd = x;
+    }
+
+    public void setBackLeftVel(float x)
+    {
+        usingJoystick = false;
+        backLeftWheelCmd = x;
+    }
+
+    public void setBackRightVel(float x)
+    {
+        usingJoystick = false;
+        backRightWheelCmd = x;
     }
 
     private void FixedUpdate()
     {
-        driveRobot();
-        shooterControl.Commands.Process();
-        intakeControl.Commands.Process();
-        grabberControl.Commands.Process();
+        if (!Photon.Pun.PhotonNetwork.IsConnected)
+        {
+            driveRobot();
+        }
+        else if (GetComponent<Photon.Pun.PhotonView>().IsMine)
+        {
+            driveRobot();
+            shooterControl.Commands.Process();
+            intakeControl.Commands.Process();
+            grabberControl.Commands.Process();
+        }
     }
 
     void OnCollisionEnter(Collision collision)

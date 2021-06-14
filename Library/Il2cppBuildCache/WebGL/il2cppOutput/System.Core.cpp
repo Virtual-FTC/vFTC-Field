@@ -9621,7 +9621,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TypeUtils_AreEquivalent_m8F1F3807B8297B2
 		Type_t * L_2 = ___t10;
 		Type_t * L_3 = ___t21;
 		bool L_4;
-		L_4 = VirtFuncInvoker1< bool, Type_t * >::Invoke(111 /* System.Boolean System.Type::IsEquivalentTo(System.Type) */, L_2, L_3);
+		L_4 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsEquivalentTo(System.Type) */, L_2, L_3);
 		return L_4;
 	}
 
@@ -9670,7 +9670,7 @@ IL_000b:
 		Type_t * L_7 = ___dest0;
 		Type_t * L_8 = ___src1;
 		bool L_9;
-		L_9 = VirtFuncInvoker1< bool, Type_t * >::Invoke(110 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_7, L_8);
+		L_9 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_7, L_8);
 		return L_9;
 	}
 

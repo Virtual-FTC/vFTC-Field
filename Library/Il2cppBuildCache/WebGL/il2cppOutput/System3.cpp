@@ -27069,7 +27069,7 @@ IL_001e:
 		L_12 = VirtFuncInvoker0< Type_t * >::Invoke(38 /* System.Type System.Reflection.MethodInfo::get_ReturnType() */, L_11);
 		Type_t * L_13 = ___returnType3;
 		bool L_14;
-		L_14 = VirtFuncInvoker1< bool, Type_t * >::Invoke(111 /* System.Boolean System.Type::IsEquivalentTo(System.Type) */, L_12, L_13);
+		L_14 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::IsEquivalentTo(System.Type) */, L_12, L_13);
 		if (L_14)
 		{
 			goto IL_0037;
@@ -35167,7 +35167,7 @@ IL_0010:
 		Type_t * L_6;
 		L_6 = Object_GetType_m571FE8360C10B98C23AAF1F066D92C08CC94F45B(L_5, /*hidden argument*/NULL);
 		Type_t * L_7;
-		L_7 = VirtFuncInvoker0< Type_t * >::Invoke(98 /* System.Type System.Type::GetElementType() */, L_6);
+		L_7 = VirtFuncInvoker0< Type_t * >::Invoke(99 /* System.Type System.Type::GetElementType() */, L_6);
 		RuntimeObject * L_8 = ___value0;
 		int32_t L_9;
 		L_9 = Array_get_Length_m12B3E61F1BF9880AB252640D69269B49665C0A10(((RuntimeArray *)CastclassClass((RuntimeObject*)L_8, RuntimeArray_il2cpp_TypeInfo_var)), /*hidden argument*/NULL);
@@ -38802,7 +38802,7 @@ IL_0015:
 		Type_t * L_6 = __this->get_nullableType_2();
 		RuntimeObject * L_7 = ___value2;
 		bool L_8;
-		L_8 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(109 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_6, L_7);
+		L_8 = VirtFuncInvoker1< bool, RuntimeObject * >::Invoke(111 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_6, L_7);
 		if (!L_8)
 		{
 			goto IL_0034;
@@ -41926,7 +41926,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TypeConverter_t004F185B630F00F509F08BD8F8D824
 		L_17 = Type_GetTypeFromHandle_m8BB57524FF7F9DB1803BC561D2B3A4DBACEB385E(L_16, /*hidden argument*/NULL);
 		Type_t * L_18 = V_2;
 		bool L_19;
-		L_19 = VirtFuncInvoker1< bool, Type_t * >::Invoke(110 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_17, L_18);
+		L_19 = VirtFuncInvoker1< bool, Type_t * >::Invoke(112 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_17, L_18);
 		if (!L_19)
 		{
 			goto IL_0075;

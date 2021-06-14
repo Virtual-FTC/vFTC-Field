@@ -21,11 +21,12 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-       if (!PhotonNetwork.IsConnected)
-        {
+        DontDestroyOnLoad(this.gameObject);
+        if (!PhotonNetwork.IsConnected)
+       {
             PhotonNetwork.AutomaticallySyncScene = true;
             PhotonNetwork.ConnectUsingSettings();
-        }
+       }
     }
 
     // Callbacks
@@ -42,6 +43,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
+        Debug.Log("Got new room List");
         rooms = roomList;
         for (int i = 0; i < objList.Length; i++)
         {
@@ -136,6 +138,15 @@ public class NetworkManager : MonoBehaviourPunCallbacks
             PhotonNetwork.LocalPlayer.NickName = playerName; //1
             PhotonNetwork.JoinRoom(rooms[index].Name);
             Debug.Log("Trying to join room");
+        }
+    }
+
+    private void Update()
+    {
+        if (!PhotonNetwork.IsConnected)
+        {
+            PhotonNetwork.AutomaticallySyncScene = true;
+            PhotonNetwork.ConnectUsingSettings();
         }
     }
 

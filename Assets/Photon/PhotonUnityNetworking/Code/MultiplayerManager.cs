@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using Photon.Realtime;
+using UnityEngine.UI;
+using UnityEngine.Events;
 
-public class MultiplayerManager : MonoBehaviour
+public class MultiplayerManager : MonoBehaviourPunCallbacks, IInRoomCallbacks
 {
-    // Start is called before the first frame update
-    void Start()
+    public void leaveRoom()
     {
-        
+        PhotonNetwork.LeaveRoom();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void OnLeftRoom()
     {
-        
+        base.OnLeftRoom();
+        PhotonNetwork.LoadLevel(0);
     }
 }

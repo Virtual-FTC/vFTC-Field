@@ -40943,7 +40943,7 @@ IL_0027:
 		Type_t * L_10;
 		L_10 = LicenseProviderAttribute_get_LicenseProvider_m458ACC093F592CD53B7D78A12CCCD3ECA0818143(__this, /*hidden argument*/NULL);
 		bool L_11;
-		L_11 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::Equals(System.Type) */, L_9, L_10);
+		L_11 = VirtFuncInvoker1< bool, Type_t * >::Invoke(115 /* System.Boolean System.Type::Equals(System.Type) */, L_9, L_10);
 		if (!L_11)
 		{
 			goto IL_0040;

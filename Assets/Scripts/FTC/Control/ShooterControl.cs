@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class ShooterControl : MonoBehaviour
 {
@@ -52,8 +53,8 @@ public class ShooterControl : MonoBehaviour
             var newRotationQ = transform.rotation;
             newRotationQ.eulerAngles = newRotation;
 
-
-            GameObject instance = (GameObject)Instantiate(prefab, newPosition, newRotationQ);
+            GameObject instance = Photon.Pun.PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Ring"), newPosition, newRotationQ, 0);
+            //GameObject instance = (GameObject)Instantiate(prefab, newPosition, newRotationQ);
             var rigid = instance.GetComponent<Rigidbody>();
 
             rigid.AddForce((shootingAngle.transform.rotation * Vector3.forward) * wantedVelocity * shotForceMult, ForceMode.Impulse);

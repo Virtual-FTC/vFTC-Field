@@ -37418,7 +37418,7 @@ IL_0006:
 		Type_t * L_12 = L_11->get_receiverType_2();
 		Type_t * L_13 = __this->get_receiverType_2();
 		bool L_14;
-		L_14 = VirtFuncInvoker1< bool, Type_t * >::Invoke(113 /* System.Boolean System.Type::Equals(System.Type) */, L_12, L_13);
+		L_14 = VirtFuncInvoker1< bool, Type_t * >::Invoke(115 /* System.Boolean System.Type::Equals(System.Type) */, L_12, L_13);
 		return L_14;
 	}
 

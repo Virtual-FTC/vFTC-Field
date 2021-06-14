@@ -38,11 +38,13 @@ extern void XRSettings_get_supportedDevices_m48F7F0CC911EB45AD210523FA957A4E8412
 extern void XRSettings_get_stereoRenderingMode_m2E44AF3D772559836F2357AEC1E175C68E6D94B9 (void);
 // 0x0000000D System.Void UnityEngine.XR.XRSettings::get_eyeTextureDesc_Injected(UnityEngine.RenderTextureDescriptor&)
 extern void XRSettings_get_eyeTextureDesc_Injected_m639509084F5EC222779474C77EF7586989C4F856 (void);
-// 0x0000000E System.Void UnityEngine.XR.XRDevice::InvokeDeviceLoaded(System.String)
+// 0x0000000E System.Void UnityEngine.XR.XRDevice::DisableAutoXRCameraTracking(UnityEngine.Camera,System.Boolean)
+extern void XRDevice_DisableAutoXRCameraTracking_mC203FE6788C85285EDD5822689A4B10EA720D268 (void);
+// 0x0000000F System.Void UnityEngine.XR.XRDevice::InvokeDeviceLoaded(System.String)
 extern void XRDevice_InvokeDeviceLoaded_m3BDF6825A2A56E4923D4E6593C7BA2949B6A3581 (void);
-// 0x0000000F System.Void UnityEngine.XR.XRDevice::.cctor()
+// 0x00000010 System.Void UnityEngine.XR.XRDevice::.cctor()
 extern void XRDevice__cctor_mC83C1293819B81E68EC72D01A5CC107DFE29B98C (void);
-static Il2CppMethodPointer s_methodPointers[15] = 
+static Il2CppMethodPointer s_methodPointers[16] = 
 {
 	XRSettings_get_enabled_m970BB98BF899D943776BE6EB66FE40AA9C12A902,
 	XRSettings_get_isDeviceActive_m8A54A2D4D91CA2BC1B1554576B2FACFE5F65B087,
@@ -57,33 +59,35 @@ static Il2CppMethodPointer s_methodPointers[15] =
 	XRSettings_get_supportedDevices_m48F7F0CC911EB45AD210523FA957A4E8412AE93F,
 	XRSettings_get_stereoRenderingMode_m2E44AF3D772559836F2357AEC1E175C68E6D94B9,
 	XRSettings_get_eyeTextureDesc_Injected_m639509084F5EC222779474C77EF7586989C4F856,
+	XRDevice_DisableAutoXRCameraTracking_mC203FE6788C85285EDD5822689A4B10EA720D268,
 	XRDevice_InvokeDeviceLoaded_m3BDF6825A2A56E4923D4E6593C7BA2949B6A3581,
 	XRDevice__cctor_mC83C1293819B81E68EC72D01A5CC107DFE29B98C,
 };
-static const int32_t s_InvokerIndices[15] = 
+static const int32_t s_InvokerIndices[16] = 
 {
-	4590,
-	4590,
-	4592,
-	4529,
-	4571,
-	4571,
-	4589,
-	4592,
-	4592,
-	4577,
-	4577,
-	4571,
-	4515,
-	4521,
-	4604,
+	5863,
+	5863,
+	5865,
+	5748,
+	5834,
+	5834,
+	5860,
+	5865,
+	5865,
+	5841,
+	5841,
+	5834,
+	5732,
+	5357,
+	5740,
+	5877,
 };
 extern const CustomAttributesCacheGenerator g_UnityEngine_VRModule_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_VRModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_VRModule_CodeGenModule = 
 {
 	"UnityEngine.VRModule.dll",
-	15,
+	16,
 	s_methodPointers,
 	0,
 	NULL,
