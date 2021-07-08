@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class ImpactSound : MonoBehaviour
 {
@@ -34,5 +35,11 @@ public class ImpactSound : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+    [PunRPC]
+    public void DestroyRing()
+    {
+        PhotonNetwork.Destroy(this.gameObject);
     }
 }

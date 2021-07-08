@@ -8,7 +8,10 @@ public class BasicMenu : MonoBehaviour
 
     public void ChangeToScene(int sceneIndex)
     {
-        Debug.Log("Test");
+        if (sceneIndex == 0 && Photon.Pun.PhotonNetwork.IsConnected)
+        {
+            Photon.Pun.PhotonNetwork.Disconnect();
+        }
         SceneManager.LoadScene(sceneIndex);
     }
 

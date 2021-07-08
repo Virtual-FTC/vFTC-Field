@@ -21,7 +21,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
         if (!PhotonNetwork.IsConnected)
        {
             PhotonNetwork.AutomaticallySyncScene = true;

@@ -3840,7 +3840,7 @@ GameObject:
   - component: {fileID: 2106253112356927111}
   - component: {fileID: 3636024805122292668}
   m_Layer: 5
-  m_Name: Icon Button With Background
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

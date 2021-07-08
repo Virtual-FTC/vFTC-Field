@@ -37,6 +37,9 @@ MonoBehaviour:
   - DestroyRpc
   - RPC_LoadedGameScene
   - CreatePlayer
+  - startGame
+  - stopGame
+  - DestroyRing
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

@@ -23,6 +23,8 @@ public class IntakeControl : MonoBehaviour
 
     public GameObject[] rings;
 
+    private GameObject lastRing;
+
     // Intake Motor Control
     void Start()
     {
@@ -64,13 +66,22 @@ public class IntakeControl : MonoBehaviour
 
     void OnTriggerStay(Collider collision)
     {
-        if (wantedVelocity != 0)
+        if (wantedVelocity != 0 && collision.gameObject != lastRing)
         {
             if (collision.tag == coliderTag && numBalls < maxNumberBalls && Time.time - timer >= timeOfBallContact)
             {
                 numBalls++;
                 rings[numBalls-1].SetActive(true);
-                Destroy(collision.gameObject);
+                lastRing = collision.gameObject;
+                if (Photon.Pun.PhotonNetwork.IsConnected)
+                {
+                    collision.gameObject.GetComponent<Photon.Pun.PhotonView>().RPC("DestroyRing", Photon.Pun.RpcTarget.All);
+                    Photon.Pun.PhotonNetwork.Destroy(collision.gameObject);
+                }
+                else
+                {
+                    Destroy(collision.gameObject);
+                }
             }
         }
         

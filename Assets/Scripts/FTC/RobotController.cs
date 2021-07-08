@@ -6,10 +6,26 @@ using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Runtime.InteropServices;
 using UnityEngine.InputSystem;
 
 public class RobotController : MonoBehaviour
 {
+    /*
+    [DllImport("__Internal")]
+    private static extern void SendFrontRightEnc(float x);
+
+    [DllImport("__Internal")]
+    private static extern void SendFrontLeftEnc(float x);
+
+    [DllImport("__Internal")]
+    private static extern void SendBackRightEnc(float x);
+
+    [DllImport("__Internal")]
+    private static extern void SendBackLeftEnc(float x);
+
+    */
+
     PlayerControls controls;
     private float linearVelocityX;
     private float linearVelocityY;
@@ -40,6 +56,8 @@ public class RobotController : MonoBehaviour
     public float motorRPM = 340.0f;
 
     private Rigidbody rb;
+
+    private Transform posiiton;
 
     private float previousRealTime;
 
@@ -78,18 +96,27 @@ public class RobotController : MonoBehaviour
         controls.GamePlay.WobbleHigh.canceled += ctx => motorPower8 = 0.0f;
 
         //Driving Controls
+        controls.GamePlay.DriveForward.started += ctx => usingJoystick = true;
         controls.GamePlay.DriveForward.performed += ctx => linearVelocityX = -1.5f*ctx.ReadValue<float>();
         controls.GamePlay.DriveForward.canceled += ctx => linearVelocityX = 0f;
+
+        controls.GamePlay.DriveBack.started += ctx => usingJoystick = true;
         controls.GamePlay.DriveBack.performed += ctx => linearVelocityX = 1.5f*ctx.ReadValue<float>();
         controls.GamePlay.DriveBack.canceled += ctx => linearVelocityX = 0f;
 
+        controls.GamePlay.DriveLeft.started += ctx => usingJoystick = true;
         controls.GamePlay.DriveLeft.performed += ctx => linearVelocityY = 1.5f*ctx.ReadValue<float>();
         controls.GamePlay.DriveLeft.canceled += ctx => linearVelocityY = 0f;
+
+        controls.GamePlay.DriveRight.started += ctx => usingJoystick = true;
         controls.GamePlay.DriveRight.performed += ctx => linearVelocityY = -1.5f*ctx.ReadValue<float>();
         controls.GamePlay.DriveRight.canceled += ctx => linearVelocityY = 0f;
 
+        controls.GamePlay.TurnLeft.started += ctx => usingJoystick = true;
         controls.GamePlay.TurnLeft.performed += ctx => angularVelocity = 6*ctx.ReadValue<float>();
         controls.GamePlay.TurnLeft.canceled += ctx => angularVelocity = 0f;
+
+        controls.GamePlay.TurnRight.started += ctx => usingJoystick = true;
         controls.GamePlay.TurnRight.performed += ctx => angularVelocity = -6*ctx.ReadValue<float>();
         controls.GamePlay.TurnRight.canceled += ctx => angularVelocity = 0f;
     }
@@ -205,11 +232,46 @@ public class RobotController : MonoBehaviour
         backRightWheelCmd = x;
     }
 
+    public void setMotor5(float x)
+    {
+        usingJoystick = false;
+        motorPower5 = x;
+    }
+
+    public void setMotor6(float x)
+    {
+        usingJoystick = false;
+        motorPower6 = x;
+    }
+
+    public void setMotor7(float x)
+    {
+        usingJoystick = false;
+        motorPower7 = x;
+    }
+
+    public void setMotor8(float x)
+    {
+        usingJoystick = false;
+        motorPower8 = x;
+    }
+
+
     private void FixedUpdate()
     {
         if (!Photon.Pun.PhotonNetwork.IsConnected)
         {
             driveRobot();
+            shooterControl.Commands.Process();
+            intakeControl.Commands.Process();
+            grabberControl.Commands.Process();
+
+            /*
+            SendFrontLeftEnc(frontLeftWheelEnc);
+            SendFrontRightEnc(frontRightWheelEnc);
+            SendBackLeftEnc(backLeftWheelEnc);
+            SendBackRightEnc(backRightWheelEnc);
+            */
         }
         else if (GetComponent<Photon.Pun.PhotonView>().IsMine)
         {
@@ -226,5 +288,15 @@ public class RobotController : MonoBehaviour
         {
             robotSoundControl.playRobotImpact();
         }
+    }
+
+    public void setStartPosition(Transform t)
+    {
+        posiiton = t;
+    }
+
+    public Transform getStartPosition()
+    {
+        return posiiton;
     }
 }

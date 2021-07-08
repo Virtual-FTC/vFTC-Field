@@ -66,6 +66,7 @@
     <Compile Include="Assets\RTCDataChan.cs" />
     <Compile Include="Assets\Scripts\FTC\GameControl\BlueWobbleGoal.cs" />
     <Compile Include="Assets\Scripts\UI\BasicMenu.cs" />
+    <Compile Include="Assets\Scripts\FTC\FieldManager.cs" />
     <Compile Include="Assets\Scripts\FTC\Control\RobotSoundControl.cs" />
     <Compile Include="Assets\Scripts\FTC\RobotCustomizer.cs" />
     <Compile Include="Assets\Scripts\FTC\GameControl\WhiteLineGoal.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Assets\Scripts\FTC\GameTimer.cs" />
     <Compile Include="Assets\Scripts\FTC\Control\ShooterControl.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_OptionList.cs" />
+    <Compile Include="Assets\Scripts\FTC\PhotonRoom.cs" />
     <Compile Include="Assets\Photon\PhotonLibs\WebSocket\WebSocket.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_TabGroup.cs" />
     <Compile Include="Assets\Scripts\FTC\GameControl\ImpactSound.cs" />
@@ -99,8 +101,9 @@
     <Compile Include="Assets\Scripts\FTC\Control\CommandProcessor.cs" />
     <Compile Include="Assets\Scripts\FTC\UserManager.cs" />
     <Compile Include="Assets\Scripts\FTC\GameControl\ScoreKeeper.cs" />
+    <Compile Include="Assets\Scripts\UI\SettingsControl.cs" />
     <Compile Include="Assets\Quantum Tek\Quantum UI\Scripts\QUI_Window.cs" />
-    <Compile Include="Assets\Scripts\FTC\FieldManager.cs" />
+    <Compile Include="Assets\Scripts\FTC\RobotControllerUdp.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />

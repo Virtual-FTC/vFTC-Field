@@ -1503,9 +1503,11 @@ IL2CPP_EXTERN_C const RuntimeMethod* Socket_GetSocketOption_m58A866C87F4B09F2A8C
 IL2CPP_EXTERN_C const RuntimeMethod* Socket_IOControl_mEF60AD4FE7242DEF5BC2A1E05E7DCFF2F3F4B7FE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Socket_Listen_m333EA7692DFF6A3B7BF746237EBBC22C1FBE61C4_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Socket_Poll_m82012C326974DCA0B8C57A98E68C3E099D52BF7C_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Socket_ReceiveFrom_mB129CBAABDBEFED42431F891B1F62D99E8CED928_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Socket_Receive_m6D95774528C89ED4777791E8EFC84ADFCD255A48_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Socket_Receive_m7D07ECE91DA04210066EB6E373376817E0A024F1_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Socket_Receive_mA08EE1F9A870791CECAAC2FA2D4144ACBA6B4962_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* Socket_SendTo_mA760EDC1FC1F6525A3ABF526A7951274D9DE83EF_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Socket_Send_m77328B1F3378D0C5B40B15C01FA2226257B706AE_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Socket_Send_mB925DA11E47BB9772EDFC0DDFEE238EB3A1F98B5_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* Socket_Send_mF70EF17396CEA161F628B1923DA32463720D9A1E_RuntimeMethod_var;
@@ -19014,12 +19016,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Send_m77328B1F3378D0C5B40B15C0
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SocketException__ctor_m8625815C7AFB0F3BF9287520D8F64A69199D6DCA (SocketException_tB04D4347A4A41DC1A8583BBAE5A7C990F78C1E88 * __this, int32_t ___socketError0, const RuntimeMethod* method);
 // System.Int32 System.Net.Sockets.Socket::Send(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.Sockets.SocketError&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Send_mF1AF06B447E1671097A0515BD6170DB92368E8D5 (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, int32_t ___offset1, int32_t ___size2, int32_t ___socketFlags3, int32_t* ___errorCode4, const RuntimeMethod* method);
+// System.Int32 System.Net.Sockets.Socket::SendTo(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_SendTo_mA760EDC1FC1F6525A3ABF526A7951274D9DE83EF (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, int32_t ___offset1, int32_t ___size2, int32_t ___socketFlags3, EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA * ___remoteEP4, const RuntimeMethod* method);
 // System.Int32 System.Net.Sockets.Socket::Receive(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Receive_mA08EE1F9A870791CECAAC2FA2D4144ACBA6B4962 (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, int32_t ___offset1, int32_t ___size2, int32_t ___socketFlags3, const RuntimeMethod* method);
 // System.Int32 System.Net.Sockets.Socket::Receive(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.Sockets.SocketError&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Receive_mD8C41C5E04F7A9AEAA8E9D7534970F50918427BF (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, int32_t ___offset1, int32_t ___size2, int32_t ___socketFlags3, int32_t* ___errorCode4, const RuntimeMethod* method);
 // System.Int32 System.Net.Sockets.Socket::Receive(System.Collections.Generic.IList`1<System.ArraySegment`1<System.Byte>>,System.Net.Sockets.SocketFlags,System.Net.Sockets.SocketError&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Receive_m7D07ECE91DA04210066EB6E373376817E0A024F1 (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, RuntimeObject* ___buffers0, int32_t ___socketFlags1, int32_t* ___errorCode2, const RuntimeMethod* method);
+// System.Int32 System.Net.Sockets.Socket::ReceiveFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_ReceiveFrom_mB129CBAABDBEFED42431F891B1F62D99E8CED928 (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, int32_t ___offset1, int32_t ___size2, int32_t ___socketFlags3, EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA ** ___remoteEP4, const RuntimeMethod* method);
 // System.Int32 System.Net.Sockets.Socket::IOControl(System.Int32,System.Byte[],System.Byte[])
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_IOControl_mEF60AD4FE7242DEF5BC2A1E05E7DCFF2F3F4B7FE (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, int32_t ___ioControlCode0, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___optionInValue1, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___optionOutValue2, const RuntimeMethod* method);
 // System.IAsyncResult System.Net.Sockets.Socket::BeginConnect(System.Net.EndPoint,System.AsyncCallback,System.Object)
@@ -19186,6 +19192,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SocketAsyncResult_get_ErrorCode_m56F1
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Receive_internal_mACBB4D49BA2AA03BABFB64D4EAF6ADD4F9B99116 (intptr_t ___sock0, WSABUF_t982D1FB4F102556DD0ABE9F8AC73FDA02B581C57 * ___bufarray1, int32_t ___count2, int32_t ___flags3, int32_t* ___error4, bool ___blocking5, const RuntimeMethod* method);
 // System.Int32 System.Net.Sockets.Socket::Receive_internal(System.IntPtr,System.Byte*,System.Int32,System.Net.Sockets.SocketFlags,System.Int32&,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Receive_internal_mA045268E2A2A8548562FB4D652262B2AF242CA8E (intptr_t ___sock0, uint8_t* ___buffer1, int32_t ___count2, int32_t ___flags3, int32_t* ___error4, bool ___blocking5, const RuntimeMethod* method);
+// System.Int32 System.Net.Sockets.Socket::ReceiveFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint&,System.Net.Sockets.SocketError&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_ReceiveFrom_mAFA99FB7487A2216312D4510E530BB9F5A4CD54B (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, int32_t ___offset1, int32_t ___size2, int32_t ___socketFlags3, EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA ** ___remoteEP4, int32_t* ___errorCode5, const RuntimeMethod* method);
 // System.Int32 System.Net.Sockets.Socket::ReceiveFrom_internal(System.Net.Sockets.SafeSocketHandle,System.Byte*,System.Int32,System.Net.Sockets.SocketFlags,System.Net.SocketAddress&,System.Int32&,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_ReceiveFrom_internal_mB857796A233063A7771FCB31AAB68A689409E670 (SafeSocketHandle_t5050671179FB886DA1763A0E4EFB3FCD072363C9 * ___safeHandle0, uint8_t* ___buffer1, int32_t ___count2, int32_t ___flags3, SocketAddress_tE8FA33C91254662406767AF97518C235382742D3 ** ___sockaddr4, int32_t* ___error5, bool ___blocking6, const RuntimeMethod* method);
 // System.Int32 System.Net.Sockets.Socket::ReceiveFrom_internal(System.IntPtr,System.Byte*,System.Int32,System.Net.Sockets.SocketFlags,System.Net.SocketAddress&,System.Int32&,System.Boolean)
@@ -19206,6 +19214,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SocketAsyncResult_Complete_m266C10BA9EEF
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Send_internal_mE78CA6C457332ABC047C04BAE46BAE149E19EC84 (intptr_t ___sock0, WSABUF_t982D1FB4F102556DD0ABE9F8AC73FDA02B581C57 * ___bufarray1, int32_t ___count2, int32_t ___flags3, int32_t* ___error4, bool ___blocking5, const RuntimeMethod* method);
 // System.Int32 System.Net.Sockets.Socket::Send_internal(System.IntPtr,System.Byte*,System.Int32,System.Net.Sockets.SocketFlags,System.Int32&,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Send_internal_m1BEC7CBA4A4284807DD126A07B02265B6190FAF2 (intptr_t ___sock0, uint8_t* ___buffer1, int32_t ___count2, int32_t ___flags3, int32_t* ___error4, bool ___blocking5, const RuntimeMethod* method);
+// System.Int32 System.Net.Sockets.Socket::SendTo_internal(System.Net.Sockets.SafeSocketHandle,System.Byte*,System.Int32,System.Net.Sockets.SocketFlags,System.Net.SocketAddress,System.Int32&,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_SendTo_internal_m8299D8A6CAF9F7C3B9C42620D96ED99CB5214A34 (SafeSocketHandle_t5050671179FB886DA1763A0E4EFB3FCD072363C9 * ___safeHandle0, uint8_t* ___buffer1, int32_t ___count2, int32_t ___flags3, SocketAddress_tE8FA33C91254662406767AF97518C235382742D3 * ___sa4, int32_t* ___error5, bool ___blocking6, const RuntimeMethod* method);
+// System.Int32 System.Net.Sockets.Socket::SendTo_internal(System.IntPtr,System.Byte*,System.Int32,System.Net.Sockets.SocketFlags,System.Net.SocketAddress,System.Int32&,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_SendTo_internal_mAFE45008CEFA16E4CCEDC0CAC8F913FCBB924D77 (intptr_t ___sock0, uint8_t* ___buffer1, int32_t ___count2, int32_t ___flags3, SocketAddress_tE8FA33C91254662406767AF97518C235382742D3 * ___sa4, int32_t* ___error5, bool ___blocking6, const RuntimeMethod* method);
 // System.Void System.Net.Sockets.Socket::GetSocketOption_obj_internal(System.Net.Sockets.SafeSocketHandle,System.Net.Sockets.SocketOptionLevel,System.Net.Sockets.SocketOptionName,System.Object&,System.Int32&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Socket_GetSocketOption_obj_internal_mC30B3F69E41421FAF4D97C59DC965A753DFADD76 (SafeSocketHandle_t5050671179FB886DA1763A0E4EFB3FCD072363C9 * ___safeHandle0, int32_t ___level1, int32_t ___name2, RuntimeObject ** ___obj_val3, int32_t* ___error4, const RuntimeMethod* method);
 // System.Void System.Net.Sockets.Socket::GetSocketOption_obj_internal(System.IntPtr,System.Net.Sockets.SocketOptionLevel,System.Net.Sockets.SocketOptionName,System.Object&,System.Int32&)
@@ -27581,6 +27593,19 @@ IL_0017:
 		return G_B2_0;
 	}
 }
+// System.Int32 System.Net.Sockets.Socket::SendTo(System.Byte[],System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_SendTo_mEE4D5D536BDD178DA55053964451F68469C6BE69 (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, int32_t ___size1, int32_t ___socketFlags2, EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA * ___remoteEP3, const RuntimeMethod* method)
+{
+	{
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_0 = ___buffer0;
+		int32_t L_1 = ___size1;
+		int32_t L_2 = ___socketFlags2;
+		EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA * L_3 = ___remoteEP3;
+		int32_t L_4;
+		L_4 = Socket_SendTo_mA760EDC1FC1F6525A3ABF526A7951274D9DE83EF(__this, L_0, 0, L_1, L_2, L_3, /*hidden argument*/NULL);
+		return L_4;
+	}
+}
 // System.Int32 System.Net.Sockets.Socket::Receive(System.Byte[],System.Net.Sockets.SocketFlags)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Receive_m5F3C0A7B05CA5DCEC831ED7DDD5E6287EFE0E014 (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, int32_t ___socketFlags1, const RuntimeMethod* method)
 {
@@ -27746,6 +27771,58 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Receive_m6D95774528C89ED477779
 IL_0014:
 	{
 		return G_B2_0;
+	}
+}
+// System.Int32 System.Net.Sockets.Socket::ReceiveFrom(System.Byte[],System.Net.EndPoint&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_ReceiveFrom_m782E046F6ADDAB2218711650A04550BB917E534C (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA ** ___remoteEP1, const RuntimeMethod* method)
+{
+	int32_t G_B2_0 = 0;
+	ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* G_B2_1 = NULL;
+	Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * G_B2_2 = NULL;
+	int32_t G_B1_0 = 0;
+	ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* G_B1_1 = NULL;
+	Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * G_B1_2 = NULL;
+	int32_t G_B3_0 = 0;
+	int32_t G_B3_1 = 0;
+	ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* G_B3_2 = NULL;
+	Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * G_B3_3 = NULL;
+	{
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_0 = ___buffer0;
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_1 = ___buffer0;
+		G_B1_0 = 0;
+		G_B1_1 = L_0;
+		G_B1_2 = __this;
+		if (L_1)
+		{
+			G_B2_0 = 0;
+			G_B2_1 = L_0;
+			G_B2_2 = __this;
+			goto IL_0009;
+		}
+	}
+	{
+		G_B3_0 = 0;
+		G_B3_1 = G_B1_0;
+		G_B3_2 = G_B1_1;
+		G_B3_3 = G_B1_2;
+		goto IL_000c;
+	}
+
+IL_0009:
+	{
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_2 = ___buffer0;
+		G_B3_0 = ((int32_t)((int32_t)(((RuntimeArray*)L_2)->max_length)));
+		G_B3_1 = G_B2_0;
+		G_B3_2 = G_B2_1;
+		G_B3_3 = G_B2_2;
+	}
+
+IL_000c:
+	{
+		EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA ** L_3 = ___remoteEP1;
+		int32_t L_4;
+		L_4 = Socket_ReceiveFrom_mB129CBAABDBEFED42431F891B1F62D99E8CED928(G_B3_3, G_B3_2, G_B3_1, G_B3_0, 0, (EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA **)L_3, /*hidden argument*/NULL);
+		return L_4;
 	}
 }
 // System.Int32 System.Net.Sockets.Socket::IOControl(System.Net.Sockets.IOControlCode,System.Byte[],System.Byte[])
@@ -31326,6 +31403,62 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Receive_internal_mA045268E2A2A
 	using namespace il2cpp::icalls;
 	return ((Socket_Receive_internal_mA045268E2A2A8548562FB4D652262B2AF242CA8E_ftn)System::System::Net::Sockets::Socket::Receive40) (___sock0, ___buffer1, ___count2, ___flags3, ___error4, ___blocking5);
 }
+// System.Int32 System.Net.Sockets.Socket::ReceiveFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_ReceiveFrom_mB129CBAABDBEFED42431F891B1F62D99E8CED928 (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, int32_t ___offset1, int32_t ___size2, int32_t ___socketFlags3, EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA ** ___remoteEP4, const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	int32_t G_B4_0 = 0;
+	int32_t G_B3_0 = 0;
+	{
+		Socket_ThrowIfDisposedAndClosed_m5EC422888FC9986F6994A0C0180BCB39407F7894(__this, /*hidden argument*/NULL);
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_0 = ___buffer0;
+		Socket_ThrowIfBufferNull_mCE5DE853E71FD065E5D5415BAFEDB84CA261DAD3(__this, L_0, /*hidden argument*/NULL);
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_1 = ___buffer0;
+		int32_t L_2 = ___offset1;
+		int32_t L_3 = ___size2;
+		Socket_ThrowIfBufferOutOfRange_m571DD069DDC7952B1EB907941F3C202054BBE6FF(__this, L_1, L_2, L_3, /*hidden argument*/NULL);
+		EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA ** L_4 = ___remoteEP4;
+		EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA * L_5 = *((EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA **)L_4);
+		if (L_5)
+		{
+			goto IL_0026;
+		}
+	}
+	{
+		ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB * L_6 = (ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB_il2cpp_TypeInfo_var)));
+		ArgumentNullException__ctor_m81AB157B93BFE2FBFDB08B88F84B444293042F97(L_6, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral6C52C8D495F05CFD54188F5CD5E5C6E98067B112)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_6, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Socket_ReceiveFrom_mB129CBAABDBEFED42431F891B1F62D99E8CED928_RuntimeMethod_var)));
+	}
+
+IL_0026:
+	{
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_7 = ___buffer0;
+		int32_t L_8 = ___offset1;
+		int32_t L_9 = ___size2;
+		int32_t L_10 = ___socketFlags3;
+		EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA ** L_11 = ___remoteEP4;
+		int32_t L_12;
+		L_12 = Socket_ReceiveFrom_mAFA99FB7487A2216312D4510E530BB9F5A4CD54B(__this, L_7, L_8, L_9, L_10, (EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA **)L_11, (int32_t*)(&V_0), /*hidden argument*/NULL);
+		int32_t L_13 = V_0;
+		G_B3_0 = L_12;
+		if (!L_13)
+		{
+			G_B4_0 = L_12;
+			goto IL_003f;
+		}
+	}
+	{
+		int32_t L_14 = V_0;
+		SocketException_tB04D4347A4A41DC1A8583BBAE5A7C990F78C1E88 * L_15 = (SocketException_tB04D4347A4A41DC1A8583BBAE5A7C990F78C1E88 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SocketException_tB04D4347A4A41DC1A8583BBAE5A7C990F78C1E88_il2cpp_TypeInfo_var)));
+		SocketException__ctor_m8625815C7AFB0F3BF9287520D8F64A69199D6DCA(L_15, L_14, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_15, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Socket_ReceiveFrom_mB129CBAABDBEFED42431F891B1F62D99E8CED928_RuntimeMethod_var)));
+	}
+
+IL_003f:
+	{
+		return G_B4_0;
+	}
+}
 // System.Int32 System.Net.Sockets.Socket::ReceiveFrom(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint&,System.Net.Sockets.SocketError&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_ReceiveFrom_mAFA99FB7487A2216312D4510E530BB9F5A4CD54B (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, int32_t ___offset1, int32_t ___size2, int32_t ___socketFlags3, EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA ** ___remoteEP4, int32_t* ___errorCode5, const RuntimeMethod* method)
 {
@@ -32601,6 +32734,139 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_Send_internal_m1BEC7CBA4A42848
 	using namespace il2cpp::icalls;
 	return ((Socket_Send_internal_m1BEC7CBA4A4284807DD126A07B02265B6190FAF2_ftn)System::System::Net::Sockets::Socket::Send40) (___sock0, ___buffer1, ___count2, ___flags3, ___error4, ___blocking5);
 }
+// System.Int32 System.Net.Sockets.Socket::SendTo(System.Byte[],System.Int32,System.Int32,System.Net.Sockets.SocketFlags,System.Net.EndPoint)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_SendTo_mA760EDC1FC1F6525A3ABF526A7951274D9DE83EF (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* ___buffer0, int32_t ___offset1, int32_t ___size2, int32_t ___socketFlags3, EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA * ___remoteEP4, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	int32_t V_1 = 0;
+	uint8_t* V_2 = NULL;
+	ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* V_3 = NULL;
+	int32_t G_B11_0 = 0;
+	int32_t G_B7_0 = 0;
+	int32_t G_B10_0 = 0;
+	int32_t G_B8_0 = 0;
+	int32_t G_B9_0 = 0;
+	{
+		Socket_ThrowIfDisposedAndClosed_m5EC422888FC9986F6994A0C0180BCB39407F7894(__this, /*hidden argument*/NULL);
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_0 = ___buffer0;
+		Socket_ThrowIfBufferNull_mCE5DE853E71FD065E5D5415BAFEDB84CA261DAD3(__this, L_0, /*hidden argument*/NULL);
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_1 = ___buffer0;
+		int32_t L_2 = ___offset1;
+		int32_t L_3 = ___size2;
+		Socket_ThrowIfBufferOutOfRange_m571DD069DDC7952B1EB907941F3C202054BBE6FF(__this, L_1, L_2, L_3, /*hidden argument*/NULL);
+		EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA * L_4 = ___remoteEP4;
+		if (L_4)
+		{
+			goto IL_0025;
+		}
+	}
+	{
+		ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB * L_5 = (ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentNullException_tFB5C4621957BC53A7D1B4FDD5C38B4D6E15DB8FB_il2cpp_TypeInfo_var)));
+		ArgumentNullException__ctor_m81AB157B93BFE2FBFDB08B88F84B444293042F97(L_5, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral6C52C8D495F05CFD54188F5CD5E5C6E98067B112)), /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_5, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Socket_SendTo_mA760EDC1FC1F6525A3ABF526A7951274D9DE83EF_RuntimeMethod_var)));
+	}
+
+IL_0025:
+	{
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_6 = ___buffer0;
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_7 = L_6;
+		V_3 = L_7;
+		if (!L_7)
+		{
+			goto IL_002f;
+		}
+	}
+	{
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_8 = V_3;
+		if (((int32_t)((int32_t)(((RuntimeArray*)L_8)->max_length))))
+		{
+			goto IL_0034;
+		}
+	}
+
+IL_002f:
+	{
+		V_2 = (uint8_t*)((uintptr_t)0);
+		goto IL_003d;
+	}
+
+IL_0034:
+	{
+		ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726* L_9 = V_3;
+		V_2 = (uint8_t*)((uintptr_t)((L_9)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(0))));
+	}
+
+IL_003d:
+	{
+		SafeSocketHandle_t5050671179FB886DA1763A0E4EFB3FCD072363C9 * L_10 = __this->get_m_Handle_17();
+		uint8_t* L_11 = V_2;
+		int32_t L_12 = ___offset1;
+		int32_t L_13 = ___size2;
+		int32_t L_14 = ___socketFlags3;
+		EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA * L_15 = ___remoteEP4;
+		SocketAddress_tE8FA33C91254662406767AF97518C235382742D3 * L_16;
+		L_16 = VirtFuncInvoker0< SocketAddress_tE8FA33C91254662406767AF97518C235382742D3 * >::Invoke(5 /* System.Net.SocketAddress System.Net.EndPoint::Serialize() */, L_15);
+		bool L_17 = __this->get_is_blocking_21();
+		IL2CPP_RUNTIME_CLASS_INIT(Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09_il2cpp_TypeInfo_var);
+		int32_t L_18;
+		L_18 = Socket_SendTo_internal_m8299D8A6CAF9F7C3B9C42620D96ED99CB5214A34(L_10, (uint8_t*)(uint8_t*)((uintptr_t)((uint8_t*)il2cpp_codegen_add((intptr_t)L_11, (int32_t)L_12))), L_13, L_14, L_16, (int32_t*)(&V_0), L_17, /*hidden argument*/NULL);
+		V_3 = (ByteU5BU5D_tDBBEB0E8362242FA7223000D978B0DD19D4B0726*)NULL;
+		int32_t L_19 = V_0;
+		V_1 = L_19;
+		int32_t L_20 = V_1;
+		G_B7_0 = L_18;
+		if (!L_20)
+		{
+			G_B11_0 = L_18;
+			goto IL_0083;
+		}
+	}
+	{
+		int32_t L_21 = V_1;
+		G_B8_0 = G_B7_0;
+		if ((((int32_t)L_21) == ((int32_t)((int32_t)10035))))
+		{
+			G_B10_0 = G_B7_0;
+			goto IL_007c;
+		}
+	}
+	{
+		int32_t L_22 = V_1;
+		G_B9_0 = G_B8_0;
+		if ((((int32_t)L_22) == ((int32_t)((int32_t)10036))))
+		{
+			G_B10_0 = G_B8_0;
+			goto IL_007c;
+		}
+	}
+	{
+		__this->set_is_connected_23((bool)0);
+		G_B10_0 = G_B9_0;
+	}
+
+IL_007c:
+	{
+		int32_t L_23 = V_0;
+		SocketException_tB04D4347A4A41DC1A8583BBAE5A7C990F78C1E88 * L_24 = (SocketException_tB04D4347A4A41DC1A8583BBAE5A7C990F78C1E88 *)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&SocketException_tB04D4347A4A41DC1A8583BBAE5A7C990F78C1E88_il2cpp_TypeInfo_var)));
+		SocketException__ctor_m4AA74DE46D28204456EFCCBBC5ACC841DA2941EF(L_24, L_23, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_24, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Socket_SendTo_mA760EDC1FC1F6525A3ABF526A7951274D9DE83EF_RuntimeMethod_var)));
+	}
+
+IL_0083:
+	{
+		__this->set_is_connected_23((bool)1);
+		__this->set_is_bound_22((bool)1);
+		EndPoint_t18D4AE8D03090A2B262136E59F95CE61418C34DA * L_25 = ___remoteEP4;
+		__this->set_seed_endpoint_18(L_25);
+		return G_B11_0;
+	}
+}
 // System.Int32 System.Net.Sockets.Socket::EndSendTo(System.IAsyncResult)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_EndSendTo_m63F470B7483CED77F2DA2FD46FE93A460743CB08 (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, RuntimeObject* ___asyncResult0, const RuntimeMethod* method)
 {
@@ -32642,6 +32908,70 @@ IL_002c:
 		int32_t L_9 = L_8->get_Total_20();
 		return L_9;
 	}
+}
+// System.Int32 System.Net.Sockets.Socket::SendTo_internal(System.Net.Sockets.SafeSocketHandle,System.Byte*,System.Int32,System.Net.Sockets.SocketFlags,System.Net.SocketAddress,System.Int32&,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_SendTo_internal_m8299D8A6CAF9F7C3B9C42620D96ED99CB5214A34 (SafeSocketHandle_t5050671179FB886DA1763A0E4EFB3FCD072363C9 * ___safeHandle0, uint8_t* ___buffer1, int32_t ___count2, int32_t ___flags3, SocketAddress_tE8FA33C91254662406767AF97518C235382742D3 * ___sa4, int32_t* ___error5, bool ___blocking6, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	int32_t V_0 = 0;
+	Exception_t * __last_unhandled_exception = 0;
+	il2cpp::utils::ExceptionSupportStack<int32_t, 1> __leave_targets;
+
+IL_0000:
+	try
+	{ // begin try (depth: 1)
+		SafeSocketHandle_t5050671179FB886DA1763A0E4EFB3FCD072363C9 * L_0 = ___safeHandle0;
+		SafeSocketHandle_RegisterForBlockingSyscall_m7033111DA7B1012B9C4155D892EED598876C2AB3(L_0, /*hidden argument*/NULL);
+		SafeSocketHandle_t5050671179FB886DA1763A0E4EFB3FCD072363C9 * L_1 = ___safeHandle0;
+		intptr_t L_2;
+		L_2 = SafeHandle_DangerousGetHandle_mEB7C6F9EC43E5A3483027A9B1B8D660D2F7E2CDB_inline(L_1, /*hidden argument*/NULL);
+		uint8_t* L_3 = ___buffer1;
+		int32_t L_4 = ___count2;
+		int32_t L_5 = ___flags3;
+		SocketAddress_tE8FA33C91254662406767AF97518C235382742D3 * L_6 = ___sa4;
+		int32_t* L_7 = ___error5;
+		bool L_8 = ___blocking6;
+		IL2CPP_RUNTIME_CLASS_INIT(Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09_il2cpp_TypeInfo_var);
+		int32_t L_9;
+		L_9 = Socket_SendTo_internal_mAFE45008CEFA16E4CCEDC0CAC8F913FCBB924D77((intptr_t)L_2, (uint8_t*)(uint8_t*)L_3, L_4, L_5, L_6, (int32_t*)L_7, L_8, /*hidden argument*/NULL);
+		V_0 = L_9;
+		IL2CPP_LEAVE(0x24, FINALLY_001d);
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t *)e.ex;
+		goto FINALLY_001d;
+	}
+
+FINALLY_001d:
+	{ // begin finally (depth: 1)
+		SafeSocketHandle_t5050671179FB886DA1763A0E4EFB3FCD072363C9 * L_10 = ___safeHandle0;
+		SafeSocketHandle_UnRegisterForBlockingSyscall_m283CE3E82686E5FC7999EDD609DF74A48652D4B3(L_10, /*hidden argument*/NULL);
+		IL2CPP_END_FINALLY(29)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(29)
+	{
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t *)
+		IL2CPP_JUMP_TBL(0x24, IL_0024)
+	}
+
+IL_0024:
+	{
+		int32_t L_11 = V_0;
+		return L_11;
+	}
+}
+// System.Int32 System.Net.Sockets.Socket::SendTo_internal(System.IntPtr,System.Byte*,System.Int32,System.Net.Sockets.SocketFlags,System.Net.SocketAddress,System.Int32&,System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Socket_SendTo_internal_mAFE45008CEFA16E4CCEDC0CAC8F913FCBB924D77 (intptr_t ___sock0, uint8_t* ___buffer1, int32_t ___count2, int32_t ___flags3, SocketAddress_tE8FA33C91254662406767AF97518C235382742D3 * ___sa4, int32_t* ___error5, bool ___blocking6, const RuntimeMethod* method)
+{
+	typedef int32_t (*Socket_SendTo_internal_mAFE45008CEFA16E4CCEDC0CAC8F913FCBB924D77_ftn) (intptr_t, uint8_t*, int32_t, int32_t, SocketAddress_tE8FA33C91254662406767AF97518C235382742D3 *, int32_t*, bool);
+	using namespace il2cpp::icalls;
+	return ((Socket_SendTo_internal_mAFE45008CEFA16E4CCEDC0CAC8F913FCBB924D77_ftn)System::System::Net::Sockets::Socket::SendTo_internal) (___sock0, ___buffer1, ___count2, ___flags3, ___sa4, ___error5, ___blocking6);
 }
 // System.Object System.Net.Sockets.Socket::GetSocketOption(System.Net.Sockets.SocketOptionLevel,System.Net.Sockets.SocketOptionName)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject * Socket_GetSocketOption_m58A866C87F4B09F2A8C3DA71635C8DA17836520D (Socket_tD9721140F91BE95BA05B87DD26A855B215D84D09 * __this, int32_t ___optionLevel0, int32_t ___optionName1, const RuntimeMethod* method)

@@ -40,8 +40,15 @@ public class RingDispenser : MonoBehaviour
             index1 = -index1;
         }
 
-        GameObject ring = Photon.Pun.PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Ring"), pos.position, Quaternion.Euler(0f, index1, 90f), 0);
-        //GameObject ring = (GameObject)Instantiate(prefab, pos.position, Quaternion.Euler(0f,index1,90f));
+        GameObject ring = null;
+        if (Photon.Pun.PhotonNetwork.IsConnected && Photon.Pun.PhotonNetwork.IsMasterClient)
+        {
+            ring = Photon.Pun.PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Ring"), pos.position, Quaternion.Euler(0f, index1, 90f), 0);
+        }
+        else if(!Photon.Pun.PhotonNetwork.IsConnected)
+        {
+            ring = (GameObject)Instantiate(prefab, pos.position, Quaternion.Euler(0f, index1, 90f));
+        }
         var rigid = ring.GetComponent<Rigidbody>();
 
         rigid.AddForce((Vector3.forward) * (shotForceMult + (index/6f)), ForceMode.Impulse);
